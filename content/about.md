@@ -11,3 +11,5 @@ This website was built to log financial events, portfolio strategies and trading
 If you would like to learn, then a fake money account is more appropriate for learning. There are several websites that offer such services.
 
 If you have any questions you can contact us at [greenleafcapital "at" protonmail "dot" com]
+
+<h2>> Thank You for visiting<span class="logo__cursor" style="width: 3px; height: 1.625rem;"></span></h2>
