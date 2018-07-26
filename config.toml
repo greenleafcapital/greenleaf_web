@@ -1,0 +1,30 @@
+baseurl = "/"
+languageCode = "en-us"
+title = "Green Leaf Capital"
+theme = "hugo-theme-hello-friend"
+copyright = ""
+paginate = 5
+
+[params]
+  subtitle = ""
+  
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]  
+
+# [params.logo]
+#   path = "/img/your-example-logo.svg"
+#   alt = "your_example_logo"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+  [[menu.main]]
+    identifier = "portfolio"
+    name = "Portfolio"
+    url = "/portfolio"
+    
+  [[menu.main]]
+    identifier = "code"
+    name = "Code"
+    url = "/code"
