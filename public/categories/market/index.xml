@@ -2,24 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Market on Green Leaf Capital</title>
-    <link>/tags/market/</link>
+    <link>/categories/market/</link>
     <description>Recent content in Market on Green Leaf Capital</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 26 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/market/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/market/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Bond Market</title>
-      <link>/post/bond/</link>
-      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/bond/</guid>
-      <description>Year 2018 has not been a good one for the bond investors. Since the summer of 2017, interest rates have been rising.
-The long term interest rates had been trending lower since 1980s. In the chart above rates reached a high of 8% and since then they kept making lower lows. Currently the ten year rates are near the an important key level at 3%. From here the future path interest will decide which way the trend moves.</description>
-    </item>
     
     <item>
       <title>Interest Rates and Bear Markets</title>

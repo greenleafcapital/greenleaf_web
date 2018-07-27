@@ -43,7 +43,20 @@
   </url>
   
   <url>
+    <loc>/categories/bonds/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/bonds/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -66,6 +79,12 @@
   </url>
   
   <url>
+    <loc>/categories/market/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/market/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -73,6 +92,12 @@
   
   <url>
     <loc>/post/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/rates/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

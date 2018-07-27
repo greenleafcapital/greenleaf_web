@@ -6,9 +6,19 @@
     <description>Recent content in Categories on Green Leaf Capital</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 26 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bonds</title>
+      <link>/categories/bonds/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/bonds/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Ideas</title>
@@ -16,6 +26,15 @@
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/ideas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Market</title>
+      <link>/categories/market/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/market/</guid>
       <description></description>
     </item>
     

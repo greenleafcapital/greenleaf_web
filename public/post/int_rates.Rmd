@@ -2,6 +2,13 @@
 title: "Interest Rates and Bear Markets"
 author: "Team Green"
 date: "2018-07-26"
+categories:
+  - Market
+  - bonds
+tags:
+  - market
+  - rates
+  - bonds
 output:
   pdf_document: default
   html_document: default
@@ -22,7 +29,7 @@ int_rates <- int_rates %>%
   mutate(date = as.Date(date))
 
 ```
-###########*Photo by Joe Roberts*
+
 
 
 
