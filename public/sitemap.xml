@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/bond/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/facebook-idea/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
   </url>
@@ -56,6 +61,12 @@
   
   <url>
     <loc>/categories/ideas/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/market/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
