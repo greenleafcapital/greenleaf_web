@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "Green Leaf Capital"
+title = "Green Leaf"
 theme = "hugo-theme-hello-friend"
 copyright = ""
 paginate = 5
