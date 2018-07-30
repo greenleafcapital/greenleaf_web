@@ -1,0 +1,43 @@
+---
+title: "FAANG stocks"
+output: html_document
+date: "2018-07-30"
+author: "Team Green"
+---
+
+```{r lib, warning=FALSE,message=FALSE,include=FALSE}
+
+library(tidyquant)
+
+tickers <- c('FB', "NFLX", "AMZN", "GOOG", "AAPL", "QQQ")
+
+price_data <- tq_get(tickers,
+                     from = "2018-06-01",
+                     get = 'stock.prices')
+
+```
+
+FANG stock performance since July 1, 2018
+
+```{r chart, warning=FALSE,message=FALSE,echo=FALSE}
+
+price_data %>%
+  filter(date >= '2018-07-01') %>%
+  group_by(symbol) %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = 'daily',
+               col_rename = 'ret') %>%
+  mutate(cr = cumprod(1 + ret)) %>%
+  mutate(returns = cr - 1) %>%
+  ggplot(aes(x = date, y = returns, color = symbol)) +
+  geom_line() +
+  theme_classic() +
+  geom_hline(yintercept = 0) +
+  ggtitle("FANG stock performance since Jul 1st, 2018") +
+  labs(x = "Date", y = "Returns") +
+  scale_y_continuous(labels = scales::percent)
+
+```
+
+
