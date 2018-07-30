@@ -17,7 +17,7 @@ price_data <- tq_get(tickers,
 
 ```
 
-FANG stock performance since July 1, 2018
+FAANG stock performance since July 1, 2018
 
 ```{r chart, warning=FALSE,message=FALSE,echo=FALSE}
 
