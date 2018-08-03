@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/fang_rets_jul2018/</loc>
-    <lastmod>2018-07-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/code/</loc>
     <lastmod>2018-07-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post/bond/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/fang/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -73,7 +73,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-07-30T00:00:00+00:00</lastmod>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -97,7 +97,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-07-30T00:00:00+00:00</lastmod>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -109,6 +109,12 @@
   
   <url>
     <loc>/tags/stock/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/stocks/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

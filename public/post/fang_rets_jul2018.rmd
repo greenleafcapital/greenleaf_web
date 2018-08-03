@@ -1,8 +1,13 @@
 ---
-title: "FAANG stocks"
-output: html_document
-date: "2018-07-30"
-author: "Team Green"
+title: "FANG Stocks"
+author: 'Team Green'
+date: '2018-07-26'
+slug: FANG
+description: "FANG Performance"
+cover: ""
+categories: []
+tags:
+  - stocks
 ---
 
 ```{r lib, warning=FALSE,message=FALSE,include=FALSE}

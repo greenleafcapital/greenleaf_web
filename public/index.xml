@@ -6,19 +6,10 @@
     <description>Recent content on Green Leaf</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>FAANG stocks</title>
-      <link>/post/fang_rets_jul2018/</link>
-      <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/fang_rets_jul2018/</guid>
-      <description>FAANG stock performance since July 1, 2018</description>
-    </item>
     
     <item>
       <title>Code</title>
@@ -37,6 +28,15 @@
       <guid>/post/bond/</guid>
       <description>Year 2018 has not been a good one for the bond investors. Since the summer of 2017, interest rates have been rising.
 The long term interest rates had been trending lower since 1980s. In the chart above rates reached a high of 8% and since then they kept making lower lows. Currently the ten year rates are near the an important key level at 3%. From here the future path interest will decide which way the trend moves.</description>
+    </item>
+    
+    <item>
+      <title>FANG Stocks</title>
+      <link>/post/fang/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/fang/</guid>
+      <description>FAANG stock performance since July 1, 2018</description>
     </item>
     
     <item>
