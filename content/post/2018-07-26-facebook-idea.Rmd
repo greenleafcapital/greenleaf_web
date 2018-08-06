@@ -11,7 +11,7 @@ categories:
 tags:
   - trade
   - facebook
-  - stock
+  - stocks
 description: "Is this the worst decline for Facebook? How can we profit from this?"
 ---
 

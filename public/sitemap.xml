@@ -8,12 +8,12 @@
   </url>
   
   <url>
-    <loc>/post/bond/</loc>
-    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <loc>/post/fang/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/fang/</loc>
+    <loc>/post/bond/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,13 +48,13 @@
   </url>
   
   <url>
-    <loc>/categories/bonds/</loc>
+    <loc>/tags/bonds/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/bonds/</loc>
+    <loc>/categories/bonds/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -72,6 +72,18 @@
   </url>
   
   <url>
+    <loc>/tags/fang/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/fang/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
     <lastmod>2018-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -84,20 +96,20 @@
   </url>
   
   <url>
-    <loc>/categories/market/</loc>
-    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/market/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>/categories/market/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -108,14 +120,14 @@
   </url>
   
   <url>
-    <loc>/tags/stock/</loc>
-    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <loc>/tags/stocks/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/stocks/</loc>
-    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <loc>/categories/stocks/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
