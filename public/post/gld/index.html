@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   
-    <title>Shiny Trade Idea :: Green Leaf</title>
+    <title>Gold Trade Idea :: Green Leaf</title>
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -25,9 +25,9 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Shiny Trade Idea :: Green Leaf — " />
+<meta name="twitter:title" content="Gold Trade Idea :: Green Leaf — " />
 <meta name="twitter:description" content="A potential trade idea that we executed today was being long Gold. First lets see how the shiny object has performed since 2010 versus the dollar.
-Its clear from the chart that both assets move in opposite directions (most of the time). After the huge run in price in Gold from 2009 t0 2013, it saw a crash in 2014. Since then its been sideways and range bound trading between $1300 to $1200." />
+price_data %&amp;gt;% group_by(symbol) %&amp;gt;% tq_transmute(select = adjusted, mutate_fun = periodReturn, period = &amp;quot;yearly&amp;quot;, col_rename = &amp;quot;returns&amp;quot;) %&amp;gt;% ungroup() %&amp;gt;% mutate(symbol = if_else(symbol == &amp;quot;GLD&amp;quot;, &amp;quot;Gold&amp;quot;, &amp;quot;Dollar&amp;quot;)) %&amp;gt;% ggplot(aes(x = date, y = returns, fill = symbol)) &#43; geom_bar(stat = &amp;#39;identity&amp;#39;, position = &amp;quot;dodge&amp;quot;) &#43; ggtitle(&amp;quot;Gold versus Dollar annual performance since 2010&amp;quot;) &#43; labs(x = &amp;quot;Date&amp;quot;, y = &amp;quot;Annual Returns&amp;quot;) &#43; geom_hline(yintercept = 0) &#43; scale_y_continuous(labels = scales::percent) &#43; theme_bw() &#43; scale_fill_discrete(name = &amp;quot;Asset&amp;quot;) Its clear from the chart that both assets move in opposite directions (most of the time)." />
 <meta name="twitter:site" content="" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image" content="/img/post/gold_bar.jpg">
@@ -35,10 +35,10 @@ Its clear from the chart that both assets move in opposite directions (most of t
 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Shiny Trade Idea :: Green Leaf — ">
+<meta property="og:title" content="Gold Trade Idea :: Green Leaf — ">
 <meta property="og:description" content="" />
 <meta property="og:url" content="/post/gld/" />
-<meta property="og:site_name" content="Shiny Trade Idea" />
+<meta property="og:site_name" content="Gold Trade Idea" />
 <meta property="og:image" content="/img/post/gold_bar.jpg">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
@@ -106,7 +106,7 @@ Its clear from the chart that both assets move in opposite directions (most of t
   <div class="content">
     
   <div class="post">
-    <h2 class="post-title"><a href="/post/gld/">Shiny Trade Idea</a></h2>
+    <h2 class="post-title"><a href="/post/gld/">Gold Trade Idea</a></h2>
     <div class="post-meta">
       <span class="post-date">
         8/6/2018
@@ -135,15 +135,163 @@ Its clear from the chart that both assets move in opposite directions (most of t
 
 
 <p>A potential trade idea that we executed today was being long Gold. First lets see how the shiny object has performed since 2010 versus the dollar.</p>
+<pre class="r"><code>price_data %&gt;%
+  group_by(symbol) %&gt;%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = &quot;yearly&quot;,
+               col_rename = &quot;returns&quot;) %&gt;%
+  ungroup() %&gt;%
+  mutate(symbol = if_else(symbol == &quot;GLD&quot;, &quot;Gold&quot;, &quot;Dollar&quot;)) %&gt;%
+  ggplot(aes(x = date, y = returns, fill = symbol)) +
+  geom_bar(stat = &#39;identity&#39;, position = &quot;dodge&quot;) +
+  ggtitle(&quot;Gold versus Dollar annual performance since 2010&quot;) +
+  labs(x = &quot;Date&quot;, y = &quot;Annual Returns&quot;) +
+  geom_hline(yintercept = 0) +
+  scale_y_continuous(labels = scales::percent) +
+  theme_bw() +
+  scale_fill_discrete(name = &quot;Asset&quot;)</code></pre>
+<p><img src="/post/2018-08-06-gld_long_calls_files/figure-html/gld%20uup%20annual%20-1.png" width="672" /></p>
 <p>Its clear from the chart that both assets move in opposite directions (most of the time). After the huge run in price in Gold from 2009 t0 2013, it saw a crash in 2014. Since then its been sideways and range bound trading between $1300 to $1200.</p>
+<pre class="r"><code>price_data %&gt;%
+  group_by(symbol) %&gt;%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = &quot;monthly&quot;,
+               col_rename = &quot;returns&quot;) %&gt;%
+  mutate(cr = cumprod(1 + returns)) %&gt;%
+  mutate(cum_ret = cr - 1) %&gt;%
+  ungroup() %&gt;%
+  mutate(symbol = if_else(symbol == &quot;GLD&quot;, &quot;Gold&quot;, &quot;Dollar&quot;)) %&gt;%
+  mutate(cum_ret = if_else(date == &quot;2009-01-30&quot;, 0, cum_ret)) %&gt;%
+  ggplot(aes(x = date, y = cum_ret, color = symbol)) +
+  geom_line() +
+  ggtitle(&quot;Cumulative returns since 2010&quot;) +
+  labs(x = &quot;Date&quot;, y = &quot;Cumulative Returns %&quot;) +
+  scale_y_continuous(labels = scales::percent) +
+  theme_bw() +
+  scale_color_discrete(name = &quot;Asset&quot;)</code></pre>
+<p><img src="/post/2018-08-06-gld_long_calls_files/figure-html/gld%20uup%20cum%20returns%20-1.png" width="672" /></p>
 <p>Since April 2018 gold has seen it price go down about 12% and in the same period dollar has rallied about 8%.</p>
+<pre class="r"><code>price_data %&gt;%
+  group_by(symbol) %&gt;%
+  filter(date &gt;= &quot;2018-01-01&quot;) %&gt;%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = &quot;daily&quot;,
+               col_rename = &quot;returns&quot;) %&gt;%
+  mutate(cr = cumprod(1 + returns)) %&gt;%
+  mutate(cum_ret = cr - 1) %&gt;%
+  ungroup() %&gt;%
+  mutate(symbol = if_else(symbol == &quot;GLD&quot;, &quot;Gold&quot;, &quot;Dollar&quot;)) %&gt;%
+  mutate(cum_ret = if_else(date == &quot;2009-01-30&quot;, 0, cum_ret)) %&gt;%
+  ggplot(aes(x = date, y = cum_ret, color = symbol)) +
+  geom_line() +
+  ggtitle(&quot;Cumulative returns since Jan 2018&quot;) +
+  labs(x = &quot;Date&quot;, y = &quot;Cumulative Returns %&quot;) +
+  scale_y_continuous(labels = scales::percent) +
+  theme_bw() +
+  scale_color_discrete(name = &quot;Asset&quot;)</code></pre>
+<p><img src="/post/2018-08-06-gld_long_calls_files/figure-html/gld%20uup%20cum%20returns%202018-1.png" width="672" /></p>
 <p>This move has largely coincided with President Trump’s escalations of trade war with Europe and China. Since the escalation the dollar has seen a run up in price, which is opposite of what the president may have intented.</p>
 <p>We see this as a good trading opportunity to go long the Gold Etf via options. Below you can see the current call options chain.</p>
+<pre class="r"><code>gld_options &lt;- getOptionChain(&quot;GLD&quot;, Exp = &quot;2018-10-19&quot;)
+gld_call &lt;- gld_options$calls
+gld_call &lt;- tk_tbl(gld_call)
+
+gld_call %&gt;%
+  filter(Strike &gt; 115,
+         Strike &lt; 125) %&gt;%
+  mutate(index = &quot;GLD&quot;) %&gt;%
+  rename(Symbol = index) %&gt;%
+  kable(caption = &quot;Call Option Chain OCt 2018&quot;) %&gt;%
+  kableExtra::kable_styling(bootstrap_options = &quot;hover&quot;)</code></pre>
+<table class="table table-hover" style="margin-left: auto; margin-right: auto;">
+<caption>
+(#tab:gld options)Call Option Chain OCt 2018
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Symbol
+</th>
+<th style="text-align:right;">
+Strike
+</th>
+<th style="text-align:right;">
+Last
+</th>
+<th style="text-align:right;">
+Chg
+</th>
+<th style="text-align:right;">
+Bid
+</th>
+<th style="text-align:right;">
+Ask
+</th>
+<th style="text-align:right;">
+Vol
+</th>
+<th style="text-align:right;">
+OI
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
 <p>For our trade we are going</p>
 <ul>
 <li>Long GLD 120 strike call options at $0.65</li>
 <li>Short GLD 121 strike call options at $0.51</li>
 </ul>
+<pre class="r"><code>gld_call %&gt;%
+  filter(Strike &gt; 119,
+         Strike &lt; 122) %&gt;%
+  mutate(index = &quot;GLD&quot;) %&gt;%
+  rename(Symbol = index) %&gt;%
+  kable(caption = &quot;Call Option Chain OCt 2018&quot;) %&gt;%
+  kableExtra::kable_styling(bootstrap_options = &quot;hover&quot;)</code></pre>
+<table class="table table-hover" style="margin-left: auto; margin-right: auto;">
+<caption>
+(#tab:gld option trade)Call Option Chain OCt 2018
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Symbol
+</th>
+<th style="text-align:right;">
+Strike
+</th>
+<th style="text-align:right;">
+Last
+</th>
+<th style="text-align:right;">
+Chg
+</th>
+<th style="text-align:right;">
+Bid
+</th>
+<th style="text-align:right;">
+Ask
+</th>
+<th style="text-align:right;">
+Vol
+</th>
+<th style="text-align:right;">
+OI
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+</tr>
+</tbody>
+</table>
 <p>Our max loss on the trade is $0.14 and max profit is $0.86. This trade will expire in 74 days and we may re-adjust or close it before.</p>
 <p>We think that GLD has a good chance of bouncing upto $117 in the next few weeks. If that happens we may start seeing some profit on this trade. We will update this post when we make any changes.</p>
 
