@@ -153,7 +153,7 @@ gld_call %>%
 
 ```
 
-Our max loss on the trade is \$0.14 and max profit is $0.86. This trade will expire in 74 days and we may re-adjust or close it before.
+Our max loss on the trade is \$0.14 and max profit is $0.86. This trade will expire in 74 days on October 19,2018. We puposefully wanted to give this trade some time to workout. 
 
 We think that GLD has a good chance of bouncing upto $117 in the next few weeks. If that happens we may start seeing some profit on this trade. We will update this post when we make any changes.
 
