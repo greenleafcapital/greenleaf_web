@@ -117,7 +117,7 @@ price_data %>%
 
 This move has largely coincided with President Trump's escalations of trade war with Europe and China. Since the escalation the dollar has seen a run up in price, which is opposite of what the president may have intented.
 
-We see this as a good trading opportunity to go long the Gold Etf via options. Below you can see the current call options chain.
+We see this as a good trading opportunity to go long the Gold etf via options. Below you can see the current call options chain.
 
 ```{r gld options, warning=FALSE,message=FALSE, echo=FALSE}
 
@@ -130,7 +130,7 @@ gld_call %>%
          Strike < 125) %>%
   mutate(index = "GLD") %>%
   rename(Symbol = index) %>%
-  kable(caption = "Call Option Chain OCt 2018")
+  kable()
 
 
 ```
@@ -145,11 +145,11 @@ For our trade we are going
 
 
 gld_call %>%
+  mutate(index = "GLD") %>%
   filter(Strike > 119,
          Strike < 122) %>%
-  mutate(index = "GLD") %>%
-  rename(Symbol = index) %>%
-  kable(caption = "Call Option Chain Oct 2018")
+  rename(Symbol = index) 
+
 
 ```
 
