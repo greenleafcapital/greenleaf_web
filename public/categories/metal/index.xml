@@ -18,7 +18,7 @@
       
       <guid>/post/gld/</guid>
       <description>A potential trade idea that we executed today was being long Gold. First lets see how the shiny object has performed since 2010 versus the dollar.
-price_data %&amp;gt;% group_by(symbol) %&amp;gt;% tq_transmute(select = adjusted, mutate_fun = periodReturn, period = &amp;quot;yearly&amp;quot;, col_rename = &amp;quot;returns&amp;quot;) %&amp;gt;% ungroup() %&amp;gt;% mutate(symbol = if_else(symbol == &amp;quot;GLD&amp;quot;, &amp;quot;Gold&amp;quot;, &amp;quot;Dollar&amp;quot;)) %&amp;gt;% ggplot(aes(x = date, y = returns, fill = symbol)) + geom_bar(stat = &amp;#39;identity&amp;#39;, position = &amp;quot;dodge&amp;quot;) + ggtitle(&amp;quot;Gold versus Dollar annual performance since 2010&amp;quot;) + labs(x = &amp;quot;Date&amp;quot;, y = &amp;quot;Annual Returns&amp;quot;) + geom_hline(yintercept = 0) + scale_y_continuous(labels = scales::percent) + theme_bw() + scale_fill_discrete(name = &amp;quot;Asset&amp;quot;) Its clear from the chart that both assets move in opposite directions (most of the time).</description>
+Its clear from the chart that both assets move in opposite directions (most of the time). After the huge run in price in Gold from 2009 t0 2013, it saw a crash in 2014. Since then its been sideways and range bound trading between $1300 to $1200.</description>
     </item>
     
   </channel>

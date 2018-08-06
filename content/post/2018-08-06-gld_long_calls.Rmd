@@ -39,7 +39,7 @@ price_data <- tq_get(tickers,
 ```
 
 
-```{r gld uup annual ,warning=FALSE,message=FALSE}
+```{r gld uup annual ,warning=FALSE,message=FALSE, echo=FALSE}
 
 price_data %>%
   group_by(symbol) %>%
@@ -63,7 +63,7 @@ price_data %>%
 
 Its clear from the chart that both assets move in opposite directions (most of the time). After the huge run in price in Gold from 2009 t0 2013, it saw a crash in 2014. Since then its been sideways and range bound trading between \$1300 to $1200.
 
-```{r gld uup cum returns ,warning=FALSE,message=FALSE}
+```{r gld uup cum returns ,warning=FALSE,message=FALSE, echo=FALSE}
 
 price_data %>%
   group_by(symbol) %>%
@@ -91,7 +91,7 @@ price_data %>%
 
 Since April 2018 gold has seen it price go down about 12% and in the same period dollar has rallied about 8%. 
 
-```{r gld uup cum returns 2018, warning=FALSE,message=FALSE}
+```{r gld uup cum returns 2018, warning=FALSE,message=FALSE, echo=FALSE}
 
 price_data %>%
   group_by(symbol) %>%
@@ -119,7 +119,7 @@ This move has largely coincided with President Trump's escalations of trade war 
 
 We see this as a good trading opportunity to go long the Gold Etf via options. Below you can see the current call options chain.
 
-```{r gld options, warning=FALSE,message=FALSE}
+```{r gld options, warning=FALSE,message=FALSE, echo=FALSE}
 
 gld_options <- getOptionChain("GLD", Exp = "2018-10-19")
 gld_call <- gld_options$calls
@@ -130,8 +130,7 @@ gld_call %>%
          Strike < 125) %>%
   mutate(index = "GLD") %>%
   rename(Symbol = index) %>%
-  kable(caption = "Call Option Chain OCt 2018") %>%
-  kableExtra::kable_styling(bootstrap_options = "hover")
+  kable(caption = "Call Option Chain OCt 2018")
 
 
 ```
@@ -142,7 +141,7 @@ For our trade we are going
 - Short GLD 121 strike call options at $0.51
 
 
-```{r gld option trade, warning=FALSE,message=FALSE}
+```{r gld option trade, warning=FALSE,message=FALSE, echo=FALSE}
 
 
 gld_call %>%
@@ -150,8 +149,7 @@ gld_call %>%
          Strike < 122) %>%
   mutate(index = "GLD") %>%
   rename(Symbol = index) %>%
-  kable(caption = "Call Option Chain OCt 2018") %>%
-  kableExtra::kable_styling(bootstrap_options = "hover")
+  kable(caption = "Call Option Chain Oct 2018")
 
 ```
 
