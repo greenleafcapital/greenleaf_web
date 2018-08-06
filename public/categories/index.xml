@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Gld</title>
+      <link>/categories/gld/</link>
+      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/gld/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Ideas</title>
       <link>/categories/ideas/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
@@ -44,6 +53,24 @@
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/market/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Metal</title>
+      <link>/categories/metal/</link>
+      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/metal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Stock</title>
+      <link>/categories/stock/</link>
+      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/stock/</guid>
       <description></description>
     </item>
     
