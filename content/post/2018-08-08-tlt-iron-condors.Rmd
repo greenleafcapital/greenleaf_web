@@ -68,7 +68,7 @@ But since the winter of 2016, monthly returns for long bonds have been steady be
 
 Our trade is based on the idea that this could continue in the future and we could see resonable moves in the rates market. Below you can see the options that we selected for our trade.
 
-```{r options data, message=FALSE, warning=FALSE, echo=FALSE}
+```{r optionsdata, message=FALSE, warning=FALSE, echo=FALSE}
 
 tltcall <- read_csv("~/Documents/greenleaf_data/TLT_Aug_8_2018/tlt_dec18_calls.csv")
 tltputs <- read_csv("~/Documents/greenleaf_data/TLT_Aug_8_2018/tlt_dec18_puts.csv")
@@ -80,7 +80,15 @@ tltcall %>%
   select(index, Strike, Last) %>%
   rename(Name = index) %>%
   mutate(Name = "TLT") %>%
-  kable()
+  mutate(Type = "Call") %>%
+  kable(caption = "TLT Dec 2018 Calls") %>%
+  kable_styling(bootstrap_options = "hover")
+
+```
+
+------
+
+```{r options-put-data, warning=FALSE, message=FALSE, echo=FALSE}
 
 tltputs %>%
   filter(Strike > 112,
@@ -88,9 +96,9 @@ tltputs %>%
   select(index, Strike, Last) %>%
   rename(Name = index) %>%
   mutate(Name = "TLT") %>%
-  kable()
-  
-
+  mutate(Type = "Put") %>%
+  kable(caption = "TLT Dec 2018 Puts") %>%
+  kable_styling(bootstrap_options = "hover")
 
 ```
 
