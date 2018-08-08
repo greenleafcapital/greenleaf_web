@@ -122,15 +122,10 @@ We see this as a good trading opportunity to go long the Gold etf via options. B
 ```{r gld options, warning=FALSE,message=FALSE, echo=FALSE}
 
 gld_options <- getOptionChain("GLD", Exp = "2018-10-19")
+
 gld_call <- gld_options$calls
 gld_call <- tk_tbl(gld_call)
 
-gld_call %>%
-  filter(Strike > 115,
-         Strike < 125) %>%
-  mutate(index = "GLD") %>%
-  rename(Symbol = index) %>%
-  kable()
 
 
 ```
@@ -144,11 +139,7 @@ For our trade we are going
 ```{r gld option trade, warning=FALSE,message=FALSE, echo=FALSE}
 
 
-gld_call %>%
-  mutate(index = "GLD") %>%
-  filter(Strike > 119,
-         Strike < 122) %>%
-  rename(Symbol = index) 
+#none
 
 
 ```
