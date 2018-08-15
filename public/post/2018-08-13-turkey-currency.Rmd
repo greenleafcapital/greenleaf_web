@@ -128,7 +128,7 @@ We can see that the dollar has been exceptionally strong against all the major c
 
 This dollar rally is quite contrary to the popular belief that was widely accepted in the market. Indeed many people had forecast the gloom doom and end of the dollar. They had been anticipating the death of the dollar since 2010, when Fed engaged in the Quantitative Easing program after the Financial Crisis. It would be goo to know how the dollar has performed against other currencies.
 
-First we will start by comparing the dollar versus emerging markets since 2010
+First we will start by comparing the dollar versus emerging markets since 2010.
 
 ```{r em/since/2005,warning=FALSE,message=FALSE,echo=FALSE}
 
