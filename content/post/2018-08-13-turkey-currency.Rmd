@@ -81,7 +81,7 @@ em_currency_prices %>%
   select(-Returns) %>%
   spread(Country, value = returns) %>%
   tk_xts() %>%
-  dygraph(main = "EM Currency Performance Since 2018") %>%
+  dygraph(main = "EM Currency Performance Since Jan 2018") %>%
   dyHighlight(highlightCircleSize = 5, 
               highlightSeriesBackgroundAlpha = 0.2,
               hideOnMouseOut = FALSE) %>%
@@ -115,7 +115,7 @@ dm_currency_prices %>%
   select(-Returns) %>%
   spread(Country, value = returns) %>%
   tk_xts() %>%
-  dygraph(main = "DM Currency Performance Since 2018") %>%
+  dygraph(main = "DM Currency Performance Since Jan 2018") %>%
   dyHighlight(highlightCircleSize = 5, 
               highlightSeriesBackgroundAlpha = 0.2,
               hideOnMouseOut = FALSE) %>%
@@ -137,7 +137,7 @@ em_currency_prices %>%
   filter(date >= "2009-12-31") %>%
   tq_transmute(select = adjusted,
                mutate_fun = periodReturn,
-               period = "daily",
+               period = "monthly",
                col_rename = "Returns") %>%
   mutate(Returns = -Returns) %>%
   mutate(returns = cumprod(1 + Returns)) %>%
