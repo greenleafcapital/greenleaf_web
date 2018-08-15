@@ -1,0 +1,219 @@
+---
+title: Turkey Currency Crisis
+author: Team Green
+date: '2018-08-13'
+slug: turkey-currency
+cover: "turkey.jpg"
+categories:
+  - Market
+  - currency
+tags:
+  - market
+  - currency
+  - turkey
+---
+
+#### Turkey Currency crisis
+
+The emerging markets are spiraled into chaos and crisis and leading the way is Turkey. The country has been tackling one crisis after another. In 2016 the there was an attempt of military coup which was put down by the people of Turkey. Since then the current president of Turkey Erdogan has consolidated his hold at the top. He has purged many opponents and the recent elections has emboldened his hold at the top. He has near absolute control over Turkey which some say is only rivaled by the Father of the country Ataturk.
+
+The currency was already performing poorly, but last Friday August 10, as usual via a presidential tweet, US president DJT, imposed sanctions on steel and aluminum from Turkey. These sanctions was the additional fuel that was added to the fire which was already burning. The Turkish lira lost some 25% of its value in one day.
+
+Below we can see the daily volatility of the Turkish lira
+
+```{r lib, warning=FALSE,message=FALSE, echo=FALSE}
+
+library(tidyquant)
+library(ggthemes)
+library(timetk)
+library(dygraphs)
+library(knitr)
+library(kableExtra)
+
+```
+
+
+```{r currency/tickers/prices, warning=FALSE,message=FALSE, echo=FALSE}
+
+em_currency_tickers <- tibble(symbol = c("USDINR=X", "TRY=X", "CNY=X", "USDMXN=X", "USDRUB=X", "USDZAR=X", "USDARS=X", "USDKRW=X"),
+                              Country = c("India", "Turkey", "China", "Mexico", "Russia", "South Africa", "Argentina", "Korea"))
+
+em_currency_prices <- tq_get(em_currency_tickers,
+                             from = "2005-01-01",
+                             get = "stock.prices")
+```
+
+<br/>
+
+```{r just/turkey, warning=FALSE,message=FALSE, echo=FALSE}
+
+tur_xts <- em_currency_prices %>%
+  filter(Country == "Turkey") %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = "daily",
+               col_rename = 'Lira') %>%
+  mutate(Lira = Lira * -100) %>%
+  tk_xts()
+
+tur_xts %>%
+  dygraph(main = "Turkish Lira daily Currency Volatility") %>%
+  dyAxis("x", label = "Date") %>%
+  dyAxis("y", label = "Lira Daily Returns %")
+
+```
+
+We can see from the chart that a typical daily move in the currency was within the +/- 2% range. The move on Friday however was unprecedented compared to past moves. The 3.5% drop that happened during the attempted military coup seems like a minor blip.
+
+There was a lot of press coverage and many argued that this may cause a contagion and affect other markets as wells. But the reality is that the US Dollar has been rallying this year again all currencies.
+
+```{r em/all/currencies, warning=FALSE,message=FALSE,echo=FALSE}
+    
+em_currency_prices %>%
+  group_by(Country) %>%
+  filter(date >= "2018-01-01") %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = "daily",
+               col_rename = "Returns") %>%
+  mutate(Returns = -Returns) %>%
+  mutate(returns = cumprod(1 + Returns)) %>%
+  select(-Returns) %>%
+  spread(Country, value = returns) %>%
+  tk_xts() %>%
+  dygraph(main = "EM Currency Performance Since 2018") %>%
+  dyHighlight(highlightCircleSize = 5, 
+              highlightSeriesBackgroundAlpha = 0.2,
+              hideOnMouseOut = FALSE) %>%
+    dyLegend(show = "follow")
+
+
+```
+
+We can see that 2018 has been a bad year for emerging market currencies. Since April 2018 dollar index has rallied above 9%. How does this compare with the developed markets currencies. 
+
+
+```{r dm/currencyies/price,warning=FALSE,message=FALSE,echo=FALSE}
+
+dm_currency_tickers <- tibble(symbol = c("USDEUR=X", "USDGBP=X", "USDCHF=X", "USDCAD=X", "USDNZD=X", "USDAUD=X", "USDJPY=X", "GLD"),
+                              Country = c("Euro", "UK", "Switzterland", "Canada", "New Zealand", "Australia", "Japan", "Gold"))
+
+dm_currency_prices <- tq_get(dm_currency_tickers,
+                             from = "2005-01-01",
+                             get = "stock.prices")
+
+dm_currency_prices %>%
+  group_by(Country) %>%
+  filter(date >= "2018-01-01") %>%
+  filter(Country != "Gold") %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = "daily",
+               col_rename = "Returns") %>%
+  mutate(Returns = -Returns) %>%
+  mutate(returns = cumprod(1 + Returns)) %>%
+  select(-Returns) %>%
+  spread(Country, value = returns) %>%
+  tk_xts() %>%
+  dygraph(main = "DM Currency Performance Since 2018") %>%
+  dyHighlight(highlightCircleSize = 5, 
+              highlightSeriesBackgroundAlpha = 0.2,
+              hideOnMouseOut = FALSE) %>%
+    dyLegend(show = "follow")
+
+
+```
+
+We can see that the dollar has been exceptionally strong against all the major currencies of the world. President Trump may not like the strong dollar, or maybe he does. Like all things with this president we are not really sure where he stands.
+
+This dollar rally is quite contrary to the popular belief that was widely accepted in the market. Indeed many people had forecast the gloom doom and end of the dollar. They had been anticipating the death of the dollar since 2010, when Fed engaged in the Quantitative Easing program after the Financial Crisis. It would be goo to know how the dollar has performed against other currencies.
+
+First we will start by comparing the dollar versus emerging markets since 2010
+
+```{r em/since/2005,warning=FALSE,message=FALSE,echo=FALSE}
+
+em_currency_prices %>%
+  group_by(Country) %>%
+  filter(date >= "2009-12-31") %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = "daily",
+               col_rename = "Returns") %>%
+  mutate(Returns = -Returns) %>%
+  mutate(returns = cumprod(1 + Returns)) %>%
+  select(-Returns) %>%
+  spread(Country, value = returns) %>%
+  tk_xts() %>%
+  dygraph(main = "EM Currency Performance Since 2010") %>%
+  dyHighlight(highlightCircleSize = 5, 
+              highlightSeriesBackgroundAlpha = 0.2,
+              hideOnMouseOut = FALSE) %>%
+    dyLegend(show = "follow")
+
+```
+
+Dollar has performed better all the major emerging markets currencies. China may have resisted the down move, as the government in China intervenes in the daily price fixing of the Yuan. One the most popular trades is shorting the Chinese Yuan. Many speculators have been trying to make a bet against the Yuan.
+
+Next we will compare the dollar performance against developed markets currency since 2010.
+
+```{r dm/since/2010,warning=FALSE,message=FALSE,echo=FALSE}
+
+dm_currency_prices %>%
+  filter(Country != "Gold") %>%
+  filter(date >= "2009-12-31") %>%
+  group_by(Country) %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = "daily",
+               col_rename = "Returns") %>%
+  mutate(Returns = -Returns) %>%
+  mutate(returns = cumprod(1 + Returns)) %>%
+  select(-Returns) %>%
+  spread(Country, value = returns) %>%
+  tk_xts() %>%
+  dygraph(main = "DM Currency Performance Since 2010") %>%
+  dyHighlight(highlightCircleSize = 5, 
+              highlightSeriesBackgroundAlpha = 0.2,
+              hideOnMouseOut = FALSE)
+
+
+```
+
+Once again we can see that Dollar has performed better that other major developed markets currencies. Far from being doomed, dollar has kept up its value better than other currencies. This is comparing dollar to other paper based forms of money. 
+Next we will see how the value of Gold denominated in USD performed since 2010. We will use the GLD etf as a proxy for Gold price.
+
+```{r gold,warning=FALSE,message=FALSE,echo=FALSE}
+
+dm_currency_prices %>%
+  filter(Country == "Gold") %>%
+  filter(date >= "2009-12-31") %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = "monthly",
+               col_rename = "gold") %>%
+  mutate(Gold = cumprod(1 + gold)) %>%
+  select(-gold) %>%
+  tk_xts() %>%
+  dygraph(main = 'Gold price performance in USD since 2010')
+
+```
+
+This is the most surprising chart of all. Gold is up only about 5% since 2010. Gold has disappointed a lot of investors in the last 8 years.
+
+In conclusion, yes we had a major event on Friday when Turkish Lira dropped 25% plus in one day. But the depreciation in currency values was already happening across the board. The dollar has maintained its value versus other currencies. A stronger dollar may indicate tighter market conditions for countries that hold USD denominated bonds. As their currencies depreciate in value, it becomes more expensive to pay back in appreciated USD denominations. This 'contagion' has already been happening, the Presidential tweet and the Lira crisis has only brought it to the forefront.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

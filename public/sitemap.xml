@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/turkey-currency/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018-08-08-tlt-iron-condors/</loc>
     <lastmod>2018-08-08T00:00:00+00:00</lastmod>
   </url>
@@ -58,13 +63,13 @@
   </url>
   
   <url>
-    <loc>/tags/bonds/</loc>
+    <loc>/categories/bonds/</loc>
     <lastmod>2018-08-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/bonds/</loc>
+    <loc>/tags/bonds/</loc>
     <lastmod>2018-08-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -76,14 +81,20 @@
   </url>
   
   <url>
-    <loc>/tags/facebook/</loc>
-    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <loc>/categories/currency/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/fang/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <loc>/tags/currency/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/facebook/</loc>
+    <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -94,13 +105,19 @@
   </url>
   
   <url>
-    <loc>/tags/gld/</loc>
-    <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+    <loc>/tags/fang/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/gld/</loc>
+    <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gld/</loc>
     <lastmod>2018-08-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -113,19 +130,19 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-08-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/market/</loc>
-    <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/market/</loc>
-    <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/market/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -137,7 +154,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -154,14 +171,14 @@
   </url>
   
   <url>
-    <loc>/tags/stocks/</loc>
-    <lastmod>2018-08-06T00:00:00+00:00</lastmod>
+    <loc>/categories/stocks/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/stocks/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <loc>/tags/stocks/</loc>
+    <lastmod>2018-08-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -180,6 +197,12 @@
   <url>
     <loc>/categories/trades/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/turkey/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
