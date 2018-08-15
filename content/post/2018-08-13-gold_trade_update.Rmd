@@ -1,0 +1,123 @@
+---
+title: "Gold trade update"
+author: 'Team Green'
+date: '2018-08-15'
+description: "Gold trade in light of Turkey's financial crisis"
+categories:
+  - gld 
+  - stock
+  - metal
+tags:
+  - gld
+  - stocks
+  - trade
+---
+
+```{r lib, warning=FALSE,message=FALSE, echo=FALSE}
+
+library(tidyquant)
+library(ggthemes)
+library(timetk)
+library(dygraphs)
+library(knitr)
+library(kableExtra)
+
+```
+
+
+The Turkish currency depreciation which was a slow moving event for the past two years is now front and center in the financial world. The relations between US and Turkey have been deteriorating and Turkey which is a NATO member is looking for new friends. 
+In light of all this our long gold trade has been performing poorly. We put on that trade last Monday (August 6) and since then Gold prices have fallen 2.8% in other words Dollar index has gone up approximately the same amount.
+
+A week ago one troy ounce of gold was 6600 in Turkish Lira. Today one troy ounce cost 7700 Turkish Lira. So we can see that gold would have protected Turkish investors in such an inflationary event. But since Turkish crisis has pushed up the demand for US dollars around the world, gold prices quoted in USD has gone down. This is what matters the most to our trade.
+
+We are long Gold against USD and for our trade to be profitable we will need to see it rally against the US dollar.
+
+Let us recap our trade, we are:
+
+- Long GLD 120 strike call options at $0.65
+- Short GLD 121 strike call options at $0.51
+
+The current price of GLD is $112 and the trade has 65 days remaining. We will analyze the trade below. 
+
+Lets start by looking at the monthly returns since 2016 elections.
+
+```{r gld/uup,warning=FALSE,message=FALSE,echo=FALSE}
+
+tickers <- c("UUP", "GLD")
+
+com_prices <- tq_get(tickers,
+                     from = "2006-01-01",
+                     get = "stock.prices")
+
+com_prices %>%
+  mutate(symbol = if_else(symbol == "UUP", "Dollar", "Gold")) %>%
+  group_by(symbol) %>%
+  filter(date >= "2016-11-01") %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = "monthly",
+               col_rename = "returns") %>%
+  ggplot(aes(x = date, y = returns, fill = symbol)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  scale_x_date(date_breaks = "2 months", date_labels = "%b%y") +
+  scale_y_continuous(breaks = seq(-0.1, 0.05, 0.01),
+                     labels = scales::percent) +
+  ggtitle("Monthly Returns for Gold and Dollar \nsince 2016 election") +
+  labs(x = "Date", y = "Returns") +
+  theme_fivethirtyeight() +
+  scale_fill_discrete(name = "")
+
+```
+
+We can see that the gold and dollar move in opposite direction most of the time. Since April 2018 gold has been down 5 months in a row counting the current month. Let us see the rolling 4 month returns for each asset.
+
+```{r roll/ret/4,warning=FALSE,message=FALSE,echo=FALSE}
+
+com_prices %>%
+  mutate(symbol = if_else(symbol == "UUP", "Dollar", "Gold")) %>%
+  group_by(symbol) %>%
+  filter(date >= "2015-11-01") %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = ROC,
+               n = 4,
+               type = "discrete",
+               col_rename = "ROC") %>%
+  ggplot(aes(x = date, y = ROC, color = symbol)) +
+  geom_line() +
+  scale_x_date(date_breaks = "3 months", date_labels = "%b%y") +
+  scale_y_continuous(breaks = seq(-0.3, 0.4, 0.01),
+                     labels = scales::percent) +
+  ggtitle("Rolling 4 Month Returns for Gold and Dollar \nsince 2015") +
+  theme_fivethirtyeight() +
+  scale_color_discrete(name = "")
+  
+
+```
+The above chart shows the rolling 4 months returns for Gold and Dollar. The average four month rolling returns have been close to zero for both assets. This chart is a little busy so lets zoom in on year 2018.
+
+```{r roll/ret/4/2018,warning=FALSE,message=FALSE,echo=FALSE}
+
+com_prices %>%
+  mutate(symbol = if_else(symbol == "UUP", "Dollar", "Gold")) %>%
+  group_by(symbol) %>%
+  filter(date >= "2018-1-01") %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = ROC,
+               n = 4,
+               type = "discrete",
+               col_rename = "ROC") %>%
+  ggplot(aes(x = date, y = ROC, color = symbol)) +
+  geom_line() +
+  scale_x_date(date_breaks = "3 months", date_labels = "%b%y") +
+  scale_y_continuous(breaks = seq(-0.3, 0.4, 0.01),
+                     labels = scales::percent) +
+  ggtitle("Rolling 4 Month Returns for Gold and Dollar \nsince 2015") +
+  theme_fivethirtyeight() +
+  scale_color_discrete(name = "")
+
+```
+
+We can see that gold is close to the lower point of its range and dollar is at the higher point. Since the mean returns is close to zero, we can expect this trend to mean revert.
+
+Given that we have 65 days remaining on this trade and both prices trading at their extremes, we will continue to hold this trade and monitor it. This trade has a limited loss and we know what we can lose if we are wrong. The max loss for the trade is $0.14 per contract, if we close today we could expect to lost 40-50% of that amount. But we will continue to see how it performs through the end of the month.
+
