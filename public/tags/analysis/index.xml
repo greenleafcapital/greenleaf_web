@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Analysis on Long Short</title>
+    <link>/tags/analysis/</link>
+    <description>Recent content in Analysis on Long Short</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 16 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/analysis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>S&amp;P 500 Analysis</title>
+      <link>/post/sp500_aug_2018/</link>
+      <pubDate>Thu, 16 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/sp500_aug_2018/</guid>
+      <description>How has S&amp;amp;P 500 performed so far in 2018. We can start by looking at the S&amp;amp;P 500 chart below.
+We can see from the chart that the S&amp;amp;P 500 is up about 6.5% since January. The price action in this chart has been sideways. We are stuck in a range 250 and 285. After big gains in 2017 the market seems to be consolidating at these new all time highs.</description>
+    </item>
+    
+  </channel>
+</rss>
