@@ -1,0 +1,391 @@
+---
+title: "S&P 500 Analysis"
+output: html_document
+author: "Team Green"
+date: "2018-08-16"
+#cover: "fb_phone.jpg"
+categories:
+  - Market
+  - stock
+tags:
+  - market
+  - analysis
+  - stocks
+description: "How has S&P 500 performed so far this year?"
+---
+
+How has S&P 500 performed so far in 2018. We can start by looking at the S&P 500 chart below.
+
+```{r lib, warning=FALSE,message=FALSE,echo=FALSE}
+
+library(tidyquant)
+library(readxl)
+library(ggrepel)
+library(ggthemes)
+
+```
+
+
+```{r sp-500-price-data,warning=FALSE,message=FALSE,echo=FALSE}
+
+spy_etf_price <- tq_get("SPY",
+                        from = "2018-01-01",
+                        get = "stock.prices")
+
+spy_etf_price %>%
+  ggplot(aes(x = date, y = close)) +
+  geom_line() +
+  theme_fivethirtyeight() +
+  ggtitle("SPY Price Chart for 2018") +
+  scale_x_date(date_breaks = "month", date_labels = "%b") +
+  scale_y_continuous(breaks = seq(240,285,5)) +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold")))
+
+```
+
+
+```{r spy-returns-chart, warning=FALSE,message=FALSE,echo=FALSE}
+
+spy_etf_price %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = "daily",
+               col_rename = "rets") %>%
+  mutate(cr = cumprod(1 + rets)) %>%
+  mutate(cr = cr - 1) %>%
+  ggplot(aes(x = date, y = cr)) +
+  geom_line() +
+  theme_fivethirtyeight() +
+  ggtitle("SPY Returns for 2018") +
+  scale_x_date(date_breaks = "month", date_labels = "%b") +
+  scale_y_continuous(breaks = seq(-0.5,0.08,0.01),
+                     labels = scales::percent) +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold")))
+
+```
+
+We can see from the chart that the S&P 500 is up about 6.5% since January. The price action in this chart has been sideways. We are stuck in a range 250 and 285. After big gains in 2017 the market seems to be consolidating at these new all time highs. 
+
+Next we can take a look under the hood and see how different S&P 500 components have been performing this year.
+
+
+```{r components-all-data,message=FALSE,warning=FALSE,echo=FALSE}
+
+spy_url <- "https://us.spdrs.com/site-content/xls/SPY_All_Holdings.xls?fund=SPY&docname=All+Holdings&onyx_code1=&onyx_code2="
+
+temp <- tempfile()
+
+download.file(spy_url, temp, mode = 'wb')
+
+spy_data <- read_xls(temp, skip = 3)
+
+spy_data <- spy_data %>%
+  rename(symbol = Identifier) %>%
+  mutate(Weight = as.numeric(Weight),
+         `Shares Held` = as.numeric(`Shares Held`)) %>%
+  na.omit()
+
+
+spy_tickers <- str_replace_all(spy_data$symbol, pattern = "[.]", replacement = "-")
+
+spy_data <- spy_data %>%
+  mutate(symbol = spy_tickers) %>%
+  filter(symbol != "CASH_USD",
+         symbol != "GOOGL")
+
+spy_prices <- read_csv("~/Documents/greenleaf_data/spy_prices_2018.csv")
+
+
+```
+
+
+```{r spy-roc-calc,message=FALSE,warning=FALSE,echo=FALSE,cache=TRUE}
+
+spy_roc <- spy_prices %>%
+  group_by(symbol) %>%
+  slice(c(1,n())) %>%
+  tq_mutate(select = adjusted,
+            mutate_fun = ROC,
+            n = 1,
+            type = "discrete",
+            col_rename = "ROC") %>%
+  na.omit()
+
+```
+
+
+```{r largest-stock-allnames,warning=FALSE,message=FALSE,echo=FALSE}
+
+largest_wt_label <- spy_roc %>%
+  mutate(Weight = Weight/100) %>%
+  filter(Weight >= 0.005 |
+           ROC >= 0.45)
+  
+
+spy_roc %>%
+  arrange(ROC) %>%
+  mutate(Weight = Weight/100) %>%
+  ggplot(aes(x = Weight, y = ROC, color = Sector)) +
+  geom_point(shape = 1,
+             size = 1,
+             stroke = 1.5) +
+  geom_text_repel(aes(label = symbol),
+                  data = largest_wt_label,
+                  size = 3,
+                  color = 'gray30') +
+  scale_y_continuous(breaks = seq(-0.5,1.2, 0.1),
+                     labels = scales::percent,
+                     name = "YTD Returns") +
+  scale_x_continuous(breaks = seq(0,0.05, 0.005),
+                     labels = scales::percent,
+                     name = "Weights") +
+  scale_color_manual(name = "Sectors",
+                     values = c("#6699CC",
+                                "#099DD7",
+                                "#28AADC",
+                                "#248E84",
+                                "#F2583F",
+                                "#96503F",
+                                "#FF99FF",
+                                "#99FF33",
+                                "#3399CC",
+                                "#33FFCC",
+                                "#3366FF"),
+                     labels = c("Discretionary", "Staples", "Energy",
+                                "Financials", "Health Care", "Industrials",
+                                "Technology", "Materials", "Real Estate", "Telecom",
+                                "Utilities")) +
+  ggtitle("S&P 500 Index Components 2018 as of August 16") +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold")))
+
+```
+
+
+We can see from the chart Amazon, Microsoft and Apple have above 3% weighting in the S&P 500. All three stocks are outperforming the market as a whole. We can see that Amazon and Netflix are both up nearly 60% this year. The other best performing stocks so far this year are Abiomed, AMD, Chipotle, WW Grainger, Trip Advisor, Align Technology and  XL Group (XL Group was purchased by AXA this year).
+
+There are many other small cap stocks that are outperforming this year which are not visible in this chart. We can zoom on that area to find out those stocks.
+
+```{r small-cap-stocks-outperform,warning=FALSE,message=FALSE,echo=FALSE}
+
+small_cap_outperformers <- spy_roc %>%
+  mutate(Weight = Weight/100) %>%
+  filter(Weight <= 0.002,
+           ROC >= 0.25)
+
+
+spy_roc %>%
+  arrange(ROC) %>%
+  mutate(Weight = Weight/100) %>%
+  ggplot(aes(x = Weight, y = ROC, color = Sector)) +
+  geom_point(shape = 1,
+             size = 1,
+             stroke = 1.5) +
+  geom_text_repel(aes(label = symbol),
+                  data = small_cap_outperformers,
+                  size = 3,
+                  color = 'gray30') +
+  scale_y_continuous(breaks = seq(-0.5,1.2, 0.1),
+                     labels = scales::percent,
+                     name = "YTD Returns") +
+  scale_x_continuous(breaks = seq(0,0.05, 0.0005),
+                     labels = scales::percent,
+                     name = "Weights") +
+  coord_cartesian(xlim = c(0,0.002),
+                  ylim = c(0,0.95)) +
+  scale_color_manual(name = "Sectors",
+                     values = c("#6699CC",
+                                "black",
+                                "#28AADC",
+                                "#248E84",
+                                "#F2583F",
+                                "#96503F",
+                                "#FF99FF",
+                                "#99FF33",
+                                "#3399CC",
+                                "#33FFCC",
+                                "#3366FF"),
+                     labels = c("Discretionary", "Staples", "Energy",
+                                "Financials", "Health Care", "Industrials",
+                                "Technology", "Materials", "Real Estate", "Telecom",
+                                "Utilities")) +
+  ggtitle("S&P 500 Index Components 2018 as of August 16",
+          subtitle = "Outperformers for S&P 500") +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold")))
+
+```
+
+This gives us a better view of the stocks with less than 0.2% weight in the S&P 500. We can draw a few conclusion from this chart.
+
+- Health Care stocks have performed better as a group
+- Consumer Discretionary stocks had a bad 2017, but this year they have made a strong comeback. Auto parts stocks, restaurants and retail stocks seemed to have reversed the trend
+- Utilities and Consumer Staples are under performing other sectors.
+
+Next we can look at the stocks that are showing negative returns for the year.
+
+```{r large-neg-returns,message=FALSE,warning=FALSE,echo=FALSE}
+
+
+large_neg_performers <- spy_roc %>%
+  mutate(Weight = Weight/100) %>%
+  filter(ROC <= 0,
+         Weight >= 0.0025)
+
+
+
+spy_roc %>%
+  arrange(ROC) %>%
+  mutate(Weight = Weight/100) %>%
+  ggplot(aes(x = Weight, y = ROC, color = Sector)) +
+  geom_point(shape = 1,
+             size = 1,
+             stroke = 1.5) +
+  geom_text_repel(aes(label = symbol),
+                  data = large_neg_performers,
+                  size = 3,
+                  color = 'gray30') +
+  scale_y_continuous(breaks = seq(-0.5,1.2, 0.1),
+                     labels = scales::percent,
+                     name = "YTD Returns") +
+  scale_x_continuous(breaks = seq(0,0.05, 0.003),
+                     labels = scales::percent,
+                     name = "Weights") +
+  coord_cartesian(ylim = c(0,-0.35),
+                  xlim = c(0,0.025)) +
+  scale_color_manual(name = "Sectors",
+                     values = c("#6699CC",
+                                "#099DD7",
+                                "#28AADC",
+                                "#248E84",
+                                "#F2583F",
+                                "#96503F",
+                                "#FF99FF",
+                                "#99FF33",
+                                "#3399CC",
+                                "#33FFCC",
+                                "#3366FF"),
+                     labels = c("Discretionary", "Staples", "Energy",
+                                "Financials", "Health Care", "Industrials",
+                                "Technology", "Materials", "Real Estate", "Telecom",
+                                "Utilities")) +
+  ggtitle("S&P 500 Index Components 2018 as of August 16",
+          subtitle = "Large Cap Negative performers for S&P 500") +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold")))
+
+```
+
+In this chart we see a mixed bag. Its not surprising to know that the stocks here are having issues of some form or another. Facebook is dealing with the privacy issue. Johnson and Johnson was fined for the talcum powder causing cancer claims. Wells fargo was fined again. GE is having many issues regarding its businesses.
+
+Finally we will see the top contributors and detractors.
+
+```{r sp-contri-chart,message=FALSE,warning=FALSE,echo=FALSE}
+
+top100_contri <- spy_roc %>%
+  mutate(Weight = Weight/100) %>%
+  mutate(contri = Weight * ROC) %>%
+  filter(contri >=  0.0005) 
+
+top100_contri <- top100_contri %>%
+  ungroup() %>%
+  arrange(desc(contri)) %>%
+  mutate(symbol = as_factor(symbol))
+
+
+top100_contri %>%
+  ggplot(aes(x = symbol, y = contri, fill = Weight)) +
+  geom_bar(stat = "identity") +
+  scale_y_continuous(breaks = seq(0,0.2,0.001),
+                     labels = scales::percent) +
+  theme_fivethirtyeight() +
+  theme(axis.text.x = element_text(angle = 45, size = 7)) +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold")),
+        legend.position = "top") +
+  ggtitle("Top Contributors to S&P 500 in 2018 as of August") +
+  labs(x = "", y = "Contribution to S&P") +
+  scale_fill_continuous(name = "Weight",
+                         labels = c("0", "1%", "2%", "3%", "4%"),
+                        low = "purple", high = "dark blue")
+
+```
+
+This chart is revealing. It shows us who is doing the heavy lifting for the S&P 500. We saw earlier that S&P is up about 6.5% and Amazon, Apple, Microsoft and Netflix together are responsible for about 4% of that returns. Only 4 stocks are responsible for 60% of the returns. Any manager who did not own these stocks has probably underperformed this market. This is revealing and some may argue a cause for concern.
+
+Let us look at the top detractors from the S&P 500
+
+```{r sp-detract-chart,message=FALSE,warning=FALSE,echo=FALSE}
+
+top100_detract <- spy_roc %>%
+  ungroup() %>%
+  mutate(Weight = Weight/100) %>%
+  mutate(contri = Weight * ROC) %>%
+  filter(contri <= -0.00015) %>%
+  arrange(contri) %>%
+  mutate(symbol = as_factor(symbol)) 
+
+  
+top100_detract %>%
+  ggplot(aes(x = symbol, y = contri, fill = Weight)) +
+  geom_bar(stat = "identity") +
+  scale_y_continuous(breaks = seq(-0.2,0,0.0002),
+                     labels = scales::percent) +
+  theme_fivethirtyeight() +
+  theme(axis.text.x = element_text(angle = 45, size = 7)) +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold")),
+        legend.position = "top") +
+  ggtitle("Top Detractors from S&P 500 in 2018 as of August") +
+  labs(x = "", y = "Contribution to S&P") +
+  scale_fill_continuous(name = "Weight",
+                         labels = c("0", "1%", "2%", "3%", "4%"),
+                        low = "purple", high = "dark blue")
+
+
+```
+
+Here we can see that GE is the largest detractor this year, but there are also names such as Facebook, McDonalds, Exxon Mobile and Johnson and Johnson with negative contributions. 
+
+In conclusion, the S&P 500 is consolidating and still looking for a direction. It is range bound within 300 point or about 10% range. We are currently near the high end of the range. So far this year only a handful of companies have contributed to S&P 500's gains. In order for S&P 500 to break out we will need to see companies such as FB, JNJ, MCD, XOM, T etc to start moving higher. On the other had if AMZN, AAPL and Microsoft start moving lower then, breaking out of this range will be difficult.
+
+
+
+

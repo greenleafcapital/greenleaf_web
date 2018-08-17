@@ -162,7 +162,11 @@ spy_roc %>%
                                 "#99FF33",
                                 "#3399CC",
                                 "#33FFCC",
-                                "#3366FF")) +
+                                "#3366FF"),
+                     labels = c("Discretionary", "Staples", "Energy",
+                                "Financials", "Health Care", "Industrials",
+                                "Technology", "Materials", "Real Estate", "Telecom",
+                                "Utilities")) +
   ggtitle("S&P 500 Index Components 2018 as of August 16") +
   theme(panel.border = element_blank(),
         panel.grid = element_blank(),
@@ -217,7 +221,11 @@ spy_roc %>%
                                 "#99FF33",
                                 "#3399CC",
                                 "#33FFCC",
-                                "#3366FF")) +
+                                "#3366FF"),
+                     labels = c("Discretionary", "Staples", "Energy",
+                                "Financials", "Health Care", "Industrials",
+                                "Technology", "Materials", "Real Estate", "Telecom",
+                                "Utilities")) +
   ggtitle("S&P 500 Index Components 2018 as of August 16",
           subtitle = "Outperformers for S&P 500") +
   theme(panel.border = element_blank(),
@@ -278,7 +286,11 @@ spy_roc %>%
                                 "#99FF33",
                                 "#3399CC",
                                 "#33FFCC",
-                                "#3366FF")) +
+                                "#3366FF"),
+                     labels = c("Discretionary", "Staples", "Energy",
+                                "Financials", "Health Care", "Industrials",
+                                "Technology", "Materials", "Real Estate", "Telecom",
+                                "Utilities")) +
   ggtitle("S&P 500 Index Components 2018 as of August 16",
           subtitle = "Large Cap Negative performers for S&P 500") +
   theme(panel.border = element_blank(),
