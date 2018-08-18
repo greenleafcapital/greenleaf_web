@@ -3,7 +3,7 @@ title: "S&P 500 Analysis"
 output: html_document
 author: "Team Green"
 date: "2018-08-16"
-#cover: "fb_phone.jpg"
+cover: "s&p_aug18.png"
 categories:
   - Market
   - stock
