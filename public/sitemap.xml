@@ -79,13 +79,13 @@
   </url>
   
   <url>
-    <loc>/categories/bonds/</loc>
+    <loc>/tags/bonds/</loc>
     <lastmod>2018-08-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/bonds/</loc>
+    <loc>/categories/bonds/</loc>
     <lastmod>2018-08-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -97,13 +97,13 @@
   </url>
   
   <url>
-    <loc>/categories/currency/</loc>
+    <loc>/tags/currency/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/currency/</loc>
+    <loc>/categories/currency/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -115,25 +115,25 @@
   </url>
   
   <url>
-    <loc>/categories/fang/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/fang/</loc>
     <lastmod>2018-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/gld/</loc>
-    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
+    <loc>/categories/fang/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/gld/</loc>
+    <lastmod>2018-08-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/gld/</loc>
     <lastmod>2018-08-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -151,13 +151,13 @@
   </url>
   
   <url>
-    <loc>/categories/market/</loc>
+    <loc>/tags/market/</loc>
     <lastmod>2018-08-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/market/</loc>
+    <loc>/categories/market/</loc>
     <lastmod>2018-08-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -187,14 +187,14 @@
   </url>
   
   <url>
-    <loc>/categories/stocks/</loc>
-    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+    <loc>/tags/stocks/</loc>
+    <lastmod>2018-08-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/stocks/</loc>
-    <lastmod>2018-08-16T00:00:00+00:00</lastmod>
+    <loc>/categories/stocks/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

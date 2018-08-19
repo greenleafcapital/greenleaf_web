@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "Long Short"
+title = "Long Short Strategies"
 theme = "hugo-theme-hello-friend"
 copyright = ""
 paginate = 5
