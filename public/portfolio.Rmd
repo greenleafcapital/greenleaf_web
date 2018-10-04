@@ -1,26 +1,210 @@
 ---
-title: "Portfolio"
-output: html_document
-date: "2018-07-25"
+title: "Q3 2018 Portfolios Positions"
 author: "Team Green"
+date: "October 3, 2018"
+output:
+  html_document:
+    df_print: paged
 ---
 
-- AAPL
+```{r load-lib, warning=FALSE, message=FALSE, echo=FALSE, include=FALSE}
 
-- MSFT
+library(tidyquant)
+library(ggthemes)
+library(dygraphs)
+library(timetk)
+library(tibbletime)
+library(knitr)
+library(readxl)
+library(kableExtra)
+library(DT)
+library(rvest)
 
-- V
+```
 
-- HD
 
-- CSCO
+```{r setup, include=FALSE, message=FALSE,warning=FALSE}
 
-- INTC
+spx_ranking <- read_csv("~/Documents/greenleaf_data/Model/2018_Q3/Q3_2018_SP500_ranking.csv")
 
-- UNH
+dow_ranking <- read_csv("~/Documents/greenleaf_data/Model/2018_Q3/Q3_2018_Dow_ranking.csv")
 
-- NKE
+rus_ranking <- read_csv("~/Documents/greenleaf_data/Model/2018_Q3/Q3_2018_Russell1000_ranking.csv")
 
-- BA
+spx_tick <- spx_ranking %>%
+  select(symbol) %>%
+  .[[1]]
 
-- CAT
+dow_tick <- dow_ranking %>%
+  filter(Rank <= 10) %>%
+  select(symbol) %>%
+  .[[1]]
+
+rus_tick <- rus_ranking %>%
+  filter(Rank <= 50) %>%
+  select(symbol) %>%
+  .[[1]]
+
+options(digits = 2, scipen = 100)
+
+
+```
+
+
+```{r dow-price, message=FALSE,warning=FALSE,include=FALSE}
+
+dow_last <- vector("numeric", length = length(dow_tick))
+
+dow_name <- vector("character", length = length(dow_tick))
+
+for(i in seq_along(dow_tick)) {
+  
+  url <- read_html(paste("https://www.marketwatch.com/investing/stock/", dow_tick[i], sep = ""))
+  
+  dow_last[i] <- url %>%
+    html_nodes(".intraday__price .value") %>%
+    html_text()
+  
+  dow_name[i] <- url %>%
+    html_nodes(".company__name") %>%
+    html_text()
+}
+
+
+dow_tbl <- tibble(Symbol = dow_tick,
+                  Name = dow_name,
+                  price = parse_number(dow_last))
+
+dow_tbl <- dow_tbl %>%
+  mutate(qty = round(1000000/price, digits = -1)) %>%
+  mutate(Value = qty * price)
+
+```
+
+
+```{r rus-price, message=FALSE,warning=FALSE,include=FALSE}
+
+rus_last <- vector("numeric", length = length(rus_tick))
+
+rus_name <- vector("character", length = length(rus_tick))
+
+for(i in seq_along(rus_tick)) {
+  
+  url <- read_html(paste("https://www.marketwatch.com/investing/stock/", rus_tick[i], sep = ""))
+  
+  rus_last[i] <- url %>%
+    html_nodes(".intraday__price .value") %>%
+    html_text()
+  
+  rus_name[i] <- url %>%
+    html_nodes(".company__name") %>%
+    html_text()
+}
+
+
+rus_tbl <- tibble(Symbol = rus_tick,
+                  Name = rus_name,
+                  price = parse_number(rus_last))
+
+rus_tbl <- rus_tbl %>%
+  mutate(qty = round(200000/price, digits = -1)) %>%
+  mutate(Value = qty * price)
+
+```
+
+
+```{r spx-price, message=FALSE,warning=FALSE,include=FALSE}
+
+spx_last <- vector("numeric", length = length(spx_tick))
+
+spx_name <- vector("character", length = length(spx_tick))
+
+for(i in seq_along(spx_tick)) {
+  
+  url <- read_html(paste("https://www.marketwatch.com/investing/stock/", spx_tick[i], sep = ""))
+  
+  spx_last[i] <- url %>%
+    html_nodes(".intraday__price .value") %>%
+    html_text()
+  
+  spx_name[i] <- url %>%
+    html_nodes(".company__name") %>%
+    html_text()
+}
+
+
+spx_tbl <- tibble(Symbol = spx_tick,
+                  Name = spx_name,
+                  price = parse_number(spx_last))
+
+spx_tbl <- spx_tbl %>%
+  mutate(qty = round(200000/price, digits = -1)) %>%
+  mutate(Value = qty * price)
+
+```
+
+# Our Current Portfolios
+
+Starting this quarter we will publish the the list of our portfolios where we are investing our money. These portfolios are constructed for investors with different levels of risks and return objectives. We have initially invested \$10 million in each portfolio and we will monitor the progress as we go along. These portfolios were constructed on October 3rd 2018 and the purchase prices are from that day. We won't worry too much about the intraday movement of stock, but we will update the prices and performance of the portfolios on a timely basis.
+
+## Stocks from the Dow Jones Index
+
+The first portfolio is built by investing in the best stocks from the Dow Jones Industrial Average (DJIA). The relevant benchmark for this portfolio is DJIA, and we expect this portfolio to beat the index over the long term market cycle. At times the markets experience severe bear markets, when such an event occurs we may move the money into the safety of cash or bonds. 
+
+```{r dow-tbl,message=FALSE,warning=FALSE,echo=FALSE}
+
+dow_tbl %>%
+  arrange(Symbol) %>%
+  datatable(caption = "Dow Jones Portfolio",
+            class = "cell-border stripe",
+            colnames = c("Purchase Price" = 4,
+                         "Quantity" = 5,
+                         "Market Value" = 6))
+
+```
+
+As you can see this is a highly concentrated portfolio, but from our experience the volatility in this portfolio is similar to that of DJIA index.
+
+## Stocks from the S&P 500 Index
+
+The second portfolio is built by investing in the best stocks from the S&P 500. The relevant benchmark for this portfolio is SPX 500, and we expect this portfolio to beat the index over the long term market cycle. We will follow the same rule as above during the bear markets. This portfolio invests in 50 stocks and may offer better diversification for investors who prefer that.
+
+```{r spx-tbl,warning=FALSE,message=FALSE,echo=FALSE}
+
+spx_tbl %>%
+  arrange(Symbol) %>%
+  datatable(caption = "S&P 500 Portfolio",
+            class = "cell-border stripe",
+            colnames = c("Purchase Price" = 4,
+                         "Quantity" = 5,
+                         "Market Value" = 6))
+
+
+```
+
+## Stocks from the Russell 1000 Index
+
+The third portfolio is built by investing in the best stocks from the Russell 1000. The relevant benchmark for this portfolio is Russell 1000, and we expect this portfolio to beat the index over the long term market cycles. We will follow similar rule as above during the bear markets. This portfolio also invests in 50 stocks and may offer more diversification. Since this portfolio contains many Mid-Cap stocks, it has more volatility. This portfolio gives an opportunity to invest in stocks that may be overlook by the general investing public.
+
+```{r rus-tbl,warning=FALSE,message=FALSE,echo=FALSE}
+
+rus_tbl %>%
+  arrange(Symbol) %>%
+  datatable(caption = "Russell 1000 Portfolio",
+            class = "cell-border stripe",
+            colnames = c("Purchase Price" = 4,
+                         "Quantity" = 5,
+                         "Market Value" = 6))
+
+
+```
+
+## Conclusion
+
+In this article we wanted to show the names in our portfolio. We will discuss the individual names in the future articles. The above portfolios are constructed for investors with different risks and returns expectations. We will update any changes in the portfolio on a timely basis. We will also measure and compare the portfolio performance with their relevant benchmarks.
+
+
+
+*This is not an investment advice. Investing in the stock markets is risky. Please consult your Financial Advisor before investing with real money. If you want to learn then we suggest you open a fake paper money account and try your skills there.*
+
+

@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Long Short Strategies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Portfolio Positions</title>
+      <link>/post/portfolio-positions/</link>
+      <pubDate>Wed, 03 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/portfolio-positions/</guid>
+      <description>Our Current Portfolios Starting this quarter we will publish the the list of our portfolios where we are investing our money. These portfolios are constructed for investors with different levels of risks and return objectives. We have initially invested $10 million in each portfolio and we will monitor the progress as we go along. These portfolios were constructed on October 3rd 2018 and the purchase prices are from that day.</description>
+    </item>
     
     <item>
       <title>S&amp;P 500 Analysis</title>
