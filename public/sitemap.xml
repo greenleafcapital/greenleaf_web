@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>/post/gold-investor-s-lost-decade/</loc>
+    <lastmod>2018-09-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018-08-17-sp500_analysis/</loc>
     <lastmod>2018-08-16T00:00:00+00:00</lastmod>
   </url>
@@ -145,6 +150,18 @@
   <url>
     <loc>/categories/gld/</loc>
     <lastmod>2018-10-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gold/</loc>
+    <lastmod>2018-09-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/gold/</loc>
+    <lastmod>2018-09-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

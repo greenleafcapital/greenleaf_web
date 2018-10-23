@@ -1,0 +1,124 @@
+---
+title: Gold investor's lost decade
+author: Team Gree Leaf
+date: '2018-09-15'
+slug: gold-investor-s-lost-decade
+categories:
+  - gld
+  - gold
+tags:
+  - Gold
+---
+
+On September 15, 2008 investment bank Lehman Brothers announced bankruptcy. This event was the largest bankruptcy in US history and pushed the world economies in deep recessions. Today is the 10 year anniversary of this event. We wanted to reflect back on this event and see how the markets have performed since the bankruptcy in 2008.
+
+It was a tough time for investors and many panicked and sold their stock holdings. During the crisis many commentators and investors were recommending investment in gold. We wanted to answer the following questions:
+
+How has Gold performed since 2008 crisis?
+What if we could see the crisis ahead of us and invest in the following assets
+
+- Gold (GLD etf)
+- S&P 500 stocks (SPY etf)
+- Intermediate Bonds (AGG etf)
+
+Was Gold better than stocks and Bonds?
+
+In other words We wanted to see how an investor with \$100,000 in investment in these assets performed during these 10 years. Below we will measure the returns.
+
+```{r lib, message=FALSE,warning=FALSE,echo=FALSE}
+
+library(tidyquant)
+library(ggthemes)
+library(timetk)
+library(DT)
+
+```
+
+```{r price-data,message=FALSE,warning=FALSE,echo=FALSE}
+
+
+tickers <- c("AGG", "GLD", "SPY")
+
+price_data <- tq_get(tickers,
+                     from = "2007-12-02",
+                     to = "2018-09-15",
+                     get = 'stock.prices')
+
+
+```
+
+
+```{r returns-data,message=FALSE,warning=FALSE,echo=FALSE}
+
+ret_data <- price_data %>%
+  group_by(symbol) %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = 'monthly',
+               col_rename = 'ret')
+
+```
+
+
+```{r returns-data-annual,message=FALSE,warning=FALSE,echo=FALSE}
+
+ret_data_annual <- price_data %>%
+  group_by(symbol) %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = 'yearly',
+               col_rename = 'ret')
+
+```
+
+
+```{r annual-plot, message=FALSE,warning=FALSE,echo=FALSE}
+
+ret_data_annual %>%
+  filter(date > '2007-12-31') %>%
+  mutate(year = year(date)) %>%
+  ggplot(aes(x = year, y = ret, fill = symbol)) +
+  geom_bar(stat = 'identity', position = "dodge") +
+  theme_fivethirtyeight() +
+  ggtitle("Annual Returns for Gold, Bonds and Stocks \nsince 2008") +
+  scale_y_continuous(breaks = seq(-0.4,0.4,0.05),
+                     labels = scales::percent) +
+  labs(x = 'Year', y = "Returns", fill = "Asset") +
+  scale_fill_discrete(labels = c("Bonds", "Gold", "Stocks")) +
+  scale_x_continuous(breaks = seq(2007,2019,1))
+
+```
+
+We can see that stocks had a terrible year in 2008. Stocks however have bounced back since then in a big way and they never had a negative returns since then. Gold on the other hand had a great run for the 4 years after the bankruptcy. But since 2012, it has had a terrible run with 4 years of negative returns (2013,2014,2015 and 2018). Bonds on the other hand were less volatile and gave steady returns with a couple of years of negative returns.
+
+Now lets compare the growth of \$100,000 since 2008.
+
+```{r plot-growth,message=FALSE,warning=FALSE, echo=FALSE}
+
+ret_data %>%
+  mutate(ret = if_else(date == '2007-12-31', 0, ret)) %>%
+  mutate(cr = cumprod(1 + ret) * 100000) %>%
+  ggplot(aes(x = date, y = cr, color = symbol)) +
+  geom_line() +
+  theme_fivethirtyeight() +
+  ggtitle("Growth of $100,000 investment in Gold, Bonds and \nStocks since 2008") +
+  scale_y_continuous(labels = scales::dollar) +
+  labs(x = 'Year', y = "Returns", color = "Asset") +
+  scale_color_discrete(labels = c("Bonds", "Gold", "Stocks"))
+
+```
+
+
+The result is surprising to us. Over the last 10 years gold was the worst performing asset of the three. It performed worse than even the Aggregate Bonds. This was indeed a lost decade for the gold investors.
+
+After an initial burst of performance, gold gave up most of the gains. Gold is recommended during the financial crisis and we can see that gold did beat stocks for the first few years. But over the long term gold did not perform as well.
+
+After the crisis, the FED engaged in QE program, and at that time many in the financial media predicted run-away inflation and recommended Gold. Some even predicted that Gold could rally upto \$10,000 to \$50,000. It is surprising to us that after 10 years Gold did not manage to beat even bonds.
+
+Warren Buffett has always recommended stocks in favor of gold over the long term. He was right, at least for the last 10 years.
+
+
+
+
+
+
