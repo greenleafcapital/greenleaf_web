@@ -6,10 +6,21 @@
     <description>Recent content in Gld on Long Short Strategies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/gld/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Gold Trade update</title>
+      <link>/post/gold-trade-update/</link>
+      <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/gold-trade-update/</guid>
+      <description>On October 19, 2018 our Gold ETF options expired out of the money and as a result we lost our premium which was our maximum loss on the trade.
+We entered the trade on August 6, 2018 and chose October as our expiration month. When we entered the trade, GLD was trading around $114 and today is it around $116.
+Even though the price of GLD is above its price on August 6th, it is not high enough to be profitable.</description>
+    </item>
     
     <item>
       <title>Gold trade update</title>
