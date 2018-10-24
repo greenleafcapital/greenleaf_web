@@ -1,0 +1,120 @@
+---
+title: Mega Millions
+author: Team Green Leaf
+date: '2018-10-24'
+slug: mega-millions
+cover: "mega_millions.JPG"
+categories:
+  - lottery
+tags: []
+---
+
+It was lottery fever in America and the recent Mega Million lottery jackpot grew to almost \$1.6 billion. Its the largest jackpot in the lottery's history. The winning numbers were drawn yesterday, and the winner is from North Carolina. We may not know who the winner is since North Carolina's law allows lottery winners to stay anonymous.
+
+The number \$1.6 billion may sound a lot (and it is), after all this person(s), will be 1477th richest in the world according to Forbes ranking. Before this person goes out an orders the biggest yacht, he/she should consider the "true" prize money they would receive.
+
+The Mega Millions lottery gives you two choices, either a lump sum payment or yearly annuity payments. The latest lump-sum payment was \$908 million. Right away you are "poorer" by almost \$700 million before even paying a dime to various tax authorities. You may ask how can this be? Well this is because of the present value calculations. You see the \$1.6 Billion dollars is payable in yearly payments over the next 30 years. So you don't get the whole \$1.6 billion in one go, but you get them over the next 30 years. 
+
+Well you may ask what are the yearly payments. The lottery's website divides the payments in such a way that year each the value of payments goes up by 5% to keep up with inflation. So we dividend the \$1.6 billion into 30 payments that increase by 5% each year and calculated the approximate value of each payment for each year.
+
+```{r lib,message=FALSE,warning=FALSE,echo=FALSE}
+
+library(tidyquant)
+library(ggthemes)
+library(jrvFinance)
+library(FinCal)
+library(DT)
+
+```
+
+```{r pmt,message=FALSE,warning=FALSE,echo=FALSE}
+
+pmt <- vector('numeric', length = 30)
+pmt[1] <- 22.6115
+
+
+for (i in seq_along(pmt)) {
+  pmt[[i + 1]] <- pmt[[i]] * 1.05
+}
+
+rate <- 0.0285
+
+pmt <- pmt[-31]
+
+pv_tbl <- tibble(Year = 1:30,
+                 Payment = pmt * 1000000)
+
+pv_tbl %>%
+  datatable(caption = "Yearly Payments for $1.6 Billion option", rownames = FALSE) %>%
+  formatCurrency("Payment", currency = "$")
+
+
+
+```
+
+```{r pmt-chart, message=FALSE,warning=FALSE,echo=FALSE}
+
+pv_tbl %>%
+  ggplot(aes(x = Year, y = Payment)) +
+  geom_bar(stat = 'identity', fill = '#CC79A7', color = 'black') +
+  scale_y_continuous(labels = scales::dollar,
+                     breaks = seq(0,100000000,10000000)) +
+  scale_x_continuous(breaks = seq(1,30,1)) +
+  labs(x = 'Year', y = 'Payments') +
+  ggtitle('Annual Payments for $1.6 Billion lottery winner') +
+  theme_classic()
+
+```
+
+
+
+Right away from the table you can see that the first payment will be about \$22.6 million and the last payment in year 30 is about \$93 million. This is far less than the \$1.6 Billion one might have hoped to get right away. But we still haven't paid the taxes on the lottery. The Federal government and the state/city will want their share. 
+
+Since the winner lives in North Carolina, he/she is liable to pay 5.5% state tax and 37% Federal Tax for a total of 42.5%. Assuming the taxes stay the same, lets calculate the yearly payment after deducting the taxes.
+
+
+```{r pmt-aft-tax,message=FALSE,warning=FALSE,echo=FALSE}
+
+pv_tbl %>%
+  mutate(aft_tax = Payment * 0.575) %>%
+  datatable(caption = "Yearly Payments for $1.6 Billion option", rownames = FALSE,
+            colnames = c("After Tax Payment" = "aft_tax")) %>%
+  formatCurrency("Payment", currency = "$") %>%
+  formatCurrency("After Tax Payment", currency = "$")
+
+```
+
+Now the first payment after paying taxes is down to \$13 million and increases to about \$53.5 million in year 30. While \$13 million per year (more than a million per month after taxes) is a lot of money (average CEO at a large firm gets paid about \$15 million before tax), but it is not as high as you may have imagined. So hold on, before calling Boeing to order your own private jet, they cost more than \$100 million per unit.
+
+Finally lets calculate how the Mega Million authorities may have come up with their lump-sum payment option. As we mentioned above the lump sum payment was about \$908 million. One may ask why is lump sum payment smaller than \$1.6 billion. That's a good question and even if you don't know anything about finance, you may have heard "A bird in hand is more than two in the bush" or as Poor Richard said "One today is worth two tomorrow."
+
+Since you get the lump sum payment today, the value is lower than the 30 year annual payment. But how do they come up with a payment of \$908 million?
+
+To calculate this we need to assume that the rate of interest used by the lottery authorities is about 2.83% per year. We will use this interest rate to calculate the present value of the payments mentioned above.
+
+```{r pv-calc,message=FALSE,warning=FALSE,echo=FALSE}
+
+int_rate <- 0.02827
+
+pv_tbl %>%
+  mutate(pv = Payment/(1 + int_rate)^Year) %>%
+  datatable(caption = "Present value of Yearly Payments for $908 million lump sum option", rownames = FALSE,
+            colnames = c("Present Value" = "pv")) %>%
+  formatCurrency("Payment", currency = "$") %>%
+  formatCurrency("Present Value", currency = "$")
+  
+
+```
+
+If you sum the present value, it will be close to \$908 million. 
+
+The lump sump payment of \$908 million will also result in a tax liability of about 42.5%. Hence the after tax value of the lump sum payment is about \$522 million. That is approximately the amount the lottery winner may be able to deposit in the bank today.
+
+Now that is a big pay day!
+
+Which option one chooses depends on his or her personality. If you are responsible with your money you may wish to take the first \$100 million to satisfy all the "Help wanted" knocks you will get on your door. You can take the second \$100 million and invest it in high quality long term Muni Bonds that pay tax free 4% and make a cool \$4 million per year to live a comfortable life. Then put rest of the money in growth assets such as stocks. By doing that, not only have you helped the people close to you, you have also manged a steady income and set your children/grandchildren's future in order.
+
+But if you are not good at handling money and may get tempted to blow it all up on jets, yacht and villas, then choose the annual payment option and let the government invest your money on your behalf. It will also be a good excuse to tell your "friends" that you only received about \$13 million per year. Good luck making them believe it!
+
+Congratulations to the winner and good luck to all in trying to beat the minuscule odds of winning the lottery.
+

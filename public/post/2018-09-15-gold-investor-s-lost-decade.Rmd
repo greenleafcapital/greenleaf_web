@@ -3,6 +3,7 @@ title: Gold investor's lost decade
 author: Team Gree Leaf
 date: '2018-09-15'
 slug: gold-investor-s-lost-decade
+cover: "plot-growth-1.png"
 categories:
   - gld
   - gold
