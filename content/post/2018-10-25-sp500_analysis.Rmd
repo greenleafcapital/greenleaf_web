@@ -358,7 +358,7 @@ top100_detract <- spy_roc %>%
   ungroup() %>%
   mutate(Weight = Weight/100) %>%
   mutate(contri = Weight * ROC) %>%
-  filter(contri <= -0.00015) %>%
+  filter(contri <= -0.00025) %>%
   arrange(contri) %>%
   mutate(symbol = as_factor(symbol)) 
 
