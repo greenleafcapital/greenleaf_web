@@ -76,7 +76,7 @@ spy_etf_price %>%
 
 ```
 
-As we can see that October saw a severe fall in stock market price. We lost almost 10% and wiped off all the gains for the year. AS you October 25, 2018 S&P 500 was negative for the year.
+As we can see that October saw a severe fall in stock market price. We lost almost 10% and wiped off all the gains for the year. 
 
 Next we can take a look under the hood and see how different S&P 500 components have been performing this year.
 
@@ -184,7 +184,7 @@ spy_roc %>%
 ```
 
 
-We can see from the chart Amazon, Microsoft and Apple have above 3% weighting in the S&P 500. All three stocks are outperforming the market as a whole. We can see that Amazon and Netflix are both up nearly 60% this year. The other best performing stocks so far this year are Abiomed, AMD, Netflix, Advanced Auto parts, and Netflix.
+We can see from the chart Amazon, Microsoft and Apple have above 3% weighting in the S&P 500. All three stocks are outperforming the market as a whole. We can see that Amazon and Netflix are both up nearly 60% this year. The other best performing stocks so far this year are Abiomed, Advanced Micro Devices, Netflix, Advanced Auto parts, and Netflix.
 
 There are many other small cap stocks that are outperforming this year which are not visible in this chart. We can zoom on that area to find out those stocks.
 
