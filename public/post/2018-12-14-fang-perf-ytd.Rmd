@@ -4,7 +4,7 @@ author: 'Team Green'
 date: '2018-12-14'
 slug: FANG
 description: "FANG Performance"
-cover:
+cover: "spy-veu.png"
 categories:
   - fang
   - stocks
