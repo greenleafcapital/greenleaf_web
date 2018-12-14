@@ -1,0 +1,213 @@
+---
+title: "World Markets"
+author: 'Team Greenleaf'
+date: '2018-12-14'
+slug: World Markets
+description: "World Markets Performance for 2018"
+cover:
+categories:
+  - Markets
+  - stocks
+tags:
+  - World
+  - Markets
+  - stocks
+---
+
+
+```{r perf, message=FALSE,warning=FALSE,echo=FALSE}
+
+library(tidyquant)
+library(timetk)
+library(ggthemes)
+library(DT)
+library(knitr)
+library(kableExtra)
+
+```
+
+## Market Review 2018
+
+We began this year on a high note. Markets around the world rallied 7 to 8% in January. But February saw a quick 10% correction. Since then the stock markets have mostly gone sideways. But the volatility has increased a lot in the last few weeks.
+
+Below are some reasons for the sideways market
+
+### Trade wars 
+
+Since Donald Trump took control of the White House he had been eager to reduce the US trade deficits. He wanted to put tariffs on other countries. This policy was not supported by most economist, but Trump with a tweet commenced the trade wars. In March, Trump tweeted "Trade wars are good and easy to win". Well he got his trade war, but so far there is no win. In our view tariffs are an indirect tax on the consumer. If Trump puts a 15% tariff on BMW, then BMW increases the price on its cars by 15% and passes the cost to the customer. This also hurts exporting economies such as South Korea and Germany since their goods are now more expensive. In the end trade wars hurt the US consumers and foreign exporters. Its a lose-lose situation. Recently Trump met Xi at the G20 meeting. Trade was the major discussion, and China agreed to lower tariffs on cars and said that they will allow foreign companies more access in its vision 2025 plan. Trump on the other hand gave China 90 day deadline to sort things out. Leading the trade talks for the US side is Robert Lighthizer, he has been a big China bear and more skeptical of China and its intentions. On top of that, Canada recently arrested the CFO Huawei in Vancouver, on behalf of America. US has accused the CFO of bank fraud and selling technology parts to Iran. This was an important development and sent shock waves around the world. Huawei is the most important company in China and the CFO is the daughter of Huawei's founder and has close ties to the Chinese government. Many US executives are now fearful of traveling to China to do business, as they could also get arrested in retaliation. This could have major disruptions in the Global trade.
+
+### Fed interest rates hike
+
+Since 2015 the FED has started hiking interest rates. During the financial crisis, the FED Funds rate were 0% and today they are at 2.25%. The FED is expected to do one more rate hike this year (we will find out on December 19th). They were indicating 4 hikes in 2019. On October 4th, FED chair Jerome Powell gave a speech where he said that the neutral rate (FEDs target interest rates) were "a long way away". This caused a drop of 6% in October. Since then Powell seemed to have walked back on this statement, and indicated that rates are "just below neutral rates" and this made the markets rally, but this rally fizzled away on the new of the CFO arrest. So we have a perfect storm of geopolitical issues and FED's tightening policy. But there are now indications that the FED might now hike the rates next year, given the weakness in the recent days. Is it too late, and are we going into recession in 2019/2020. These will be important issue going into next year.
+
+One of the major indication of this sell off was the early summer divergence between the US stocks and the FTSE All world stocks Ex US stocks index. Below we can see how their relationship broke in May. 
+
+```{r spy-veu,message=FALSE,warning=FALSE,cache=TRUE, echo=FALSE}
+
+spy_veu <- read_csv("E:/Documents/greenleaf_web_data/spy_veu.csv")
+
+spy_veu %>%
+  filter(date >= "2017-10-01") %>%
+  filter(symbol != "AGG") %>%
+  group_by(symbol) %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = "daily",
+               col_rename = "ret") %>%
+  mutate(cr = cumprod(1 + ret)) %>%
+  mutate(cr = cr-1) %>%
+  ggplot(aes(x = date, y = cr, color = symbol)) +
+  geom_line() + 
+  scale_x_date(date_breaks = "months",
+               date_labels = "%b") +
+  scale_y_continuous(breaks = seq(-0.2,0.25,0.05),
+                     labels = scales::percent) +
+  ggtitle("S&P 500 vs International stocks Performance \nsince Oct 2017",
+          subtitle = "As we can see since since May 2018 international stocks have gone down
+and S&P 500 has continued to go sideways") +
+  labs(x = "Date", y = "Returns") +
+  theme_economist() +
+  scale_color_discrete(name = "Assets",
+                       labels = c("S&P 500", "International Stocks")) 
+  
+
+```
+
+After the summer of 2018 S&P 500 continued to rally but the rest of the kept drifting lower.
+Next we will look at the overall performance of major markets around the world.
+
+
+```{r load-file,message=FALSE,warning=FALSE,cache=TRUE, echo=FALSE}
+
+price_data <- read_csv("E:/Documents/greenleaf_web_data/price_data_Jan2017.csv")
+
+```
+
+
+## Major Asset Returns for 2018
+
+
+```{r perf-rettable,message=FALSE,warning=FALSE, echo=FALSE}
+
+price_data %>%
+  group_by(symbol, Name) %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = 'yearly',
+               col_rename = 'ret') %>%
+  ungroup(symbol, Name) %>%
+  filter(date == "2018-12-12") %>%
+  mutate(symbol = as_factor(symbol),
+         Name = as_factor(Name)) %>%
+  arrange(desc(ret)) %>%
+  select(Name,ret) %>%
+  rename(`Percent Returns` = ret) %>%
+  mutate(`Percent Returns` = `Percent Returns` * 100) %>%
+  kable(digits = 2) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = "hover")
+
+```
+
+
+## Asset Class Performance Chart
+
+```{r perft,message=FALSE,warning=FALSE, echo=FALSE, fig.height=5,fig.width=8}
+
+
+price_data %>%
+  group_by(symbol, Name) %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = 'yearly',
+               col_rename = 'ret') %>%
+  ungroup(symbol, Name) %>%
+  filter(date == "2018-12-12") %>%
+  mutate(symbol = as_factor(symbol),
+         Name = as_factor(Name)) %>%
+  mutate(Name = fct_reorder(Name,ret)) %>%
+  ggplot(aes(x = Name, y = ret)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.65) +
+  coord_flip() +
+  scale_y_continuous(labels = scales::percent, breaks = seq(-0.35, 1, .05)) +
+  theme_bw() +
+  theme(text = element_text(size = 8)) +
+  ggtitle('2018 YTD Performance for Various Asset Classes') +
+  labs(x = '', y = 'Returns %')
+
+```
+
+
+Its clear from the table and chart above, that 2018 was not a good year for investors. We saw negative returns across several asset classes. South Korea and Germany had the worst performance of all. We can see that most Asian and European stocks were hurt this year. S&P 500 on the other hand is flat. We can also see that bonds were also down or flat. 
+
+
+```{r sector,message=FALSE,warning=FALSE, echo=FALSE, fig.height=5,fig.width=8}
+
+sector_price <- read_csv("E:/Documents/greenleaf_web_data/sector_price.csv")
+
+sector_price %>%
+  group_by(symbol, Name) %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = "yearly",
+               col_rename = "ret") %>%
+  ungroup() %>%
+  mutate(Name = str_replace_all(.$Name,pattern = "SPDR ",replacement =  "")) %>%
+  filter(date == "2018-12-12") %>%
+  mutate(Name = as_factor(Name)) %>%
+  mutate(Name = fct_reorder(Name,ret)) %>%
+  ggplot(aes(x = Name, y = ret)) +
+  geom_bar(stat = "identity", position = "dodge", width = 0.65) +
+  coord_flip() +
+  scale_y_continuous(labels = scales::percent, breaks = seq(-0.35, 1, .05)) +
+  theme_bw() +
+  theme(text = element_text(size = 8)) +
+  ggtitle('2018 YTD Performance for US Stock Markets') +
+  labs(x = '', y = 'Returns %')
+  
+
+```
+
+Looking at the above chart we can see that recession proof sectors such as health care and utilities were the best performers and cyclical sectors such as energy, material, industrials suffered as a result of the trade war. NASDAQ and tech sector managed to stay positive but, they were up almost 20% at the end of September. Next we will look at individual names.
+
+```{r sector-perf, message=FALSE, warning=FALSE, echo=FALSE}
+
+abv_50_price <- read_csv("E:/Documents/greenleaf_web_data/abv_50.csv")
+
+abv_50_price %>%
+  group_by(symbol, Name, Sector) %>%
+  filter(date >= "2018-01-01") %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = 'yearly',
+               col_rename = 'ret') %>%
+  mutate(ret = ret * 100) %>%
+  arrange(desc(ret)) %>%
+  select(-date) %>%
+  rename(Symbol = symbol,
+         Returns = ret) %>%
+  kable(digits = 2, caption = "2018 Performance for Companies above $50 Billion Market Cap") %>%
+  kable_styling(full_width = FALSE,
+                latex_options = "scale_down")
+
+```
+
+```{r abv50-chart,message=FALSE,warning=FALSE,echo=FALSE}
+
+abv_50_price %>%
+  group_by(symbol, Name, Sector) %>%
+  filter(date >= "2018-01-01") %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = 'yearly',
+               col_rename = 'ret') %>%
+  ungroup() %>%
+  mutate(symbol = as_factor(symbol)) %>%
+  mutate(symbol = fct_reorder(symbol,ret)) %>%
+  ggplot(aes(x = symbol, y = ret)) +
+  geom_bar(stat = "identity", size = 0.6) +
+  coord_flip() +
+  theme_bw() +
+  theme(text = element_text(size = 8))
+
+```
+
