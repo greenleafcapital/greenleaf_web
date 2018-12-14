@@ -4,7 +4,7 @@ author: 'Team Greenleaf'
 date: '2018-12-14'
 slug: World Markets
 description: "World Markets Performance for 2018"
-cover:
+cover: "spy-veu.png"
 categories:
   - Markets
   - stocks
