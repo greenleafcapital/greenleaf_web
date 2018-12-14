@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Long Short Strategies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>FANG Stocks</title>
+      <link>/post/fang/</link>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/fang/</guid>
+      <description>FAANG stock performance since October 1, 2018. We have seen major losses since October 2018.</description>
+    </item>
     
     <item>
       <title>Red October</title>
@@ -48,7 +57,7 @@ Even though the price of GLD is above its price on August 6th, it is not high en
       <pubDate>Wed, 03 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/portfolio-positions/</guid>
-      <description>Our Current Portfolios Starting this quarter we will publish the the list of our portfolios where we are investing our money. These portfolios are constructed for investors with different levels of risks and return objectives. We have initially invested $10 million in each portfolio and we will monitor the progress as we go along. These portfolios were constructed on October 3rd 2018 and the purchase prices are from that day.</description>
+      <description>Our Current PortfoliosStarting this quarter we will publish the the list of our portfolios where we are investing our money. These portfolios are constructed for investors with different levels of risks and return objectives. We have initially invested $10 million in each portfolio and we will monitor the progress as we go along. These portfolios were constructed on October 3rd 2018 and the purchase prices are from that day.</description>
     </item>
     
     <item>
@@ -86,7 +95,7 @@ We can see from the chart that the S&amp;amp;P 500 is up about 6.5% since Januar
       <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/turkey-currency/</guid>
-      <description>Turkey Currency crisis The emerging markets are spiraled into chaos and crisis and leading the way is Turkey. The country has been tackling one crisis after another. In 2016 the there was an attempt of military coup which was put down by the people of Turkey. Since then the current president of Turkey Erdogan has consolidated his hold at the top. He has purged many opponents and the recent elections has emboldened his hold at the top.</description>
+      <description>Turkey Currency crisisThe emerging markets are spiraled into chaos and crisis and leading the way is Turkey. The country has been tackling one crisis after another. In 2016 the there was an attempt of military coup which was put down by the people of Turkey. Since then the current president of Turkey Erdogan has consolidated his hold at the top. He has purged many opponents and the recent elections has emboldened his hold at the top.</description>
     </item>
     
     <item>
@@ -147,7 +156,7 @@ This is the worst one day performance for Facebook since its IPO. After its IPO 
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/post/int_rates/</guid>
-      <description>How do interest rates affect Market Valuations? It has been said many times that it is impossible to predict a bear market. Many on Wall Street spend enormous amount of time and money on this very activity. Although it may be difficult to predict the bear market one can evaluate the conditions that could lead to a bear market. What do I mean by that?
+      <description>How do interest rates affect Market Valuations?It has been said many times that it is impossible to predict a bear market. Many on Wall Street spend enormous amount of time and money on this very activity. Although it may be difficult to predict the bear market one can evaluate the conditions that could lead to a bear market. What do I mean by that?
 Lets imagine a bridge that carries thousands of vehicles across from one end to another.</description>
     </item>
     
