@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/world-markets/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018-10-25-sp500_analysis/</loc>
     <lastmod>2018-10-25T00:00:00+00:00</lastmod>
   </url>
@@ -211,6 +216,18 @@
   </url>
   
   <url>
+    <loc>/tags/markets/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/markets/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/metal/</loc>
     <lastmod>2018-10-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -279,6 +296,12 @@
   <url>
     <loc>/tags/turkey/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/world/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

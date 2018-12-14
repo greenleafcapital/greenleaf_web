@@ -191,23 +191,5 @@ abv_50_price %>%
 
 ```
 
-```{r abv50-chart,message=FALSE,warning=FALSE,echo=FALSE}
 
-abv_50_price %>%
-  group_by(symbol, Name, Sector) %>%
-  filter(date >= "2018-01-01") %>%
-  tq_transmute(select = adjusted,
-               mutate_fun = periodReturn,
-               period = 'yearly',
-               col_rename = 'ret') %>%
-  ungroup() %>%
-  mutate(symbol = as_factor(symbol)) %>%
-  mutate(symbol = fct_reorder(symbol,ret)) %>%
-  ggplot(aes(x = symbol, y = ret)) +
-  geom_bar(stat = "identity", size = 0.6) +
-  coord_flip() +
-  theme_bw() +
-  theme(text = element_text(size = 8))
-
-```
 
