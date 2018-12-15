@@ -69,13 +69,13 @@ The FED was engagaged in the increasing its short term interest rates, initially
 As the economies around the world starts slowing down, the financial stocks have started feeling the pain. Whether it turns into a full blown crisis remains to be seen.
 
 
-```{r bank-prices}
+```{r bank-prices,message=FALSE,warning=FALSE,echo=FALSE}
 
 bank_prices <- read_csv("E:/Documents/greenleaf_web_data/bank_prices.csv")
 
 ```
 
-```{r banks-chart}
+```{r banks-chart,message=FALSE,warning=FALSE,echo=FALSE}
 
 bank_prices %>%
   filter(sector %in% c("Banks", "Capital Markets")) %>%
