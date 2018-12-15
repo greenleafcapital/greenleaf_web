@@ -1,0 +1,65 @@
+---
+title: "World Banks"
+author: 'Team Greenleaf'
+date: '2018-12-14'
+slug: World Banks
+description: "Major World Financials Performance for 2018"
+cover: "fin-dec14.png"
+categories:
+  - Markets
+  - stocks
+  - Banks
+tags:
+  - World
+  - Markets
+  - stocks
+---
+
+
+
+<p>The US stocks market are in a coorection territory now. They are down more than 10% in the last two months. One of the major sectors has been trending lower throughout 2018. The financials sector is in a bear market. The major banks around the world are looking weak. Initially investors dismissed these concerns as company specific. Goldman Sachs was tangled in the 1MDB scandal. Then there European banks such as Deutche Bank and Credit Suisse. Their stocks are down more than 30% in 2018. Deutche Bank has some serious fundamental issues.</p>
+<p>First we begin by looking at the performance of the Financial Sector since 2007.</p>
+<p><img src="/post/2018-12-14-financials_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>During the 2007/2008 Housing bust, financial stocks saw cumulative returns of 80% from 2007 to 2009. The FED engaged in reducing the interest rates, the US government bailed out the troubled banks with its TARP program. These measures helped the big banks recover from their losses and today they are bigger than they were before the financial crisis.</p>
+<p>We also see that the election of Donald Trump to the White House turned out to be beneficial to the banks (we can see a vertical line in Nov 2016).</p>
+<p>The FED was engagaged in the increasing its short term interest rates, initially these measures along with Trump’s deregulation policies proved beneficial to banks.</p>
+<p>As the economies around the world starts slowing down, the financial stocks have started feeling the pain. Whether it turns into a full blown crisis remains to be seen.</p>
+<pre class="r"><code>bank_prices &lt;- read_csv(&quot;E:/Documents/greenleaf_web_data/bank_prices.csv&quot;)</code></pre>
+<pre><code>## Parsed with column specification:
+## cols(
+##   symbol = col_character(),
+##   Name = col_character(),
+##   Mkt = col_integer(),
+##   sector = col_character(),
+##   date = col_date(format = &quot;&quot;),
+##   open = col_double(),
+##   high = col_double(),
+##   low = col_double(),
+##   close = col_double(),
+##   volume = col_integer(),
+##   adjusted = col_double()
+## )</code></pre>
+<pre><code>## Warning in rbind(names(probs), probs_f): number of columns of result is not
+## a multiple of vector length (arg 1)</code></pre>
+<pre><code>## Warning: 5 parsing failures.
+## row # A tibble: 5 x 5 col     row col    expected          actual file                               expected   &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;             &lt;chr&gt;  &lt;chr&gt;                              actual 1  1184 volume no trailing char~ .6e+07 &#39;E:/Documents/greenleaf_web_data/~ file 2  2342 volume no trailing char~ e+05   &#39;E:/Documents/greenleaf_web_data/~ row 3  6346 volume no trailing char~ e+05   &#39;E:/Documents/greenleaf_web_data/~ col 4 11667 volume no trailing char~ e+05   &#39;E:/Documents/greenleaf_web_data/~ expected 5 14780 volume no trailing char~ e+05   &#39;E:/Documents/greenleaf_web_data/~</code></pre>
+<pre class="r"><code>bank_prices %&gt;%
+  filter(sector %in% c(&quot;Banks&quot;, &quot;Capital Markets&quot;)) %&gt;%
+  group_by(symbol,Name) %&gt;%
+  filter(date &gt; &#39;2017-12-31&#39;) %&gt;%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = &quot;yearly&quot;,
+               col_rename = &#39;ret&#39;) %&gt;%
+  ungroup() %&gt;%
+  mutate(Name = as_factor(Name)) %&gt;%
+  mutate(Name = fct_reorder(Name,ret)) %&gt;%
+  ggplot(aes(x = Name, y = ret)) +
+  geom_bar(stat = &#39;identity&#39;, position = &quot;dodge&quot;, width = 0.6) +
+  scale_y_continuous(breaks = seq(-0.8,0.9,0.1),
+                     labels = scales::percent) +
+  coord_flip() +
+  theme_calc() +
+  theme(text = element_text(size = 8)) +
+  labs(x = &quot;&quot;, y = &quot;Returns&quot;)</code></pre>
+<p><img src="/post/2018-12-14-financials_files/figure-html/banks-chart-1.png" width="672" /></p>

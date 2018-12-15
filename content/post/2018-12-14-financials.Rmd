@@ -1,0 +1,101 @@
+---
+title: "World Banks"
+author: 'Team Greenleaf'
+date: '2018-12-14'
+slug: World Banks
+description: "Major World Financials Performance for 2018"
+cover: "fin-dec14.png"
+categories:
+  - Markets
+  - stocks
+  - Banks
+tags:
+  - World
+  - Markets
+  - stocks
+---
+
+```{r perf, message=FALSE,warning=FALSE,echo=FALSE}
+
+library(tidyquant)
+library(timetk)
+library(ggthemes)
+library(DT)
+library(knitr)
+library(kableExtra)
+
+```
+
+The US stocks market are in a coorection territory now. They are down more than 10% in the last two months. One of the major sectors has been trending lower throughout 2018. The financials sector is in a bear market. The major banks around the world are looking weak. Initially investors dismissed these concerns as company specific. Goldman Sachs was tangled in the 1MDB scandal. Then there European banks such as Deutche Bank and Credit Suisse. Their stocks are down more than 30% in 2018. Deutche Bank has some serious fundamental issues. 
+
+
+```{r xlf-price,message=FALSE,warning=FALSE,echo=FALSE}
+
+xlf_price <- read_csv("E:/Documents/greenleaf_web_data/xlf_prices_Dec142018.csv")
+
+xlf_ret <- xlf_price %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = "monthly",
+               col_rename = "ret")
+
+```
+
+First we begin by looking at the performance of the Financial Sector since 2007.
+
+```{r,message=FALSE,warning=FALSE,echo=FALSE}
+
+xlf_ret %>%
+  filter(date >= '2007-01-01') %>%
+  mutate(cr = cumprod(1 + ret)) %>%
+  mutate(cr = cr - 1) %>%
+  ggplot(aes(x = date, y = cr)) +
+  geom_line() +
+  scale_y_continuous(breaks = seq(-0.9,5,0.10),
+                     labels = scales::percent) +
+  theme_pander() +
+  ggtitle("The performance Financial ETF XLF since the peak \nof the Financial Crisis") +
+  labs(x = "Date", y = "Cumulative Returns")
+
+```
+
+
+During the 2007/2008 Housing bust, financial stocks saw cumulative returns of 80% from 2007 to 2009. The FED engaged in reducing the interest rates, the US government bailed out the troubled banks with its TARP program. These measures helped the big banks recover from their losses and today they are bigger than they were before the financial crisis.
+
+We also see that the election of Donald Trump to the White House turned out to be beneficial to the banks (we can see a vertical line in Nov 2016). 
+
+The FED was engagaged in the increasing its short term interest rates, initially these measures along with Trump's deregulation policies proved beneficial to banks.
+
+As the economies around the world starts slowing down, the financial stocks have started feeling the pain. Whether it turns into a full blown crisis remains to be seen.
+
+
+```{r bank-prices}
+
+bank_prices <- read_csv("E:/Documents/greenleaf_web_data/bank_prices.csv")
+
+```
+
+```{r banks-chart}
+
+bank_prices %>%
+  filter(sector %in% c("Banks", "Capital Markets")) %>%
+  group_by(symbol,Name) %>%
+  filter(date > '2017-12-31') %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = "yearly",
+               col_rename = 'ret') %>%
+  ungroup() %>%
+  mutate(Name = as_factor(Name)) %>%
+  mutate(Name = fct_reorder(Name,ret)) %>%
+  ggplot(aes(x = Name, y = ret)) +
+  geom_bar(stat = 'identity', position = "dodge", width = 0.6) +
+  scale_y_continuous(breaks = seq(-0.8,0.9,0.1),
+                     labels = scales::percent) +
+  coord_flip() +
+  theme_calc() +
+  theme(text = element_text(size = 8)) +
+  labs(x = "", y = "Returns")
+
+```
+

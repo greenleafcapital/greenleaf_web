@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/post/world-banks/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/world-markets/</loc>
     <lastmod>2018-12-14T00:00:00+00:00</lastmod>
   </url>
@@ -114,8 +119,8 @@
   </url>
   
   <url>
-    <loc>/tags/bonds/</loc>
-    <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+    <loc>/categories/banks/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -126,19 +131,25 @@
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>/tags/bonds/</loc>
     <lastmod>2018-08-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/currency/</loc>
-    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <loc>/categories/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/currency/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/currency/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -150,20 +161,14 @@
   </url>
   
   <url>
-    <loc>/tags/fang/</loc>
-    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/fang/</loc>
     <lastmod>2018-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/gld/</loc>
-    <lastmod>2018-10-19T00:00:00+00:00</lastmod>
+    <loc>/tags/fang/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -174,13 +179,19 @@
   </url>
   
   <url>
-    <loc>/tags/gold/</loc>
-    <lastmod>2018-09-15T00:00:00+00:00</lastmod>
+    <loc>/tags/gld/</loc>
+    <lastmod>2018-10-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/gold/</loc>
+    <lastmod>2018-09-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/gold/</loc>
     <lastmod>2018-09-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -204,25 +215,25 @@
   </url>
   
   <url>
-    <loc>/tags/market/</loc>
-    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/market/</loc>
     <lastmod>2018-10-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/markets/</loc>
-    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+    <loc>/tags/market/</loc>
+    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/markets/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/markets/</loc>
     <lastmod>2018-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -234,13 +245,13 @@
   </url>
   
   <url>
-    <loc>/tags/portfolio/</loc>
+    <loc>/categories/portfolio/</loc>
     <lastmod>2018-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/portfolio/</loc>
+    <loc>/tags/portfolio/</loc>
     <lastmod>2018-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -264,13 +275,13 @@
   </url>
   
   <url>
-    <loc>/tags/stocks/</loc>
+    <loc>/categories/stocks/</loc>
     <lastmod>2018-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/stocks/</loc>
+    <loc>/tags/stocks/</loc>
     <lastmod>2018-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
