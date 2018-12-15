@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/home-builders/</loc>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018-12-14-fang-perf-ytd/</loc>
     <lastmod>2018-12-14T00:00:00+00:00</lastmod>
   </url>
@@ -197,6 +202,18 @@
   </url>
   
   <url>
+    <loc>/tags/home-builders/</loc>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/home-builders/</loc>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/ideas/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -204,7 +221,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -228,13 +245,13 @@
   
   <url>
     <loc>/tags/markets/</loc>
-    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/markets/</loc>
-    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -258,7 +275,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -276,13 +293,13 @@
   
   <url>
     <loc>/tags/stocks/</loc>
-    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/stocks/</loc>
-    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

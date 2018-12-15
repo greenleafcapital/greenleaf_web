@@ -1,0 +1,168 @@
+---
+title: "Home builders stocks"
+author: 'Team Greenleaf'
+date: '2018-12-15'
+slug: Home builders
+description: "Home builders carnage in 2018. These stocks are in a bear market. Is this an opportunity or should we stay away."
+cover: "housing-sector.png"
+categories:
+  - Markets
+  - stocks
+  - Home Builders
+tags:
+  - Home Builders
+  - Markets
+  - stocks
+---
+
+2018 has not been a good year for equities. One sector in particular has come under enormous pressure. Home builder stocks are now firmly into bear market. In this article we will try to analyze this sector and see if there is an opportunity to invest or stay away from these stocks.
+
+```{r load-lib,message=FALSE,warning=FALSE,echo=FALSE}
+
+library(tidyquant)
+library(timetk)
+library(ggthemes)
+library(DT)
+library(knitr)
+library(kableExtra)
+
+```
+
+Lets begin by looking at the overall housing sector. 
+
+```{r housing-sector,warning=FALSE,message=FALSE,echo=FALSE}
+
+hm_tic <- read_csv("E:/Documents/greenleaf_web_data/Dec/hm_tic.csv")
+
+itb_price <- read_csv("E:/Documents/greenleaf_web_data/Dec/itb_price.csv")
+
+itb_price %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = 'daily',
+               col_rename = "ret") %>%
+  mutate(cr = cumprod(1 + ret)) %>%
+  ggplot(aes(x = date, y = cr)) +
+  geom_line() +
+  theme_economist() +
+  scale_y_continuous(breaks = seq(0,2,0.1),
+                     labels = scales::dollar) +
+  labs(x = "Year", y = "$1 investment") +
+  scale_x_date(date_breaks = 'year',
+               date_labels = "%y") +
+  ggtitle("Home Construction sector performance since 2006",
+          subtitle = "This chart shows a $1 investment in the sector in 2006")
+
+```
+
+
+The sector is highly volatile and cyclical. An investor in this ETF is still underwater since 2006, even after the rally since 2009 bottom. This goes to show deep the drawdown was for such an investor. Looking at the price action it does not appear to be a sector one should buy and hold. 
+
+```{r housing-sector-ytd-chart,warning=FALSE,message=FALSE,echo=FALSE}
+
+itb_price %>%
+  filter(date >= "2018-01-01") %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = 'daily',
+               col_rename = "ret") %>%
+  mutate(cr = cumprod(1 + ret)) %>%
+  ggplot(aes(x = date, y = cr)) +
+  geom_line() +
+  theme_economist() +
+  scale_y_continuous(breaks = seq(0,2,0.1),
+                     labels = scales::dollar) +
+  labs(x = "2018", y = "$1 investment") +
+  scale_x_date(date_breaks = 'months',
+               date_labels = "%b") +
+  ggtitle("Home Construction sector performance since 2018",
+          subtitle = "This chart shows a $1 investment in the sector since Jan 2018")
+
+```
+
+So far YTD this sector is down 30%. Going into 2018 analysts on the street were bullish on the housing sector, given the backdrop of low US unmployment rate and the strong economic growth. But other important factors such as Trump tax cuts, which capped the federal deduction for state and local tax at \$10000 and the FED interest rate hikes have slowed down home sales in 2018. Mortgages have increased for many new home buyers. This has pushed their monthly mortgage expense higher. The potentially slowing economy in 2019 could further deteriorate home buying activity.
+
+Next look at some of the large home builders by market cap and their performance since 2017.
+
+```{r home-mkt-cap, message=FALSE,warning=FALSE,echo=FALSE}
+
+hm_tic <- read_csv("E:/Documents/greenleaf_web_data/Dec/hm_tic.csv")
+
+hm_tic %>%
+  filter(Name != "N/A") %>%
+  rename(Symbol = symbol,
+         `Market Capitalization` = MktCap) %>%
+  datatable()
+
+```
+
+```{r perf-hm, message=FALSE,warning=FALSE,echo=FALSE}
+
+hm_ret <- read_csv("E:/Documents/greenleaf_web_data/Dec/hm_ret.csv")
+
+hm_ret %>%
+  group_by(symbol) %>%
+  filter(symbol %in% c("DHI", "TOL", "LEN", "NVR", "HOV", "KBH")) %>%
+  filter(date >= "2017-01-01",
+         date <= "2017-12-31") %>%
+  mutate(cr = cumprod(1 + ret)) %>%
+  ggplot(aes(x = date, y = cr, color = symbol)) +
+  geom_line() +
+  theme_fivethirtyeight() +
+  scale_y_continuous(breaks = seq(0,6,0.1),
+                     labels = scales::dollar) +
+  labs(x = "2018", y = "$1 investment") +
+  scale_color_discrete(name = 'Homebuilders') +
+  ggtitle("Homebuilders Stocks in 2017",
+          subtitle = "This chart shows $1 investment performance in 2017")
+
+hm_ret %>%
+  group_by(symbol) %>%
+  filter(symbol %in% c("DHI", "TOL", "LEN", "NVR", "HOV", "KBH")) %>%
+  filter(date >= "2018-01-01",
+         date <= "2018-12-31") %>%
+  mutate(cr = cumprod(1 + ret)) %>%
+  ggplot(aes(x = date, y = cr, color = symbol)) +
+  geom_line() +
+  theme_fivethirtyeight() +
+  scale_y_continuous(breaks = seq(0,6,0.1),
+                     labels = scales::dollar) +
+  labs(x = "2018", y = "$1 investment") +
+  scale_color_discrete(name = 'Homebuilders') +
+  ggtitle("Homebuilders Stocks in 2018",
+          subtitle = "This chart shows $1 investment performance in 2018")
+
+```
+
+Home builder stocks had a great run in 2017. Some of them more than doubled in value in 2017. But since January of 2018 these stocks have fallen and are now in a bear market territory. They have given up most of the gains made in 2017. Now the question is whether these stocks have bottomed or could they fall further.
+
+We can look at the valuations for the stocks.
+
+```{r hm-valu,message=FALSE,warning=FALSE,echo=FALSE}
+
+hm_eps <- read_csv("E:/Documents/greenleaf_web_data/Dec/hm_PE.csv")
+
+hm_eps %>%
+  left_join(.,hm_tic, by = 'symbol') %>%
+  na.omit() %>%
+  select(symbol,Name,PE,Forward_PE,MktCap) %>%
+  rename(Symbol = symbol) %>%
+  datatable()
+  
+
+```
+ On a valuation basis these stocks are trading in single digit current are forward PE ratios. If the forward estimates are accurate then they offer a great earnings yield for our investments. 
+ 
+The main questions for investors are:
+ 
+- Are analysts too bullish and slow to recognize the slowdown in the economy
+- Will the Trump trade war, further disrupt commerce and slow down global economy
+- Will the FED slowdown its path of interest rate hikes, given the economic slowdown and recent volatility in the stock markets
+
+We are seeing some bottoming process in home builders stocks. This sector did not make a new low when Russell 2000 index traded at its 52 week low. One can get a confirmation if we see new highs in this sector. 
+
+So the bottom line is that these stocks appear to be trading cheap, but a lot depends on the future FED actions and economic activity. We are seeing some bottoming process, but need confirmation before we trade. We have seen in the past that these stock can move down a lot when the economy slows. We will hopefully get some clarity on the FEDs plan for 2019 this week. Will that trigger a new highs in this sector, or will the FED disappoint the markets. We will soon find out.
+
+
+
+
