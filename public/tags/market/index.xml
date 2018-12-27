@@ -6,10 +6,19 @@
     <description>Recent content in Market on Long Short Strategies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 27 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/market/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Stock Market and Interest Rates Since 2007</title>
+      <link>/post/bonds/</link>
+      <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/bonds/</guid>
+      <description>Volatility is back in the stock markets. In the past we have pointed out the divergence between the US markets and the World stock markets. It is now clear that this disconnection has now resolved itself with the sell-off in the US markets. YTD the US stock market is down about 7%. The month December 2018 saw its worst performance in since the great depression. It was at one point down almost 18%.</description>
+    </item>
     
     <item>
       <title>Red October</title>

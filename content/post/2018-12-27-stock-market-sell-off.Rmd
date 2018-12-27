@@ -1,0 +1,202 @@
+---
+title: "Stock Market and Interest Rates Since 2007"
+author: 'Team Greenleaf'
+date: '2018-12-27'
+slug: bonds
+description: "How have interest rates performed since 2008?"
+cover: "YTD-spy.png"
+categories: []
+tags:
+  - market
+  - Bonds
+---
+
+```{r,message=FALSE,warning=FALSE,echo=FALSE}
+library(tidyquant)
+library(ggthemes)
+library(dygraphs)
+library(timetk)
+library(tibbletime)
+
+```
+
+
+Volatility is back in the stock markets. In the past we have pointed out the divergence between the US markets and the World stock markets. It is now clear that this disconnection has now resolved itself with the sell-off in the US markets. YTD the US stock market is down about 7%. The month December 2018 saw its worst performance in since the great depression. It was at one point down almost 18%. 
+
+```{r YTD-spy,message=FALSE,warning=FALSE,echo=FALSE}
+
+spy_etf_price <- tq_get("SPY",
+                        from = "2018-01-01",
+                        get = "stock.prices")
+
+int_rates <- read_csv("E:/Documents/greenleaf_web_data/int_rate_1950.csv")
+
+spy_etf_price %>%
+  ggplot(aes(x = date, y = close)) +
+  geom_line() +
+  theme_fivethirtyeight() +
+  ggtitle("SPY Price Chart for 2018") +
+  scale_x_date(date_breaks = "month", date_labels = "%b") +
+  scale_y_continuous(breaks = seq(240,285,5)) +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold"))) +
+  annotate("text", x = today() - weeks(6), y = 260, label = "Powell's speech and \nrate hike on\nDec 19\n stock sold 10%", fontface = 1, size = 2.5)
+
+```
+
+Going into the December FED meeting, the markets had expected an interest rate hike from the FED. But there was this talk of "Dovish hike" (whatever that means?). FED chair Jerome Powell, by hiking FED funds rate by another 25bps gave the markets what they had expected. The markets however reacted violently, and we saw a quick 10% drop in US equity markets in the next 4 trading days. 
+
+Many (including POTUS) blame the FED's decision to hike given the global slowdown and low inflation. Indeed the long end of the treasury bonds have been signaling some slowdown in the future. We see this in the falling yields and bond rallies.
+
+The 10 year treasury bond yield dropped from a high of almost 3.5% in October to 2.75% today. The yield curve has been tightening and today the spread between the long end and the short end is flattest since the Financial crisis.
+
+
+```{r yield-curve-all,message=FALSE,warning=FALSE,echo=FALSE}
+
+int_rates %>% 
+  tbl_time(date) %>%
+  filter(!symbol %in% c("DGS3", "DGS20")) %>%
+  ggplot(aes(x = date, y = price, color = symbol)) +
+  geom_line() +
+  scale_x_date(breaks = seq(ymd('1950-1-01'), ymd('2018-7-01'), by = '5 years')) +
+  annotate('rect', fill = 'grey', alpha = 0.5, xmin =  ymd('1968-11-01'), xmax = ymd('1970-05-31'),
+           ymin = -Inf, ymax = Inf) +
+  annotate('rect', fill = 'grey', alpha = 0.5, xmin =  ymd('1973-11-01'), xmax = ymd('1974-10-31'),
+           ymin = -Inf, ymax = Inf) +
+  annotate('rect', fill = 'grey', alpha = 0.3, xmin =  ymd('1980-11-01'), xmax = ymd('1982-08-31'),
+           ymin = -Inf, ymax = Inf) +
+  annotate('rect', fill = 'grey', alpha = 0.3, xmin =  ymd('2000-03-01'), xmax = ymd('2002-10-31'),
+           ymin = -Inf, ymax = Inf) +
+  annotate('rect', fill = 'grey', alpha = 0.3, xmin =  ymd('2007-10-01'), xmax = ymd('2009-03-31'),
+           ymin = -Inf, ymax = Inf) +
+  annotate("text", x =  ymd('1969-11-01'), y = 9.5, label = '1970 Bear Market\nDown 36%', fontface = 1, size = 2.5) +
+  annotate("text", x =  ymd('1974-01-01'), y = 5, label = '1974 Bear Market\nDown 48%', fontface = 1, size = 2.5) +
+  annotate("text", x =  ymd('1981-11-01'), y = 18, label = '1980 Bear Market\nDown 27%', fontface = 1, size = 2.5) +
+  annotate("text", x =  ymd('2001-11-01'), y = 7, label = '2001 Dot Com Bust\nDown 49%', fontface = 1, size = 2.5) +
+  annotate("text", x =  ymd('2008-11-01'), y = 6, label = '2007 Housing Bust\nDown 57%', fontface = 1, size = 2.5) +
+  ggtitle("Interest rates and Bear Markets") +
+  labs(x = 'Year', y = 'Interest Rates %') +
+  scale_y_continuous(breaks = seq(0,18,1.5)) +
+  scale_x_date(date_breaks = '3 years',
+               date_labels = '%y') +
+  scale_color_discrete(name = 'Maturity',
+                       labels = c("10 Years", "2 Years", "30 Years")) +
+  theme_fivethirtyeight()
+
+
+```
+
+
+```{r yield-curve-2008,message=FALSE,warning=FALSE,echo=FALSE}
+
+
+int_rates %>% 
+  tbl_time(date) %>%
+  filter(!symbol %in% c("DGS3", "DGS20")) %>%
+  ggplot(aes(x = date, y = price, color = symbol)) +
+  geom_line() +
+  scale_x_date(breaks = seq(ymd('1950-1-01'), ymd('2018-7-01'), by = '5 years')) +
+  annotate('rect', fill = 'grey', alpha = 0.5, xmin =  ymd('1968-11-01'), xmax = ymd('1970-05-31'),
+           ymin = -Inf, ymax = Inf) +
+  annotate('rect', fill = 'grey', alpha = 0.5, xmin =  ymd('1973-11-01'), xmax = ymd('1974-10-31'),
+           ymin = -Inf, ymax = Inf) +
+  annotate('rect', fill = 'grey', alpha = 0.3, xmin =  ymd('1980-11-01'), xmax = ymd('1982-08-31'),
+           ymin = -Inf, ymax = Inf) +
+  annotate('rect', fill = 'grey', alpha = 0.3, xmin =  ymd('2000-03-01'), xmax = ymd('2002-10-31'),
+           ymin = -Inf, ymax = Inf) +
+  annotate('rect', fill = 'grey', alpha = 0.3, xmin =  ymd('2007-10-01'), xmax = ymd('2009-03-31'),
+           ymin = -Inf, ymax = Inf) +
+  annotate("text", x =  ymd('1969-11-01'), y = 9.5, label = '1970 Bear Market\nDown 36%', fontface = 1, size = 2.5) +
+  annotate("text", x =  ymd('1974-01-01'), y = 5, label = '1974 Bear Market\nDown 48%', fontface = 1, size = 2.5) +
+  annotate("text", x =  ymd('1981-11-01'), y = 18, label = '1980 Bear Market\nDown 27%', fontface = 1, size = 2.5) +
+  annotate("text", x =  ymd('2001-11-01'), y = 7, label = '2001 Dot Com Bust\nDown 49%', fontface = 1, size = 2.5) +
+  annotate("text", x =  ymd('2008-11-01'), y = 6, label = '2007 Housing Bust', fontface = 1, size = 2.5) +
+  ggtitle("Interest rates and Bear Market of 2007/08") +
+  labs(x = 'Year', y = 'Interest Rates %') +
+  scale_y_continuous(breaks = seq(0,18,1.5)) +
+  scale_x_date(date_breaks = 'year',
+               date_labels = '%y') +
+  scale_color_discrete(name = 'Maturity',
+                       labels = c("10 Years", "2 Years", "30 Years", "5 Years")) +
+  theme_fivethirtyeight() +
+  coord_x_date(xlim = c(today() - years(11), today()),
+               ylim = c(0,6.5)) 
+
+```
+
+
+The 2 years and 5 years yield curve is slightly inverted. This indicates tightening financial conditions. This was further evident with the selloff in the stock market and the junk bond market.   
+
+```{r two-five,message=FALSE,warning=FALSE,echo=FALSE}
+
+int_rates %>% 
+  tbl_time(date) %>%
+  filter(symbol %in% c("DGS2", "DGS5")) %>%
+  ggplot(aes(x = date, y = price, color = symbol)) +
+  geom_line() +
+  scale_x_date(breaks = seq(ymd('1950-1-01'), ymd('2018-7-01'), by = '5 years')) +
+  annotate('rect', fill = 'grey', alpha = 0.5, xmin =  ymd('1968-11-01'), xmax = ymd('1970-05-31'),
+           ymin = -Inf, ymax = Inf) +
+  annotate('rect', fill = 'grey', alpha = 0.5, xmin =  ymd('1973-11-01'), xmax = ymd('1974-10-31'),
+           ymin = -Inf, ymax = Inf) +
+  annotate('rect', fill = 'grey', alpha = 0.3, xmin =  ymd('1980-11-01'), xmax = ymd('1982-08-31'),
+           ymin = -Inf, ymax = Inf) +
+  annotate('rect', fill = 'grey', alpha = 0.3, xmin =  ymd('2000-03-01'), xmax = ymd('2002-10-31'),
+           ymin = -Inf, ymax = Inf) +
+  annotate('rect', fill = 'grey', alpha = 0.3, xmin =  ymd('2007-10-01'), xmax = ymd('2009-03-31'),
+           ymin = -Inf, ymax = Inf) +
+  annotate("text", x =  ymd('1969-11-01'), y = 9.5, label = '1970 Bear Market\nDown 36%', fontface = 1, size = 2.5) +
+  annotate("text", x =  ymd('1974-01-01'), y = 5, label = '1974 Bear Market\nDown 48%', fontface = 1, size = 2.5) +
+  annotate("text", x =  ymd('1981-11-01'), y = 18, label = '1980 Bear Market\nDown 27%', fontface = 1, size = 2.5) +
+  annotate("text", x =  ymd('2001-11-01'), y = 7, label = '2001 Dot Com Bust\nDown 49%', fontface = 1, size = 2.5) +
+  annotate("text", x =  ymd('2008-11-01'), y = 6, label = '2007 Housing Bust', fontface = 1, size = 2.5) +
+  ggtitle("2 Years and 5 Years Treasury bonds yield curve") +
+  labs(x = 'Year', y = 'Interest Rates %') +
+  scale_y_continuous(breaks = seq(0,18,1.5)) +
+  scale_x_date(date_breaks = 'year',
+               date_labels = '%y') +
+  scale_color_discrete(name = 'Maturity',
+                       labels = c("2 Years", "5 Years")) +
+  theme_fivethirtyeight() +
+  coord_x_date(xlim = c(today() - years(11), today()),
+               ylim = c(0,6.5)) +
+  annotate("text", x =  today(), y = 3.5, label = 'Inverted \nYield Curve', fontface = 1, size = 2.5)
+
+```
+
+In conclusion
+
+- The market conditions are tightening
+- Yields are falling
+- Yield spreads are tight or inverted
+- Equity markets and Corporate credit markets are selling off
+- Gold is catching a bid
+- FED is letting its balance sheet shrink
+- FED has indicated further hikes in 2019 (2 more)
+- Trade warsand tariffs are still on
+
+Today conditions look bearish, and the stock market may be signaling an end of the long bull market which started in March 2009. The trend seems to be reversing. Do we see conditions deteriorate further or will the Central bank back off. If the stock market is down only 6 or 7% for the year (current year), the FED may not react at all and may think its healthy to have a correction as we are seeing today. This could further push the equity markets lower as accommodating policy is removed and the FED continues to hike.
+
+Do we see a long and prolonged bear market or is this just a quick correction and the bull market will continue.
+
+We believe today that the trend has come to an end, markets will either go sideways for a while (range 2600 to 2300 on SPX) or sell-off further. We will change our opinion, when we start seeing evidence of continuation of the bull market (a break above 2800 on SPX). In the mean time, our policy will be to preseve capital.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
