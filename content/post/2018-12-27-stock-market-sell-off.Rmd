@@ -85,7 +85,7 @@ int_rates %>%
   scale_x_date(date_breaks = '3 years',
                date_labels = '%y') +
   scale_color_discrete(name = 'Maturity',
-                       labels = c("10 Years", "2 Years", "30 Years")) +
+                       labels = c("10 Years", "2 Years", "30 Years", "5 Years")) +
   theme_fivethirtyeight()
 
 
