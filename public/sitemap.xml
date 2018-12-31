@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/2018-12-31-portfolio-positions/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018-12-27-sp500_analysis/</loc>
     <lastmod>2018-12-27T00:00:00+00:00</lastmod>
   </url>
@@ -140,14 +145,14 @@
   </url>
   
   <url>
-    <loc>/tags/bonds/</loc>
-    <lastmod>2018-12-27T00:00:00+00:00</lastmod>
+    <loc>/categories/bonds/</loc>
+    <lastmod>2018-08-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/bonds/</loc>
-    <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+    <loc>/tags/bonds/</loc>
+    <lastmod>2018-12-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -158,13 +163,13 @@
   </url>
   
   <url>
-    <loc>/tags/currency/</loc>
+    <loc>/categories/currency/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/currency/</loc>
+    <loc>/tags/currency/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -176,20 +181,14 @@
   </url>
   
   <url>
-    <loc>/tags/fang/</loc>
-    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/fang/</loc>
     <lastmod>2018-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/gld/</loc>
-    <lastmod>2018-10-19T00:00:00+00:00</lastmod>
+    <loc>/tags/fang/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -200,8 +199,8 @@
   </url>
   
   <url>
-    <loc>/tags/gold/</loc>
-    <lastmod>2018-09-15T00:00:00+00:00</lastmod>
+    <loc>/tags/gld/</loc>
+    <lastmod>2018-10-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -212,13 +211,19 @@
   </url>
   
   <url>
-    <loc>/tags/home-builders/</loc>
-    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+    <loc>/tags/gold/</loc>
+    <lastmod>2018-09-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/home-builders/</loc>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/home-builders/</loc>
     <lastmod>2018-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -231,7 +236,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-12-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -242,25 +247,25 @@
   </url>
   
   <url>
-    <loc>/tags/market/</loc>
-    <lastmod>2018-12-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/market/</loc>
     <lastmod>2018-12-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/markets/</loc>
-    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+    <loc>/tags/market/</loc>
+    <lastmod>2018-12-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/markets/</loc>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/markets/</loc>
     <lastmod>2018-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -272,20 +277,20 @@
   </url>
   
   <url>
-    <loc>/tags/portfolio/</loc>
-    <lastmod>2018-10-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/portfolio/</loc>
     <lastmod>2018-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>/tags/portfolio/</loc>
+    <lastmod>2018-10-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
-    <lastmod>2018-12-27T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -302,14 +307,14 @@
   </url>
   
   <url>
-    <loc>/tags/stocks/</loc>
-    <lastmod>2018-12-27T00:00:00+00:00</lastmod>
+    <loc>/categories/stocks/</loc>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/stocks/</loc>
-    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+    <loc>/tags/stocks/</loc>
+    <lastmod>2018-12-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
