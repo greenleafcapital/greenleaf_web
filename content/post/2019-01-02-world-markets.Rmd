@@ -1,0 +1,197 @@
+---
+title: "2018 Major Asset class performance"
+author: "Team Greenleaf"
+date: '2019-01-02'
+cover: ''
+description: "How did financial assets perform during 2018?"
+tags:
+- World
+- Markets
+- stocks
+categories:
+- Markets
+- stocks
+---
+
+```{r lib, message=FALSE,warning=FALSE,echo=FALSE}
+
+library(tidyquant)
+library(timetk)
+library(ggthemes)
+library(DT)
+library(knitr)
+library(kableExtra)
+
+```
+
+Year 2018 has concluded and its time to reflect back and see what happened this year. We began the year on a positive note, but then by February the market sold off and since then S&P 500 moved sideways between 2500 on the low end to 2940 on the high end. The the range was extended on the lower end when we broke the 2500 support level after the FED hike and the "hawkish" press conference by Jerome Powell. The lower end of the new range is 2350 and we have a "potential" high of 2500 on the high end. Lets look at the SPY etf chart below see the important range and levels. 
+
+
+```{r spx-monthly-perf-and-chart,message=FALSE,warning=FALSE,echo=FALSE}
+
+spy_data <- read_csv("E:/Documents/greenleaf_web_data/2019/Jan/Jan2_worldmkt/world_data.csv")
+
+spy_data %>%
+  filter(symbol == "SPY") %>%
+  ggplot(aes(x = date, y = adjusted)) +
+  geom_line() +
+  theme_fivethirtyeight() +
+  ggtitle("SPY Price for 2018") +
+  scale_x_date(date_breaks = "month", date_labels = "%b") +
+  scale_y_continuous(breaks = seq(200,290,5)) +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold"))) +
+  annotate("rect", xmin = ymd("2018-01-01"), xmax = ymd("2018-12-31"), ymin = 252, ymax = 255,
+           alpha = 0.2) +
+  annotate("text", x = ymd("2018-07-01"), y = 253, label = "Support brokern\nat 255 level")
+
+```
+
+<br/>
+
+S&P 500 had 8 positive months and 4 negative months, but the negative months were much worse than the positive months combined and hence we closed the year negative.
+
+Lets review the major events that happened this fall.
+
+```{r spy-month-perf,message=FALSE,warning=FALSE,echo=FALSE}
+
+spy_data %>%
+  filter(symbol == "SPY") %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = 'monthly',
+               col_rename = 'spy') %>%
+  mutate(year = year(date), month = month(date)) %>%
+  mutate(date2 = make_date(year = year, month = month)) %>%
+  ggplot(aes(x = date2, y = spy)) +
+  geom_bar(stat = "identity") +
+  theme_fivethirtyeight() +
+  ggtitle("S&P 500 monthly returns for 2018") +
+  scale_x_date(date_breaks = "month", date_labels = "%b") +
+  scale_y_continuous(breaks = seq(-1,1,0.01),
+                     label = scales::percent) +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold")))
+  
+  
+
+```
+
+### Democrats take control of the House
+
+After the Q1 sell off, the S&P 500 made a good comeback in the spring and summer. But all that and more was lost in the fall and early winter. Volatility came back during the fall, as US went into the election season. The Democrats took power of the lower chamber in the US and we are already seeing disagreements between the POTUS and the Democratic leaders for the funding of the southern border wall. This has resulted in the partial government shutdown and we are still waiting for the government to resolve thier issues. This has added uncertainty in the economy, which the markets do not like.
+
+
+### Fed rate hike in December
+
+The FED had publicized their intentions to raise interest rates in December throughout the year. They fulfilled their promise in December when the further increased FED funds rate by 25 bps. Although the markets had expected the rate hikes they were not pleased with the 'hawkish' press conference. The FED anticipates another 2 hikes in 2019, and the Quantitative tightening (QT) ie - letting FED balance sheet to shrink. These FED actions further roiled the markets and we saw another 10% sell off 4 days after Powell's press conference.
+
+### US & China Trade War/Negotiations
+
+Are we in a trade war or are we in a trade negotiations. Markets clearly don't like "Trade Wars". Trade wars and tariffs disrupt global trade and in turn global growth. Since majority of the large US corporations are now global firms, any escalation of the trade war will disrupt global commerce and the bottom line of these firms. At this moment the leaders in US and China are playing the game of who will blink first. In turn they are hurting their own domestic stock markets. US small cap equities are in a bear market and Chinese stock market is similarly in the early stage of what could be a long bear market. We will see which leader blinks first, one holds power for life and another leader will have to face voters and start campaigning soon. It will be tough to get re-elected, if you have a bearish stock market.
+
+### Difficult year to make money
+
+2018 was a difficult year to make any money as most asset classes were negative for the year. There were very few places for a US investor to hide. Almost all asset classes, from the most risky to the least risky, saw some draw-downs for the year. Savings account paying 2% beat most asset classes for the year.
+
+<br/>
+
+```{r spy-yearly-ret,message=FALSE,warning=FALSE,echo=FALSE}
+
+spy_price <- read_csv("E:/Documents/greenleaf_web_data/2019/Jan/Jan2_worldmkt/spy_price.csv")
+
+spy_price %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = 'yearly',
+               col_rename = 'spy') %>%
+  filter(date > "2007-12-31") %>%
+  mutate(year = year(date), month = month(date)) %>%
+  mutate(date2 = make_date(year = year, month = month)) %>%
+  ggplot(aes(x = year, y = spy)) +
+  geom_bar(stat = "identity") +
+  theme_fivethirtyeight() +
+  ggtitle("S&P 500 Yearly returns since 2008") +
+  scale_x_continuous(breaks = seq(1992,2018, 2)) +
+  scale_y_continuous(breaks = seq(-1,1,0.05),
+                     label = scales::percent) +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold"))) +
+  annotate("text", x = 2017, y = -0.3, label = "First negative returns \nsince 2008 crisis") +
+  geom_segment(aes(x = 2017, xend = 2018, y = -0.25, yend = -0.06), arrow = arrow())
+
+```
+
+<br/>
+<br/>
+
+```{r all-mkt-perf,message=FALSE,warning=FALSE,echo=FALSE}
+
+mkt_data <- read_csv("E:/Documents/greenleaf_web_data/2019/Jan/Jan2_worldmkt/world_data.csv")
+
+mkt_data %>%
+  group_by(symbol, Name) %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = 'yearly') %>%
+  ungroup() %>%
+  mutate(Name = as_factor(Name)) %>%
+  mutate(Name = fct_reorder(Name, yearly.returns)) %>%
+  ggplot(aes(x = Name, y = yearly.returns)) +
+  geom_bar(stat = 'identity') +
+  coord_flip() +
+  scale_y_continuous(labels = scales::percent, breaks = seq(-1, 1, .05)) +
+  theme_fivethirtyeight() +
+  ggtitle("Major Assets performance in USD for 2018") +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        axis.text.x = element_text(size = 8),
+        axis.text.y = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold")))
+  
+
+```
+
+<br/>
+<br/>
+
+```{r all-mkt-tbl,message=FALSE,warning=FALSE,echo=FALSE}
+
+mkt_data %>%
+  group_by(symbol, Name) %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = 'yearly',
+               col_rename = 'ret') %>%
+  select(-date) %>%
+  rename(`2018 Performance` = ret) %>%
+  datatable(caption = "2018 Performace for Major Assets",
+            rownames = FALSE) %>%
+  formatPercentage(digits = 2, columns = "2018 Performance")
+  
+
+```
+
+So the risks are still out there, not many investors are out right bearish yet. Do buyers step in here or do we see further continuation of sell-off in 2019.
+
+
+
+
