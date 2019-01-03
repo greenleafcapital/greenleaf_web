@@ -113,7 +113,7 @@
     <item>
       <title>Markets</title>
       <link>/categories/markets/</link>
-      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/markets/</guid>
       <description></description>
@@ -161,6 +161,15 @@
       <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/trades/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Us</title>
+      <link>/categories/us/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/us/</guid>
       <description></description>
     </item>
     

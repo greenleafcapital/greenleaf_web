@@ -1,0 +1,191 @@
+---
+title: "US Markets and Important Levels"
+author: "Team Greenleaf"
+date: '2019-01-03'
+cover: 'spy-1.png'
+description: Markets are trading on sentiments, and sentiments can become more bearish
+  if we breach these important levels in the US Markets
+tags:
+- US
+- markets
+- stocks
+categories:
+- US
+- markets
+- stocks
+---
+
+```{r lib, warning=FALSE,message=FALSE,echo=FALSE}
+
+library(tidyquant)
+library(ggthemes)
+library(timetk)
+library(ggthemes)
+
+```
+
+
+On January 2nd, Apple warned a slowdown in iPhone sales forecast and as a result the stock was down almost 10%. Apple's weakness has affected all major US markets. All the major US markets are now below their key support area. Below we will look at all the major index charts and their key support levels.
+
+### Dow Jones Index ETF (DIA)
+
+```{r inx-data, warning=FALSE,message=FALSE,echo=FALSE}
+
+stock_prices <- read_csv("E:/Documents/greenleaf_web_data/2019/Jan/Jan3_Major_US_mkts/stock_prices.csv")
+
+stock_prices %>%
+  filter(symbol == 'DIA') %>%
+  add_row(date = "2019-01-03", adjusted = 227.33) %>%
+  filter(date >= "2015-01-01") %>%
+  ggplot(aes(x = date, y = adjusted)) +
+  geom_line() +
+  theme_wsj() +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold"))) +
+  scale_y_continuous(breaks = seq(65,300,20),
+                     labels = scales::dollar) +
+  labs(x = "Year", y = "Price") +
+  annotate("text", x = ymd("2016-04-08"), y = 205, label = "Trump gets elected") +
+  geom_segment(aes(x = ymd("2016-04-08"), xend = ymd("2016-11-08"), y = 200, yend = 180), arrow = arrow(), size = 1) +
+  annotate("rect", xmin = ymd("2017-10-01"), xmax = ymd("2019-01-30"), ymin = 233.5, ymax = 233) +
+  geom_segment(aes(x = ymd("2016-04-08"), xend = ymd("2016-11-08"), y = 200, yend = 180), arrow = arrow(), size = 1) +
+  annotate("text", x = ymd("2018-05-08"), y = 200, label = "Lost key support") +
+  geom_segment(aes(x = ymd("2018-05-08"), xend = ymd("2018-12-10"), y = 205, yend = 230), arrow = arrow(), size = 1) +
+  ggtitle("Dow Jones ETF Price Chart since 2015") +
+  annotate("text", x = ymd("2018-04-08"), y = 170, label = "We have lost support\nDo we take back the whole\n2017 rally?")
+  
+
+```
+
+### S&P 500 Index ETF (SPY)
+
+```{r spy, warning=FALSE,message=FALSE,echo=FALSE}
+
+stock_prices %>%
+  filter(symbol == "SPY") %>%
+  add_row(date = "2019-01-03", adjusted = 244.50) %>%
+  filter(date >= "2015-01-01") %>%
+  ggplot(aes(x = date, y = adjusted)) +
+  geom_line() +
+  theme_wsj() +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold"))) +
+  scale_y_continuous(breaks = seq(65,300,20),
+                     labels = scales::dollar) +
+  labs(x = "Year", y = "Price") +
+  annotate("text", x = ymd("2016-09-08"), y = 250, label = "Trump gets elected") +
+  geom_segment(aes(x = ymd("2016-09-08"), xend = ymd("2016-11-08"), y = 245, yend = 215), arrow = arrow(), size = 1) +
+  annotate("rect", xmin = ymd("2017-10-01"), xmax = ymd("2019-01-30"), ymin = 252.5, ymax = 250, alpha = 0.2) +
+  annotate("text", x = ymd("2018-05-08"), y = 225, label = "Lost key support") +
+  geom_segment(aes(x = ymd("2018-05-08"), xend = ymd("2018-12-10"), y = 230, yend = 250), arrow = arrow(), size = 1) +
+  ggtitle("S&P 500 ETF Price Chart since 2015") +
+  annotate("text", x = ymd("2018-04-08"), y = 190, label = "We have lost support\nDo we take back the whole\n2017 rally?")
+
+```
+
+### Nasdaq 100 ETF (QQQ)
+
+```{r qqq, warning=FALSE,message=FALSE,echo=FALSE}
+
+stock_prices %>%
+  filter(symbol == "QQQ") %>%
+  add_row(date = "2019-01-03", adjusted = 150.3) %>%
+  filter(date >= "2015-01-01") %>%
+  ggplot(aes(x = date, y = adjusted)) +
+  geom_line() +
+  theme_wsj() +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold"))) +
+  scale_y_continuous(breaks = seq(65,300,20),
+                     labels = scales::dollar) +
+  labs(x = "Year", y = "Price") +
+  annotate("text", x = ymd("2016-09-08"), y = 145, label = "Trump gets elected") +
+  geom_segment(aes(x = ymd("2016-09-08"), xend = ymd("2016-11-08"), y = 142, yend = 120), arrow = arrow(), size = 1) +
+  annotate("rect", xmin = ymd("2017-10-01"), xmax = ymd("2019-01-30"), ymin = 150.5, ymax = 153, alpha = 0.2) +
+  annotate("text", x = ymd("2018-05-08"), y = 130, label = "Cusp of losing support") +
+  geom_segment(aes(x = ymd("2018-05-08"), xend = ymd("2018-12-10"), y = 135, yend = 150), arrow = arrow(), size = 1) +
+  ggtitle("Nasdaq 100 ETF Price Chart since 2015") +
+  annotate("text", x = ymd("2016-04-08"), y = 175, label = "We are close to losing support\nDo we take back the whole\n2017 rally?")
+
+```
+
+### Russell 2000 ETF (IWM)
+
+```{r rus-2000,warning=FALSE,message=FALSE,echo=FALSE}
+
+stock_prices %>%
+  filter(symbol == "IWM") %>%
+  add_row(date = "2019-01-03", adjusted = 132.7) %>%
+  filter(date >= "2015-01-01") %>%
+  ggplot(aes(x = date, y = adjusted)) +
+  geom_line() +
+  theme_wsj() +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold"))) +
+  scale_y_continuous(breaks = seq(65,300,20),
+                     labels = scales::dollar) +
+  labs(x = "Year", y = "Price") +
+  annotate("text", x = ymd("2016-09-08"), y = 145, label = "Trump gets elected") +
+  geom_segment(aes(x = ymd("2016-09-08"), xend = ymd("2016-11-08"), y = 142, yend = 127), arrow = arrow(), size = 1) +
+  annotate("rect", xmin = ymd("2017-10-01"), xmax = ymd("2019-01-30"), ymin = 143, ymax = 145, alpha = 0.2) +
+  annotate("text", x = ymd("2018-05-08"), y = 130, label = "Lost support\nand lost all 2017 gains") +
+  geom_segment(aes(x = ymd("2018-05-08"), xend = ymd("2018-10-10"), y = 135, yend = 144), arrow = arrow(), size = 1) +
+  ggtitle("Russell 2000 ETF Price Chart since 2015") +
+  annotate("text", x = ymd("2015-07-08"), y = 150, label = "Russell 2000 companies \nwhich are more \nUS centric have lost \nall the gains since 2017")
+
+
+```
+
+US Markets are losing major support areas. Apple's revenue warning can be a canary in the coalmine that's probably pointing to more pain ahead. In the last few days, bonds, gold and safe currencies have rallied and we are seeing a broad based sell-off in the US markets. The biggest surprise it the VIX. VIX is at 25 handle. Are puts cheap given all the weakness in the market and only a 25 handle. We will find out.
+
+
+```{r vix, warning=FALSE,message=FALSE,echo=FALSE}
+
+vix_price <- read_csv("E:/Documents/greenleaf_web_data/2019/Jan/Jan3_Major_US_mkts/vix_prices.csv")
+
+vix_price %>%
+  add_row(date = "2019-01-03", adjusted = 25) %>%
+  tq_transmute(mutate_fun = to.period,
+               period = 'months') %>%
+  ggplot(aes(x = date, y = adjusted)) +
+  geom_line() +
+  theme_wsj() +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold"))) +
+  labs(x = "Year", y = "Price") +
+  ggtitle("VIX Index since 2000") +
+  scale_y_continuous(breaks = seq(0,100,5)) +
+  scale_x_date(date_breaks = "2 years",
+               date_labels = "%y") +
+  geom_segment(aes(x = ymd("2018-05-01"), xend = ymd("2019-01-03"), y = 40, yend = 28), arrow = arrow()) +
+  annotate("text", x = ymd("2017-01-01"), y = 45, label = "All this bearish sentiment \nstill only a 25 handle?")
+  
+  
+
+```
+
