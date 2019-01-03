@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Long Short Strategies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Apple</title>
+      <link>/categories/apple/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/apple/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Banks</title>
@@ -140,7 +149,7 @@
     <item>
       <title>Stocks</title>
       <link>/categories/stocks/</link>
-      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/stocks/</guid>
       <description></description>

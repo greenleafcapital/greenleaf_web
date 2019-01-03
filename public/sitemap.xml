@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/2019-01-02-aapl-stock/</loc>
+    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2019-01-02-world-markets/</loc>
     <lastmod>2019-01-02T00:00:00+00:00</lastmod>
   </url>
@@ -144,6 +149,18 @@
   </url>
   
   <url>
+    <loc>/tags/apple/</loc>
+    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/apple/</loc>
+    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/banks/</loc>
     <lastmod>2018-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -163,7 +180,7 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -241,7 +258,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-01-02T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -295,7 +312,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-01-02T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -313,13 +330,13 @@
   
   <url>
     <loc>/tags/stocks/</loc>
-    <lastmod>2019-01-02T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/stocks/</loc>
-    <lastmod>2019-01-02T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
