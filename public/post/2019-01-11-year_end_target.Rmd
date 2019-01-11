@@ -45,7 +45,8 @@ spx_price <- read_csv("E:/Documents/greenleaf_web_data/2019/Jan/Jan11_Year_end/s
 spx_price %>%
   filter(date >= "2018-10-01") %>%
   ggplot(aes(x = date, y = adjusted)) +
-  geom_line() +
+  geom_line(color = "brown", size = 1) +
+  annotate("text", x = Sys.Date(), y = 2675, label = "Price on\nJan 11") +
   geom_point(data = sp_tbl %>%
                mutate(date = ymd("2019-12-31")),
              aes(x = date, y = target)) +
@@ -58,7 +59,8 @@ spx_price %>%
                   direction = "y",
                   nudge_x = -200) +
   theme_bw() +
-  ggtitle("S&P 500 target for year end 2019 by major Wall Street banks")
+  ggtitle("S&P 500 target for year end 2019 by major Wall Street banks") +
+  labs(x = "Date", y = "S&P 500 Price")
 
 ```
 
