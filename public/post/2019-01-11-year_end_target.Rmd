@@ -1,0 +1,64 @@
+---
+title: "Year end targets for S&P 500 Index"
+author: "Team Greenleaf"
+date: '2019-01-11'
+cover: 'target-chart-1.png'
+description: Where will S\&\P500 end the year? Wall street analysts have the answers for you.
+tags:
+- US
+- markets
+- stocks
+- S\&\P500 
+categories:
+- US
+- markets
+- stocks
+---
+
+Presenting today the year end targets for 2019, by wall street analysts.
+
+```{r lib, message=FALSE, warning=FALSE, echo=FALSE}
+
+source("E:/Documents/greenleaf_web_data/get_returns.r")
+library(rvest)
+library(ggrepel)
+library(DT)
+
+```
+
+```{r target-table,message=FALSE, warning=FALSE, echo=FALSE}
+
+sp_tbl <- read_csv("E://Documents/greenleaf_web_data/2019/Jan/Jan11_Year_end/analyst_target.csv")
+
+sp_tbl %>%
+  datatable(caption = "Wall Street targets for 2019", rownames = FALSE,
+            colnames = c("Firm", "Analyst", "2019 Target", "S&P 500 Earnings", "S&P 500 PE ratio"))
+
+```
+
+Overall everybody is bullish. Targets range from 6% to 23% above the current price of 2600 on the S&P 500.
+
+```{r target-chart,message=FALSE, warning=FALSE, echo=FALSE}
+
+spx_price <- read_csv("E:/Documents/greenleaf_web_data/2019/Jan/Jan11_Year_end/spx_price.csv")
+
+spx_price %>%
+  filter(date >= "2018-10-01") %>%
+  ggplot(aes(x = date, y = adjusted)) +
+  geom_line() +
+  geom_point(data = sp_tbl %>%
+               mutate(date = ymd("2019-12-31")),
+             aes(x = date, y = target)) +
+  scale_y_continuous(position = "right",
+                     breaks = seq(2000,3500,50)) +
+  scale_x_date(date_breaks = "month",
+               date_labels = "%b\n%Y",
+               limits = ymd(c('2018-10-01', "2020-01-31"))) +
+  geom_label_repel(data = sp_tbl, aes(x = ymd("2019-12-31"), y = target, label = Firm),
+                  direction = "y",
+                  nudge_x = -200) +
+  theme_bw() +
+  ggtitle("S&P 500 target for year end 2019 by major Wall Street banks")
+
+```
+
