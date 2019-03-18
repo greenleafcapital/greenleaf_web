@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Long Short Strategies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Year end targets for S&amp;P 500 Index</title>
+      <link>/post/2019-03-18-year_end_target/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019-03-18-year_end_target/</guid>
+      <description>Updated as of March 2019.
+Presenting today the year end targets for 2019, by wall street analysts.
+{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;caption&#34;:&#34;Wall Street targets for 2019&#34;,&#34;data&#34;:[[&#34;Morgan Stanley*&#34;,&#34;Goldman Sachs&#34;,&#34;Credit Suisse&#34;,&#34;Deutsche Bank&#34;,&#34;Bank of America Merrill Lynch&#34;,&#34;Citigroup&#34;,&#34;UBS&#34;,&#34;BMO&#34;,&#34;JPMorgan Chase&#34;,&#34;Oppenheimer&#34;,&#34;Fundstrat Global Advisors&#34;,&#34;Wells Fargo Investment Institute&#34;,&#34;CFRA*&#34;,&#34;BNY Mellon Wealth Management&#34;,&#34;Canaccord Genuity&#34;,&#34;RBC Capital Markets&#34;,&#34;BTIG&#34;,&#34;Bernstein&#34;,&#34;Barclays&#34;],[&#34;Mike Wilson&#34;,&#34;David Kostin&#34;,&#34;Jonathan Golub&#34;,&#34;Binky Chadha&#34;,&#34;Savita Subramanian&#34;,&#34;Tobias Levkovich&#34;,&#34;Keith Parker&#34;,&#34;Brian Belski&#34;,&#34;Dubravko Lakos-Bujas&#34;,&#34;John Stoltzfus&#34;,&#34;Thomas Lee&#34;,&#34;Scott Wren&#34;,&#34;Sam Stovall&#34;,&#34;Jeff Mortimer&#34;,&#34;Tony Dwyer&#34;,&#34;Lori Calvasina&#34;,&#34;Julian Emanuel&#34;,&#34;Noah Weisberger&#34;,&#34;Maneesh Deshpande&#34;],[2750,2850,3000,3000,3000,2800,3150,2950,3000,3000,3025,2850,3000,2850,3200,2890,3000,3000,3000],[162,150,161.5,162,153,153,157,158,153,146,147,152,156.2,152.5,160,151,150,160,162.6],[16.98,19,18.58,18.52,19.61,18.3,20.06,18.67,19.61,20.55,20.58,18.75,19.21,18.69,20,19.14,20,18.75,18.45]],&#34;container&#34;:&#34;\n \n \n Firm\n Analyst\n 2019 Target\n S&amp;amp;P 500 Earnings\n S&amp;amp;P 500 PE ratio\n \n \n&#34;</description>
+    </item>
     
     <item>
       <title>Year end targets for S&amp;P 500 Index</title>
