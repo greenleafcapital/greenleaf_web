@@ -164,13 +164,13 @@
   </url>
   
   <url>
-    <loc>/tags/apple/</loc>
+    <loc>/categories/apple/</loc>
     <lastmod>2019-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/apple/</loc>
+    <loc>/tags/apple/</loc>
     <lastmod>2019-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -182,14 +182,14 @@
   </url>
   
   <url>
-    <loc>/tags/bonds/</loc>
-    <lastmod>2018-12-27T00:00:00+00:00</lastmod>
+    <loc>/categories/bonds/</loc>
+    <lastmod>2018-08-08T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/bonds/</loc>
-    <lastmod>2018-08-08T00:00:00+00:00</lastmod>
+    <loc>/tags/bonds/</loc>
+    <lastmod>2018-12-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -200,13 +200,13 @@
   </url>
   
   <url>
-    <loc>/tags/currency/</loc>
+    <loc>/categories/currency/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/currency/</loc>
+    <loc>/tags/currency/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -218,20 +218,14 @@
   </url>
   
   <url>
-    <loc>/tags/fang/</loc>
-    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/fang/</loc>
     <lastmod>2018-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/gld/</loc>
-    <lastmod>2018-10-19T00:00:00+00:00</lastmod>
+    <loc>/tags/fang/</loc>
+    <lastmod>2018-12-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -242,8 +236,8 @@
   </url>
   
   <url>
-    <loc>/tags/gold/</loc>
-    <lastmod>2018-09-15T00:00:00+00:00</lastmod>
+    <loc>/tags/gld/</loc>
+    <lastmod>2018-10-19T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -254,13 +248,19 @@
   </url>
   
   <url>
-    <loc>/tags/home-builders/</loc>
-    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+    <loc>/tags/gold/</loc>
+    <lastmod>2018-09-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/home-builders/</loc>
+    <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/home-builders/</loc>
     <lastmod>2018-12-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -284,25 +284,25 @@
   </url>
   
   <url>
-    <loc>/tags/market/</loc>
-    <lastmod>2018-12-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/categories/market/</loc>
     <lastmod>2018-12-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/markets/</loc>
-    <lastmod>2019-03-18T00:00:00+00:00</lastmod>
+    <loc>/tags/market/</loc>
+    <lastmod>2018-12-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/markets/</loc>
+    <lastmod>2019-03-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/markets/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -314,13 +314,13 @@
   </url>
   
   <url>
-    <loc>/tags/portfolio/</loc>
+    <loc>/categories/portfolio/</loc>
     <lastmod>2018-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/portfolio/</loc>
+    <loc>/tags/portfolio/</loc>
     <lastmod>2018-10-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -350,13 +350,13 @@
   </url>
   
   <url>
-    <loc>/tags/stocks/</loc>
+    <loc>/categories/stocks/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/stocks/</loc>
+    <loc>/tags/stocks/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -386,13 +386,13 @@
   </url>
   
   <url>
-    <loc>/tags/us/</loc>
+    <loc>/categories/us/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/us/</loc>
+    <loc>/tags/us/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
