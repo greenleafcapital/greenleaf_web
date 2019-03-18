@@ -123,6 +123,11 @@
   </url>
   
   <url>
+    <loc>/portfolio/</loc>
+    <lastmod>2018-07-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/bond/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
   </url>
@@ -150,10 +155,6 @@
   <url>
     <loc>/showcase/</loc>
     <lastmod>2018-07-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/portfolio/</loc>
   </url>
   
   <url>
