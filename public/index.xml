@@ -172,15 +172,6 @@ Even though the price of GLD is above its price on August 6th, it is not high en
     </item>
     
     <item>
-      <title>Q3 2018 Portfolios Positions</title>
-      <link>/portfolio/</link>
-      <pubDate>Wed, 03 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/portfolio/</guid>
-      <description>Our Current PortfoliosStarting this quarter we will publish the the list of our portfolios where we are investing our money. These portfolios are constructed for investors with different levels of risks and return objectives. We have initially invested $10 million in each portfolio and we will monitor the progress as we go along. These portfolios were constructed on October 3rd 2018 and the purchase prices are from that day.</description>
-    </item>
-    
-    <item>
       <title>Gold investor&#39;s lost decade</title>
       <link>/post/gold-investor-s-lost-decade/</link>
       <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
@@ -316,6 +307,16 @@ If you would like to learn, then a fake money account is more appropriate for le
       <guid>/showcase/</guid>
       <description>Header 2 Backup two-step verification breach, anonymous terminal traffic worm virus reboot fsociety dat file. Traffic fsociety malware 100 terabytes system hack, delete brute-force cyber security fiber connection connect code worm wipe. Cyber security off the grid delete IP decrypt, nodes connect password 100 terabytes RUDY attack malicious code rootkit gigabit speed. Tor connect network, intercepting traffic off the grid IP protocol password.
  Backup DDoS attack rootkit nodes disconnect website.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/portfolio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio/</guid>
+      <description>+++title = “Portfolio”date = “2018-07-27”author = “Team Greenleaf”+++
+This is where you will find portfolio positions in the future.</description>
     </item>
     
   </channel>
