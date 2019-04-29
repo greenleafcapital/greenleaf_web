@@ -22,9 +22,30 @@ library(dygraphs)
 
 ```{r bonds price, echo=FALSE,warning=FALSE,message=FALSE,include=FALSE}
 
-bnd_returns <- read.csv("~/Documents/greenleaf_data/bonds_int.csv")
+tickers <- c("AGG", "BIV", "BND", "HYG", "IEF", "JNK", "VCIT")
+tickers2 <- c("LQD", "TLT", "VCLT")
 
-bnd_lng_returns <- read.csv("~/Documents/greenleaf_data/bonds_lng.csv")
+bnd_price <- tq_get(tickers,
+                    from = "2007-01-01",
+                    get = "stock.prices")
+
+lng_bnd_price <- tq_get(tickers2,
+                    from = "2005-01-01",
+                    get = "stock.prices")
+
+bnd_returns <- bnd_price %>%
+  group_by(symbol) %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = 'yearly',
+               col_rename = 'returns')
+
+bnd_lng_returns <- lng_bnd_price %>%
+  group_by(symbol) %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = 'yearly',
+               col_rename = 'returns')
 
 ten_year <- tq_get("^TNX",
                    from = '1990-01-01',
@@ -52,9 +73,9 @@ ten_year %>%
 
 Year 2018 has not been a good one for the bond investors. Since the summer of 2017, interest rates have been rising. 
 
-The long term interest rates had been trending lower since 1980s. In the chart above rates reached a high of 8% and since then they kept making lower lows. Currently the ten year rates are near the an important key level at 3%. From here the future path interest will decide which way the trend moves. Do we break out of the 3% resistance level? or do we fade back lower? It will be interesting to see.
+The long term interest rates had been trending lower since 1980s. In the chart above rates reached a high of 8% and since then they kept making lower lows. Currently the ten year rates are near an important key level at 3%. From here the future path interest will decide which way the trend moves. Do we break out of the 3% resistance level? Or do we fade back lower? It will be interesting to see.
 
-Below are the bond performance for different maturities. Even though the rates were trending lower, there were a few years when bonds suffered negative returns. Similarly it is possible that even if interest rates trend higher, we could get some years where bonds give positive returns.
+Below is the bond performance for different maturities and credit quality. Even though the rates were trending lower, there were a few years when bonds suffered negative returns. Similarly it is possible that even if interest rates trend higher, we could get some years where bonds give positive returns.
 
 
 
