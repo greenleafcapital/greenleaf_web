@@ -1,0 +1,345 @@
+---
+title: "S&P 500 Mid Year Review"
+output: html_document
+author: "DD"
+date: "2019-07-17"
+cover: 
+categories:
+  - Market
+  - stock
+tags:
+  - market
+  - analysis
+  - stocks
+description: "Strong Performance for the US Market"
+---
+
+Since the setback of Q4 2018, US stock markets have roared back and are up more than 25% since the December 24, 2018 low. The bounce can be attributed to three main factors
+
+- US Fed backing off from their rate hikes and indicating that they may cut rates this year.
+- US & China promising to continue the talks to find a resolution and de-escalate the trade wars.
+- Talks of Brexit and its effects are not in the news and the can is kicked further down.
+
+The US President is up for re-election in little more than a year from today. The last thing he would like to see is a stock market crash and a weak economy. So he is pressuring the Fed to cut short term rates. He is also threatening to escalate the trade war with China and other countries, and create a lot of uncertainty in the global economy. The Fed admitted that given the uncertainty, it may have to act and cut interest rates. Thus the President is indirectly pressuring the Fed to cut rates and give a short term boost to the economy just in time before his re-election.
+
+Given this backdrop, the US markets have reacted positively so far in 2019.
+
+Let's look at the SPY chart so far in 2019.
+
+```{r message=FALSE,warning=FALSE, echo=FALSE}
+library(tidyquant)
+library(readxl)
+library(ggrepel)
+library(ggthemes)
+library(plotly)
+library(scales)
+
+spy_etf_price <- tq_get("SPY",
+                        from = "2019-01-01",
+                        get = "stock.prices")
+```
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+
+p <- spy_etf_price %>%
+  filter(date >= '2019-01-01') %>%
+  plot_ly(x = ~date,
+          type = 'candlestick',
+          open = ~open,
+          close = ~close,
+          high = ~high, low = ~low) %>%
+  layout(title = "SPY Chart for 2019",
+         xaxis = list(rangeslider = list(visible = F)))
+
+p
+
+```
+
+The market has been trending higher, there was a slight pullback in May when the US President threatened more tariffs on China, but since the meeting with President Xi in Osaka he has backed off that threat. We can see that the markets saw a nice bounce since May. We have added more than 9% since the May pullback as we can see from the chart below.
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+
+p <- spy_etf_price %>%
+  filter(date >= '2019-01-01') %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = "daily",
+               col_rename = "rets") %>%
+  mutate(returns = cumprod(1 + rets)) %>%
+  mutate(returns = returns - 1) %>%
+  ggplot(aes(x = date, y = returns)) +
+  geom_line() +
+  theme_fivethirtyeight() +
+  ggtitle("SPY returns for 2019") +
+  scale_x_date(date_breaks = "month", date_labels = "%b") +
+  scale_y_continuous(breaks = pretty_breaks(n = 10),
+                     labels = scales::percent) +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = "bold"))
+
+ggplotly(p)
+
+```
+
+Next lets look at the individual names.
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+
+spy_url <- "https://us.spdrs.com/site-content/xls/SPY_All_Holdings.xls?fund=SPY&docname=All+Holdings&onyx_code1=&onyx_code2="
+
+temp <- tempfile()
+
+download.file(spy_url, temp, mode = 'wb')
+
+spy_data <- read_xls(temp, skip = 3)
+
+spy_data <- spy_data %>%
+  rename(symbol = Identifier) %>%
+  mutate(Weight = as.numeric(Weight),
+         `Shares Held` = as.numeric(`Shares Held`)) %>%
+  na.omit()
+
+
+spy_tickers <- str_replace_all(spy_data$symbol, pattern = "[.]", replacement = "-")
+
+spy_data <- spy_data %>%
+  mutate(symbol = spy_tickers) %>%
+  filter(symbol != "CASH_USD",
+         symbol != "GOOGL")
+
+spy_data2 <- spy_data %>%
+  select(symbol, Weight, Sector)
+
+spy_prices <- tq_get(spy_data2,
+                     from = "2018-12-31",
+                     get = 'stock.prices')
+
+```
+
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+
+spy_roc <- spy_prices %>%
+  group_by(symbol) %>%
+  slice(c(1,n())) %>%
+  tq_mutate(select = adjusted,
+            mutate_fun = ROC,
+            n = 1,
+            type = "discrete",
+            col_rename = "Returns_2019") %>%
+  na.omit()
+
+```
+
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+
+f <- list(
+  family = "Courier New, monospace",
+  size = 18,
+  color = "#7f7f7f"
+)
+
+x <- list(
+  title = "Weight",
+  titlefont = f
+)
+y <- list(
+  title = "2019 YTD Returns",
+  titlefont = f)
+
+plot_ly(spy_roc,
+        x = ~Weight,
+        y = ~Returns_2019,
+        alpha = 0.3,
+        type = 'scatter',
+        mode = 'text',
+        text = ~symbol,
+        textposition = "top right") %>%
+  add_markers() %>%
+  layout(title = "SP 500 Index Components 2019 YTD Returns",
+         xaxis = x,
+         yaxis = y,
+         showlegend = FALSE)
+
+```
+
+The above chart looks busy, and it is. It contains more than 500 stock names and their returns/weights in the S&P 500 index. You can drag & select to zoom into a particular chart area.
+
+We can see that majority of the stocks are in the positive territory and Microsoft, Amazon and Apple (the big 3) have done really well, gaining over 25% to 35%. 
+
+AMD is the best performer for the year so far and Xerox, MarketAxess and Chipotle and right behind AMD. These are the high momentum stocks that have caught a nice bid in 2019.
+
+Among the worst performers, we see Nordstrom, Mylan and Kraft Heinz. We also see a few retail stocks such as Gap, Kohls and Macys doing poorly. These companies are facing massive changes in their industry and are disrupted by Amazon entering their businesses.
+
+To reduce the noise in the chart we will show you only the stocks that have more than 50% returns or weight greater than 0.3%. This will provide us a better view of the chart.
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+
+largest_wt_label <- spy_roc %>%
+  mutate(Weight = Weight/100) %>%
+  filter(Weight >= 0.003 |
+           Returns_2019 >= 0.5)
+
+plot_ly(largest_wt_label,
+        x = ~Weight,
+        y = ~Returns_2019,
+        alpha = 0.3,
+        type = 'scatter',
+        mode = 'text',
+        text = ~symbol,
+        textposition = "top right") %>%
+  add_markers() %>%
+  layout(title = "SP 500 Index Components \nwith Large weights or above 50% returns",
+         xaxis = x,
+         yaxis = y,
+         showlegend = FALSE)
+
+
+
+```
+
+To get a better look at the cluster we can look only at the small cap outperformers. There are many other small cap stocks (small cap in this case is less weight in the S&P 500) that are outperforming this year which are not visible in this chart. We can zoom on that area to find out those stocks.
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+
+small_cap_outperformers <- spy_roc %>%
+  mutate(Weight = Weight/100) %>%
+  filter(Weight <= 0.002,
+         Returns_2019 >= 0.3)
+
+plot_ly(small_cap_outperformers,
+        x = ~Weight,
+        y = ~Returns_2019,
+        alpha = 0.3,
+        type = 'scatter',
+        mode = 'text',
+        text = ~symbol,
+        textposition = "top right") %>%
+  add_markers() %>%
+  layout(title = "SP 500 Index Small weight out-performers in 2019",
+         xaxis = x,
+         yaxis = y,
+         showlegend = FALSE)
+
+
+```
+
+This gives us a better view of the stocks with less than 0.2% weight in the S&P 500.
+
+Next we can look at the stocks that are showing negative returns for the year.
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+
+large_neg_performers <- spy_roc %>%
+  mutate(Weight = Weight/100) %>%
+  filter(Returns_2019 <= 0,
+         Weight >= 0)
+
+plot_ly(large_neg_performers,
+        x = ~Weight,
+        y = ~Returns_2019,
+        alpha = 0.3,
+        type = 'scatter',
+        mode = 'text',
+        text = ~symbol,
+        textposition = "top right") %>%
+  add_markers() %>%
+  layout(title = "SP 500 stocks in the Red in 2019",
+         xaxis = x,
+         yaxis = y,
+         showlegend = FALSE)
+
+```
+
+We can see that retail stocks, asset managers, energy stocks and drug producers are having a bad year so far in 2019.
+
+Next we will see the top contributors and detractors.
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+
+top100_contri <- spy_roc %>%
+  mutate(Weight = Weight/100) %>%
+  mutate(contri = Weight * Returns_2019) %>%
+  filter(contri >=  0.0005) 
+
+top100_contri <- top100_contri %>%
+  ungroup() %>%
+  arrange(desc(contri)) %>%
+  mutate(symbol = as_factor(symbol))
+
+p <- top100_contri %>%
+  rename(contribution = contri) %>%
+  ggplot(aes(x = symbol, y = contribution, fill = Weight)) +
+  geom_bar(stat = "identity") +
+  scale_y_continuous(breaks = seq(0,0.2,0.001),
+                     labels = scales::percent) +
+  theme_fivethirtyeight() +
+  theme(axis.text.x = element_text(angle = 45, size = 7)) +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic")),
+        legend.position = "top") +
+  ggtitle("Top Contributors to S&P 500 in 2019 as of July 2019") +
+  labs(x = "", y = "Contribution to S&P") +
+  scale_fill_continuous(name = "Weight",
+                        labels = c("0", "1%", "2%", "3%", "4%"),
+                        low = "purple", high = "dark blue")
+
+ggplotly(p)  
+
+```
+
+This chart is revealing. It shows us who is doing the heavy lifting for the S&P 500. We can see that Microsoft, Amazon, Apple and Facebook have added 4.5% to the S&P 500 this year. 
+
+Let us look at the top detractors from the S&P 500
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+
+top100_detract <- spy_roc %>%
+  ungroup() %>%
+  mutate(Weight = Weight/100) %>%
+  mutate(contri = Weight * Returns_2019) %>%
+  filter(contri <= -0.000001) %>%
+  arrange(contri) %>%
+  mutate(symbol = as_factor(symbol)) 
+
+
+p <- top100_detract %>%
+  rename(contribution = contri) %>%
+  mutate(contribution = round(contribution,5)) %>%
+  ggplot(aes(x = symbol, y = contribution, fill = Weight)) +
+  geom_bar(stat = "identity") +
+  scale_y_continuous(breaks = seq(-0.2,0,0.0002),
+                     labels = scales::percent) +
+  theme_fivethirtyeight() +
+  theme(axis.text.x = element_text(angle = 45, size = 7)) +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        panel.grid.major.x = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic")),
+        legend.position = "top") +
+  ggtitle("Top Detractors from S&P 500 in 2019 as of July 2019") +
+  labs(x = "", y = "Contribution to S&P") +
+  scale_fill_continuous(name = "Weight",
+                        labels = c("0", "1%", "2%", "3%", "4%"),
+                        low = "purple", high = "dark blue")
+
+ggplotly(p)
+
+```
+
+Not many names here, this goes on to show us the strength of the US market so far in 2019. Give the strength in the stock markets, many are questioning the FED's wiillingness to cut rates this year. We shall see what the FED does at its next meeting on July 30th.
