@@ -1,0 +1,112 @@
+---
+title: "Trade Idea - Opportunity to go Short Netflix"
+output: html_document
+author: "DD"
+date: "2019-07-26"
+cover: 
+categories:
+  - Market
+  - stock
+  - Idea
+tags:
+  - market
+  - analysis
+  - stocks
+description: "Opportunity to short Netflix"
+---
+
+On July 17,2019 after market hours Netflix reported its earnings. The earnings were a disappointment and the stock fell more than 10%. Lets look at the Netflix chart first.
+
+```{r message=FALSE,warning=FALSE,echo=FALSE}
+
+library(tidyquant)
+library(timetk)
+library(plotly)
+
+```
+
+```{r message=FALSE,warning=FALSE,echo=FALSE}
+
+nflx_price <- tq_get('NFLX',
+                     from = '2019-01-01',
+                     get = 'stock.prices')
+
+a1 <- list(text = "Support",
+          x = '2019-05-27',
+          y = 0.30,
+          xref = 'x',
+          yref = 'paper',
+          xanchor = 'left',
+          showarrow = FALSE
+)
+
+a2 <- list(text = "Resistance",
+           x = '2019-07-15',
+           y = 0.36,
+           xref = 'x',
+           yref = 'paper',
+           xanchor = 'left',
+           showarrow = FALSE
+)
+
+
+nflx_price %>%
+  filter(date >= '2019-04-01') %>%
+  plot_ly(x = ~date, type = 'candlestick',
+          open = ~open,
+          close = ~close,
+          high = ~high,
+          low = ~low) %>%
+  layout(title = "Netflix Price Since April 1, 2019",
+         annotations = list(a1,a2),
+         shapes = list(
+           list(type = "rect",
+                fillcolor = "black", line = list(color = "black"), opacity = 0.3,
+                x0 = "2019-04-01", x1 = "2019-07-25", xref = "x",
+                y0 = 332, y1 = 332, yref = "y")),
+         xaxis = list(rangeslider = list(visible = F)))
+
+```
+
+We can see from the chart that Netflix had formed a support around 330 to 340 price range. This support was breached after the earnings disappointment on July 17th. Since then the stock has recovered back from \$300 to \$330 which was its last trading price when this post was written.
+
+We might expect the previous support area to act as resistance. Currently Netflix is trading near this resistance area. Also the 200 Day moving average price is aroound \$335. These two can act as a major resistance area. 
+
+So how can we trade this stock?
+
+Shorting Netflix outright has been disastrous over the past several years and it is not a good idea to short Netflix without any hedging strategy. 
+
+The best way in our opinion is to use Netflix's put options, and since we want to give this trade some time to workout, we are looking at the options expiring in December.
+
+Below you can see partial December option chain.
+
+```{r warning=FALSE,message=FALSE,echo=FALSE}
+
+library(DT)
+
+nflx_options <- getOptionChain('NFLX', Exp = '2019-12-20')
+
+nflx_put <- tk_tbl(nflx_options$puts)
+
+nflx_put %>%
+  filter(Strike <= 300 & Strike > 260) %>%
+  rename(Contract_Name = index) %>%
+  datatable()
+  
+
+
+```
+
+Our target price for Netflix is to trade somewhere between 280 to 260. So we like the 280/265 put vertical. You will have to pay somewhere around \$3 to buy this vertical. The max profit on this trade (assuming \$3 to buy it) is \$12 and the max loss is the price we pay to buy this vertical which is \$3.
+
+#### Summary
+
+- Netflix has disappointed after its earnings
+- Subscribers growth has slowed
+- Stock is trading near the 200 Day moving average and the previous support area. These could act as potential resistance.
+- We want to enter into an asymmetric risk/reward trade, to control our risk and maximize our profits
+- Buying the 280/265 December 2019 put vertical is one of the many ways to capitalize on this trade
+- The put vertical will cost \$3
+- Max gain is \$12
+- Max loss is \$3
+
