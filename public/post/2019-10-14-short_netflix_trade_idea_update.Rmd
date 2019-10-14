@@ -1,0 +1,128 @@
+---
+title: "Update - Netflix Trade"
+output: html_document
+author: "DD"
+date: "2019-10-14"
+cover: 
+categories:
+  - Market
+  - stock
+  - Idea
+tags:
+  - market
+  - analysis
+  - stocks
+description: "This article is an update on the Netflix Trade entered on July 26, 2019"
+---
+
+On July 26, 2019 we posted a trade idea to short Netflix stock. Since that day, Netflix stock saw a steep decline of 25%, It made a low of \$252 on September 24th. Since then it has managed to bounce back about 10%. Today we wanted to give an update on the trade.
+
+To recap we bought the 280/265 put vertical expiring in December 2019. We paid about \$3 for that trade. On September 24th, this put vertical traded for more than \$8. Currently its trading near \$6. Netflix is scheduled to report earnings on Wednesday Oct 16. We will discuss how we are managing this trade.
+
+First lets see the Netflix stock chart.
+
+```{r message=FALSE,warning=FALSE,echo=FALSE}
+
+library(tidyquant)
+library(timetk)
+library(plotly)
+
+```
+
+```{r message=FALSE,warning=FALSE,echo=FALSE}
+
+nflx_price <- tq_get('NFLX',
+                     from = '2019-01-01',
+                     get = 'stock.prices')
+
+a1 <- list(text = "Support",
+           x = '2019-05-27',
+           y = 0.6,
+           xref = 'x',
+           yref = 'paper',
+           xanchor = 'left',
+           showarrow = FALSE
+)
+
+a2 <- list(text = "Resistance",
+           x = '2019-07-30',
+           y = 0.6,
+           xref = 'x',
+           yref = 'paper',
+           xanchor = 'left',
+           showarrow = FALSE
+)
+
+a3 <- list(text = "New Support",
+           x = '2019-8-10',
+           y = 0.24,
+           xref = 'x',
+           yref = 'paper',
+           xanchor = 'left',
+           showarrow = FALSE
+)
+
+a4 <- list(text = "New \nResistance?",
+           x = '2019-10-10',
+           y = 0.24,
+           xref = 'x',
+           yref = 'paper',
+           xanchor = 'left',
+           showarrow = FALSE
+)
+
+
+
+
+nflx_price %>%
+  filter(date >= '2019-04-01') %>%
+  plot_ly(x = ~date, type = 'candlestick',
+          open = ~open,
+          close = ~close,
+          high = ~high,
+          low = ~low) %>%
+  layout(title = "Netflix Price Since April 1, 2019",
+         annotations = list(a1,a2,a3,a4),
+         shapes = list(
+           list(type = "rect",
+                fillcolor = "black", line = list(color = "black"), opacity = 0.3,
+                x0 = "2019-04-01", x1 = "2019-07-25", xref = "x",
+                y0 = 332, y1 = 332, yref = "y"),
+           list(type = "rect",
+                fillcolor = "black", line = list(color = "black"), opacity = 0.3,
+                x0 = "2019-08-01", x1 = "2019-10-25", xref = "x",
+                y0 = 285, y1 = 285, yref = "y")),
+         xaxis = list(rangeslider = list(visible = F)))
+
+```
+
+From the above chart we can see that after the initial decline, Netflix was trying to form some support around \$280. But it broke that support on September 20th. It made a low of \$252 on September 25th and since then it has bounced back to around \$280 level where it currently trades. 
+
+Now lets see where the options are currently trading.
+
+```{r warning=FALSE,message=FALSE,echo=FALSE}
+
+library(DT)
+
+nflx_options <- getOptionChain('NFLX', Exp = '2019-12-20')
+
+nflx_put <- tk_tbl(nflx_options$puts)
+
+nflx_put %>%
+  filter(Strike <= 300 & Strike > 260) %>%
+  rename(Contract_Name = index) %>%
+  datatable()
+  
+
+
+```
+
+We can see that the we can sell our options for a net credit of \$6. This is double the amount we paid for the options in July.
+
+So should we take our 100% profits and close the trade before earnings. Or is \$280 a new resistance level and we should let this trade ride.
+
+These are difficult questions and it comes down to the temperament of the trader. If you are satisfied with the 100% profits then you can close the trade and move to the next opportunity. If you enjoy wild ride and wish to have skin in the game when Netflix reports earnings, then you can keep the trade on. 
+
+When we put on the trade our target range was 280 to 260. Since it has hit this price, we have closed our trade.
+
+

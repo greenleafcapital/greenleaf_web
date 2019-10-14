@@ -70,7 +70,7 @@ nflx_price %>%
 
 We can see from the chart that Netflix had formed a support around 330 to 340 price range. This support was breached after the earnings disappointment on July 17th. Since then the stock has recovered back from \$300 to \$330 which was its last trading price when this post was written.
 
-We might expect the previous support area to act as resistance. Currently Netflix is trading near this resistance area. Also the 200 Day moving average price is aroound \$335. These two can act as a major resistance area. 
+We might expect the previous support area to act as resistance. Currently Netflix is trading near this resistance area. Also the 200 Day moving average price is around \$335. These two can act as a major resistance area. 
 
 So how can we trade this stock?
 
