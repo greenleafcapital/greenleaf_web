@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Long Short Strategies</title>
@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Analysis</title>
+      <title>analysis</title>
       <link>/tags/analysis/</link>
       <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
       
@@ -21,7 +21,52 @@
     </item>
     
     <item>
-      <title>Apple</title>
+      <title>market</title>
+      <link>/tags/market/</link>
+      <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/market/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stocks</title>
+      <link>/tags/stocks/</link>
+      <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/stocks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markets</title>
+      <link>/tags/markets/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/markets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>S\&amp;\P500</title>
+      <link>/tags/s//p500/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/s//p500/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>US</title>
+      <link>/tags/us/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/us/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apple</title>
       <link>/tags/apple/</link>
       <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
       
@@ -30,7 +75,16 @@
     </item>
     
     <item>
-      <title>Bonds</title>
+      <title>World</title>
+      <link>/tags/world/</link>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/world/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bonds</title>
       <link>/tags/bonds/</link>
       <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
       
@@ -39,25 +93,16 @@
     </item>
     
     <item>
-      <title>Currency</title>
-      <link>/tags/currency/</link>
-      <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
+      <title>Home Builders</title>
+      <link>/tags/home-builders/</link>
+      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/currency/</guid>
+      <guid>/tags/home-builders/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Facebook</title>
-      <link>/tags/facebook/</link>
-      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/facebook/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fang</title>
+      <title>fang</title>
       <link>/tags/fang/</link>
       <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
       
@@ -66,7 +111,7 @@
     </item>
     
     <item>
-      <title>Gld</title>
+      <title>gld</title>
       <link>/tags/gld/</link>
       <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
       
@@ -84,61 +129,7 @@
     </item>
     
     <item>
-      <title>Home Builders</title>
-      <link>/tags/home-builders/</link>
-      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/home-builders/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Market</title>
-      <link>/tags/market/</link>
-      <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/market/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Markets</title>
-      <link>/tags/markets/</link>
-      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/markets/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rates</title>
-      <link>/tags/rates/</link>
-      <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/rates/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>S\\p500</title>
-      <link>/tags/s/p500/</link>
-      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/s/p500/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Stocks</title>
-      <link>/tags/stocks/</link>
-      <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/stocks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Trade</title>
+      <title>trade</title>
       <link>/tags/trade/</link>
       <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
       
@@ -147,7 +138,16 @@
     </item>
     
     <item>
-      <title>Turkey</title>
+      <title>currency</title>
+      <link>/tags/currency/</link>
+      <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/currency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>turkey</title>
       <link>/tags/turkey/</link>
       <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
       
@@ -156,20 +156,20 @@
     </item>
     
     <item>
-      <title>Us</title>
-      <link>/tags/us/</link>
-      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      <title>rates</title>
+      <link>/tags/rates/</link>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/us/</guid>
+      <guid>/tags/rates/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>World</title>
-      <link>/tags/world/</link>
-      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      <title>facebook</title>
+      <link>/tags/facebook/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/world/</guid>
+      <guid>/tags/facebook/</guid>
       <description></description>
     </item>
     

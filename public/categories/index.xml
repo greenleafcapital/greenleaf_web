@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Long Short Strategies</title>
@@ -6,82 +6,10 @@
     <description>Recent content in Categories on Long Short Strategies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Apple</title>
-      <link>/categories/apple/</link>
-      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/apple/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Banks</title>
-      <link>/categories/banks/</link>
-      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/banks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bonds</title>
-      <link>/categories/bonds/</link>
-      <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/bonds/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Currency</title>
-      <link>/categories/currency/</link>
-      <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/currency/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fang</title>
-      <link>/categories/fang/</link>
-      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/fang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gld</title>
-      <link>/categories/gld/</link>
-      <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/gld/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Gold</title>
-      <link>/categories/gold/</link>
-      <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/gold/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Home Builders</title>
-      <link>/categories/home-builders/</link>
-      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/home-builders/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Idea</title>
@@ -89,24 +17,6 @@
       <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/idea/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ideas</title>
-      <link>/categories/ideas/</link>
-      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/ideas/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lottery</title>
-      <link>/categories/lottery/</link>
-      <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/lottery/</guid>
       <description></description>
     </item>
     
@@ -120,6 +30,15 @@
     </item>
     
     <item>
+      <title>stock</title>
+      <link>/categories/stock/</link>
+      <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/stock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Markets</title>
       <link>/categories/markets/</link>
       <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
@@ -129,29 +48,83 @@
     </item>
     
     <item>
-      <title>Metal</title>
-      <link>/categories/metal/</link>
-      <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/metal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Stock</title>
-      <link>/categories/stock/</link>
-      <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/stock/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Stocks</title>
+      <title>stocks</title>
       <link>/categories/stocks/</link>
       <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/stocks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>US</title>
+      <link>/categories/us/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/us/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apple</title>
+      <link>/categories/apple/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/apple/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Home Builders</title>
+      <link>/categories/home-builders/</link>
+      <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/home-builders/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Banks</title>
+      <link>/categories/banks/</link>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/banks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fang</title>
+      <link>/categories/fang/</link>
+      <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/fang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lottery</title>
+      <link>/categories/lottery/</link>
+      <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/lottery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gld</title>
+      <link>/categories/gld/</link>
+      <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/gld/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>metal</title>
+      <link>/categories/metal/</link>
+      <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/metal/</guid>
       <description></description>
     </item>
     
@@ -165,11 +138,38 @@
     </item>
     
     <item>
-      <title>Us</title>
-      <link>/categories/us/</link>
-      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      <title>gold</title>
+      <link>/categories/gold/</link>
+      <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>/categories/us/</guid>
+      <guid>/categories/gold/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>currency</title>
+      <link>/categories/currency/</link>
+      <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/currency/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bonds</title>
+      <link>/categories/bonds/</link>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/bonds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ideas</title>
+      <link>/categories/ideas/</link>
+      <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/ideas/</guid>
       <description></description>
     </item>
     

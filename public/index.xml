@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Long Short Strategies</title>
@@ -100,7 +100,7 @@ Dow Jones Index ETF (DIA)S&amp;amp;P 500 Index ETF (SPY)Nasdaq 100 ETF (QQQ)
       <guid>/post/2018-12-27-sp500_analysis/</guid>
       <description>In the last post we discussed the recent sell off in the US equity markets. In this post we will dig deeper and see how individual components of the market performed this year.
 First we will begin by looking at the components that make up the S&amp;amp;P 500 index and the returns for 2018.
-S&amp;amp;P 500 Components{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;caption&#34;:&#34;S&amp;amp;P 500 Components Data&#34;,&#34;data&#34;:[[&#34;Microsoft Corporation&#34;,&#34;Apple Inc.&#34;,&#34;Amazon.com Inc.&#34;,&#34;Berkshire Hathaway Inc.</description>
+S&amp;amp;P 500 Components{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;caption&#34;:&#34;S&amp;amp;P 500 Components Data&#34;,&#34;data&#34;:[[&#34;Microsoft Corporation&#34;,&#34;Apple Inc.&#34;,&#34;Amazon.com Inc.</description>
     </item>
     
     <item>
@@ -316,7 +316,7 @@ Lets imagine a bridge that carries thousands of vehicles across from one end to 
       <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>Welcome This website was built to log financial events, portfolio strategies and trading ideas. This website is not intended to provide financial advice. Financial assets such as company stocks are risky. They can depreciate in value and cause permanent loss of capital. It is always important to consult a financial advisor to discuss whether a certain investment is suitable for you.
+      <description>This website was built to log financial events, portfolio strategies and trading ideas. This website is not intended to provide financial advice. Financial assets such as company stocks are risky. They can depreciate in value and cause permanent loss of capital. It is always important to consult a financial advisor to discuss whether a certain investment is suitable for you.
 If you would like to learn, then a fake money account is more appropriate for learning.</description>
     </item>
     
