@@ -1,0 +1,88 @@
+---
+title: "Markets plunge more than 15% in a week"
+output: html_document
+author: "DD"
+date: "2020-03-01"
+cover: 
+categories:
+  - Market
+  - stock
+  - Analysis
+tags:
+  - market
+  - analysis
+  - stocks
+description: "Market Sell off around the world."
+---
+
+Last week of February 2020, saw one of the steepest weekly losses in market indexes around the world. The fears were sparked by the spread of coronavirus. Stock market investors and speculators, realized that the virus was not as under control as anticipated. There was relentless selling all 5 days. Below we can see the S&P 500 ETF (SPY) chart. We can see that all the gains since October 2019, have been lost.
+
+
+```{r message=FALSE,warning=FALSE,echo=FALSE}
+
+library(tidyquant)
+library(timetk)
+library(plotly)
+
+```
+
+```{r message=FALSE,warning=FALSE,echo=FALSE}
+
+spy_price <- tq_get('SPY',
+                    from = '2019-08-01',
+                    to = "2020-02-29",
+                    get = 'stock.prices')
+
+a1 <- list(text = "Support 1",
+           x = '2020-01-25',
+           y = 0.6,
+           xref = 'x',
+           yref = 'paper',
+           xanchor = 'left',
+           showarrow = FALSE
+)
+
+a2 <- list(text = "Support 2",
+           x = '2020-01-01',
+           y = 0.1,
+           xref = 'x',
+           yref = 'paper',
+           xanchor = 'left',
+           showarrow = FALSE
+)
+
+xax <- list(
+  title = "Date"
+)
+
+
+
+spy_price %>%
+  filter(date >= '2019-04-01') %>%
+  plot_ly(x = ~date, type = 'candlestick',
+          open = ~open,
+          close = ~close,
+          high = ~high,
+          low = ~low) %>%
+  layout(title = "SPY Price Since August 1, 2019",
+         annotations = list(a1,a2),
+         shapes = list(
+           list(type = "rect",
+                fillcolor = "black", line = list(color = "black"), opacity = 0.3,
+                x0 = "2020-1-1", x1 = "2020-2-25", xref = "x",
+                y0 = 320, y1 = 320, yref = "y"),
+           list(type = "rect",
+                fillcolor = "black", line = list(color = "black"), opacity = 0.3,
+                x0 = "2019-08-01", x1 = "2020-02-28", xref = "x",
+                y0 = 285, y1 = 282, yref = "y")),
+         xaxis = list(rangeslider = list(visible = F)))
+
+```
+
+
+As shown above the market lost support 1 very quickly. We have now bounced off Support 2. We have to see how long this support can hold. This will depend on the measures taken by both the Health officials and the Fed. 
+
+To realize any further gains, we will have to see significant reduction in the spread of the virus and rate cuts from the Fed will help ease the interest rate burden on businesses around the world.
+
+
+

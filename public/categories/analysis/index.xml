@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Analysis on Long Short Strategies</title>
+    <link>/categories/analysis/</link>
+    <description>Recent content in Analysis on Long Short Strategies</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/analysis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Markets plunge more than 15% in a week</title>
+      <link>/post/2020-03-01-stock_market_selloff/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-03-01-stock_market_selloff/</guid>
+      <description>Last week of February 2020, saw one of the steepest weekly losses in market indexes around the world. The fears were sparked by the spread of coronavirus. Stock market investors and speculators, realized that the virus was not as under control as anticipated. There was relentless selling all 5 days. Below we can see the S&amp;amp;P 500 ETF (SPY) chart. We can see that all the gains since October 2019, have been lost.</description>
+    </item>
+    
+  </channel>
+</rss>

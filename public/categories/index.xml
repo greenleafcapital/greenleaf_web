@@ -6,24 +6,24 @@
     <description>Recent content in Categories on Long Short Strategies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Idea</title>
-      <link>/categories/idea/</link>
-      <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
+      <title>Analysis</title>
+      <link>/categories/analysis/</link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/idea/</guid>
+      <guid>/categories/analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Market</title>
       <link>/categories/market/</link>
-      <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>/categories/market/</guid>
       <description></description>
@@ -32,9 +32,18 @@
     <item>
       <title>stock</title>
       <link>/categories/stock/</link>
-      <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>/categories/stock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Idea</title>
+      <link>/categories/idea/</link>
+      <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/idea/</guid>
       <description></description>
     </item>
     
