@@ -1,0 +1,544 @@
+---
+title: "S&P 500 Analysis March 2020"
+author: "DD"
+date: "2020-03-16"
+categories:
+  - Market
+  - stock
+tags:
+  - market
+  - analysis
+  - stocks
+description: "Dissecting the S&P 500 Index Returns or lack thereof for Q1 2020"
+output: html_document
+---
+
+In the last post we discussed the recent sell off in the US equity markets. In this post we will dig deeper and see how individual components of the market performed this year.
+
+First we will begin by looking at the components that make up the S&P 500 index and the returns so far for 2020.
+
+### S&P 500 Components
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+library(tidyquant)
+library(readxl)
+library(ggrepel)
+library(ggthemes)
+library(DT)
+
+```
+
+
+
+```{r load-components, echo=FALSE, message=FALSE, warning=FALSE}
+
+spy_data <- read_csv("E:/Documents/greenleaf_web_data/2020/March/Mar_16_2020/SP_weights_Mar2020.csv")
+
+spy_data %>%
+  rename(Symbol = Ticker) %>%
+  mutate(Weight = Weight/100) %>%
+  datatable(rownames = FALSE, caption = "S&P 500 Components Data") %>%
+  formatPercentage(digits = 2, columns = "Weight")
+
+```
+
+
+### S&P 500 Performance Chart for 2020
+
+```{r spx-perf-2018,echo=FALSE, message=FALSE, warning=FALSE}
+
+spx_price <- read_csv("E:/Documents/greenleaf_web_data/2020/March/Mar_16_2020/spy_price.csv")
+
+spx_price %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = periodReturn,
+               period = "daily",
+               col_rename = "rets") %>%
+  mutate(cr = cumprod(1 + rets)) %>%
+  mutate(cr = cr - 1) %>%
+  ggplot(aes(x = date, y = cr)) +
+  geom_line() +
+  theme_fivethirtyeight() +
+  ggtitle("S&P 500 Returns for 2020") +
+  scale_x_date(date_breaks = "month", date_labels = "%b") +
+  scale_y_continuous(breaks = seq(-0.5,0.08,0.01),
+                     labels = scales::percent) +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold")))
+
+```
+
+The S&P 500 has gone from up 5% to down 25% in a matter of 3 weeks. Some claim this is the fastest correction in history.
+
+We can next look at the different sector performance.
+
+### S&P 500 sectors Performance
+
+```{r sector-funcs,echo=FALSE, message=FALSE, warning=FALSE}
+
+sector_price <- read_csv("E:/Documents/greenleaf_web_data/2020/March/Mar_16_2020/sector_price.csv")
+
+sec_ret_func <- function(a) {
+  
+  sector_price %>%
+    group_by(symbol) %>%
+    tq_transmute(select = adjusted,
+                 mutate_fun = periodReturn,
+                 period = 'daily',
+                 col_rename = "ret") %>%
+    filter(symbol == a) %>%
+    mutate(cr = cumprod(1 + ret)) %>%
+    mutate(cr = cr - 1)
+  
+}
+  
+
+sec_ret_gg <- function(x,y) {
+  
+  sec_ret_func(x) %>%
+  ggplot(aes(x = date, y = cr)) +
+  geom_line() +
+  theme_fivethirtyeight() +
+  ggtitle(paste(y,"Sector Returns Chart for 2020")) +
+  scale_x_date(date_breaks = "month", date_labels = "%b") +
+  scale_y_continuous(breaks = seq(-1,1,0.02),
+                     labels = scales::percent) +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold")))
+    
+  
+}
+
+
+```
+
+
+```{r sec-perf-tbl,echo=FALSE, message=FALSE, warning=FALSE}
+
+
+sec_tbl <- tibble(symbol = c("XLK", "XLF", "XLV", "XLY", "XLI",
+                       "XLU", "XLP", "XLE", "XLB", "XLRE"),
+                  Sector = c("Technology", "Financials", "HealthCare", "Cons Discretionary",
+                             "Industrials", "Utility", "Cons Staples", "Energy", "Materials", "Real Estate"))
+
+sector_price %>%
+  group_by(symbol) %>%
+  slice(c(1, n())) %>%
+  tq_transmute(select = adjusted,
+               mutate_fun = ROC,
+               type = "discrete", 
+               n = 1, col_rename = "2020 Returns") %>%
+  na.omit() %>%
+  arrange(`2020 Returns`) %>%
+  left_join(sec_tbl, by = "symbol") %>%
+  select(Sector, `2020 Returns`) %>%
+  rename(Symbol = symbol) %>%
+  datatable(caption = "S&P 500 Sector returns for 2020", rownames = FALSE) %>%
+  formatPercentage(digits = 2, columns = "2020 Returns")
+
+```
+
+### S&P 500 Sectors performance Charts
+
+```{r charts,echo=FALSE, message=FALSE, warning=FALSE}
+
+sec_tbl <- tibble(symbol = c("XLK", "XLF", "XLV", "XLY", "XLI",
+                       "XLU", "XLP", "XLE", "XLB", "XLRE"),
+                  Sector = c("Technology", "Financials", "HealthCare", "Cons Discretionary",
+                             "Industrials", "Utility", "Cons Staples", "Energy", "Materials", "Real Estate"))
+
+sec_sym <-  list("XLK", "XLF", "XLV", "XLY", "XLI",
+                       "XLU", "XLP", "XLE", "XLB", "XLRE")
+
+sec_name <- list("Technology", "Financials", "HealthCare", "Cons Discretionary",
+                             "Industrials", "Utility", "Cons Staples", "Energy", "Materials", "Real Estate")
+
+
+map2(sec_sym, sec_name, sec_ret_gg)
+
+
+
+
+
+```
+
+All of the 10 sectors in the S&P 500 are trading negative. Even "safe" sectors such as Utilities and Consumer Staples are negative. The worst performance was for the Energy, Materials, Industrial and Financial sectors. Those are more cyclical in nature and maybe pointing to a slowdown or a recession in the overall economy.
+
+### Individual Stocks
+
+```{r spy-comp-perf,echo=FALSE, message=FALSE, warning=FALSE}
+
+spx_ret_all <- read_csv("E:/Documents/greenleaf_web_data/2020/March/Mar_16_2020/indi_returns.csv")
+
+```
+
+```{r large-cap-all,echo=FALSE, message=FALSE, warning=FALSE}
+
+largest_wt_label <- spx_ret_all %>%
+  rename(Weight = `Weight (%)`) %>%
+  rename(symbol = Ticker) %>%
+  mutate(Weight = Weight/100) %>%
+  filter(Weight >= 0.005 |
+           ROC >= 0.45)
+
+spx_ret_all %>%
+  rename(Weight = `Weight (%)`) %>%
+  arrange(ROC) %>%
+  mutate(Weight = Weight/100) %>%
+  rename(symbol = Ticker) %>%
+  ggplot(aes(x = Weight, y = ROC, color = Sector)) +
+  geom_point(shape = 1,
+             size = 1,
+             stroke = 1.5) +
+  geom_text_repel(aes(label = symbol),
+                  data = largest_wt_label,
+                  size = 3,
+                  color = 'gray30') +
+  scale_y_continuous(breaks = seq(-0.7,1.2, 0.1),
+                     labels = scales::percent,
+                     name = "YTD Returns") +
+  scale_x_continuous(breaks = seq(0,0.05, 0.005),
+                     labels = scales::percent,
+                     name = "Weights") +
+  scale_color_manual(name = "Sectors",
+                     values = c("#6699CC",
+                                "#099DD7",
+                                "#28AADC",
+                                "#248E84",
+                                "#F2583F",
+                                "#96503F",
+                                "#FF99FF",
+                                "#99FF33",
+                                "#3399CC",
+                                "#33FFCC",
+                                "#3366FF",
+                                "#3366FF"),
+                     labels = c("Communications", "Discretionary", "Staples",
+                                "Energy","Financials", "Health Care", "Industrials",
+                                "Technology", "Materials", "Real Estate",
+                                "Utilities")) +
+  ggtitle("S&P 500 Individual stock performance in 2020") +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold"))) 
+
+```
+
+This chart may appear busy, because it packs a lot of information. This chart shows the YTD performance for each stock in the S&P 500 index. The Y-axis is the YTD returns and X-axis shows their weight in the S&P 500 index. The different colors are for different sectors. I have only named the symbols of the major stocks that most investor are familiar with. 
+
+Next we will zoom in to take a better look at the stocks smaller weight (less than 20bps) that outperformed this year.
+
+```{r small-cap-out,echo=FALSE, message=FALSE, warning=FALSE}
+
+small_cap_outperformers <- spx_ret_all %>%
+  rename(Weight = `Weight (%)`) %>%
+  rename(symbol = Ticker) %>%
+  mutate(Weight = Weight/100) %>%
+  filter(ROC >= 0)
+
+
+spx_ret_all %>%
+  rename(Weight = `Weight (%)`) %>%
+  rename(symbol = Ticker) %>%
+  arrange(ROC) %>%
+  mutate(Weight = Weight/100) %>%
+  ggplot(aes(x = Weight, y = ROC, color = Sector)) +
+  geom_point(shape = 1,
+             size = 1,
+             stroke = 1.5) +
+  geom_text_repel(aes(label = symbol),
+                  data = small_cap_outperformers,
+                  size = 3,
+                  color = 'gray30') +
+  scale_y_continuous(breaks = seq(-0.5,1.2, 0.1),
+                     labels = scales::percent,
+                     name = "YTD Returns") +
+  scale_x_continuous(breaks = seq(0,0.05, 0.0005),
+                     labels = scales::percent,
+                     name = "Weights") +
+  coord_cartesian(xlim = c(0,0.005),
+                  ylim = c(0,0.3)) +
+  scale_color_manual(name = "Sectors",
+                     values = c("#6699CC",
+                                "seagreen4",
+                                "#28AADC",
+                                "#248E84",
+                                "#F2583F",
+                                "#96503F",
+                                "#FF99FF",
+                                "#99FF33",
+                                "#3399CC",
+                                "#33FFCC",
+                                "#3366FF",
+                                "#3366FF"),
+                     labels = c("Communications", "Discretionary", "Staples", "Energy",
+                                "Financials", "Health Care", "Industrials",
+                                "Technology", "Materials", "Real Estate",
+                                "Utilities")) +
+  ggtitle("S&P 500 stocks with Positive Returns in 2020",
+          subtitle = "Outperformers for S&P 500") +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold")))
+  
+
+```
+
+
+
+```{r worst-perf-largecap, echo=FALSE, message=FALSE, warning=FALSE}
+
+large_neg_performers <- spx_ret_all %>%
+  rename(Weight = `Weight (%)`) %>%
+  rename(symbol = Ticker) %>%
+  mutate(Weight = Weight/100) %>%
+  filter(ROC <= 0,
+         Weight >= 0.0035)
+
+spx_ret_all %>%
+  rename(Weight = `Weight (%)`) %>%
+  rename(symbol = Ticker) %>%
+  arrange(ROC) %>%
+  mutate(Weight = Weight/100) %>%
+  ggplot(aes(x = Weight, y = ROC, color = Sector)) +
+  geom_point(shape = 1,
+             size = 1,
+             stroke = 1.5) +
+  geom_text_repel(aes(label = symbol),
+                  data = large_neg_performers,
+                  size = 3,
+                  color = 'gray30') +
+  scale_y_continuous(breaks = seq(-0.5,1.2, 0.1),
+                     labels = scales::percent,
+                     name = "YTD Returns") +
+  scale_x_continuous(breaks = seq(0,0.05, 0.003),
+                     labels = scales::percent,
+                     name = "Weights") +
+  coord_cartesian(ylim = c(0,-0.75),
+                  xlim = c(0,0.025)) +
+  scale_color_manual(name = "Sectors",
+                     values = c("#6699CC",
+                                "#099DD7",
+                                "#28AADC",
+                                "#248E84",
+                                "#F2583F",
+                                "#96503F",
+                                "#FF99FF",
+                                "#99FF33",
+                                "#3399CC",
+                                "#33FFCC",
+                                "#3366FF",
+                                "#3366FF"),
+                     labels = c("Communications", "Discretionary", "Staples", "Energy",
+                                "Financials", "Health Care", "Industrials",
+                                "Technology", "Materials", "Real Estate",
+                                "Utilities")) +
+  ggtitle("S&P 500 Worst performing Large cap stocks",
+          subtitle = "Large Cap Negative performers for S&P 500") +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold")))
+
+
+
+```
+
+Next lets look at the best and worst stocks in the index.
+
+### Top 10 and Bottom 10 Performers
+
+```{r top-10,echo=FALSE, message=FALSE, warning=FALSE}
+
+spx_ret_all %>%
+  rename(Weight = `Weight (%)`) %>%
+  rename(symbol = Ticker) %>%
+  arrange(desc(ROC)) %>%
+  select(symbol, Name, Sector, ROC) %>%
+  rename(Symbol = symbol,
+         Returns = ROC) %>%
+  slice(c(1:10)) %>%
+  datatable(caption = "Top 10 stock performers in S&P 500", rownames = FALSE) %>%
+  formatPercentage(digits = 2, columns = "Returns")
+
+
+```
+
+
+
+```{r bottom-10,echo=FALSE, message=FALSE, warning=FALSE}
+
+spx_ret_all %>%
+  rename(Weight = `Weight (%)`) %>%
+  rename(symbol = Ticker) %>%
+  filter(symbol != 'IR') %>%
+  arrange(ROC) %>%
+  select(symbol, Name, Sector, ROC) %>%
+  rename(Symbol = symbol,
+         Returns = ROC) %>%
+  slice(c(1:10)) %>%
+  datatable(caption = "Bottom 10 stock performers in S&P 500", rownames = FALSE) %>%
+  formatPercentage(digits = 2, columns = "Returns")
+
+
+```
+
+
+
+```{r large-contri,echo=FALSE, message=FALSE, warning=FALSE}
+
+top100_contri <- spx_ret_all %>%
+  rename(Weight = `Weight (%)`) %>%
+  rename(symbol = Ticker) %>%
+  mutate(Weight = Weight/100) %>%
+  mutate(contri = Weight * ROC) %>%
+  filter(contri >=  0) 
+
+top100_contri <- top100_contri %>%
+  ungroup() %>%
+  arrange(desc(contri)) %>%
+  mutate(symbol = as_factor(symbol))
+
+
+top100_contri %>%
+  ggplot(aes(x = symbol, y = contri, fill = Weight)) +
+  geom_bar(stat = "identity") +
+  scale_y_continuous(breaks = seq(0,0.2,0.0001),
+                     labels = scales::percent) +
+  theme_fivethirtyeight() +
+  theme(axis.text.x = element_text(angle = 45, size = 7)) +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold")),
+        legend.position = "top") +
+  ggtitle("Top Contributors to S&P 500 in 2020") +
+  labs(x = "", y = "Contribution to S&P") +
+  scale_fill_continuous(name = "Weight",
+                        labels = c("0", "1%", "2%", "3%", "4%"),
+                        low = "purple", high = "dark blue")
+
+
+```
+
+
+
+```{r detractors, echo=FALSE, message=FALSE, warning=FALSE}
+
+top100_detract <- spx_ret_all %>%
+  rename(Weight = `Weight (%)`) %>%
+  rename(symbol = Ticker) %>%
+  ungroup() %>%
+  mutate(Weight = Weight/100) %>%
+  mutate(contri = Weight * ROC) %>%
+  filter(contri <= -0.002) %>%
+  arrange(contri) %>%
+  mutate(symbol = as_factor(symbol)) 
+
+
+top100_detract %>%
+  filter(Weight > 0.001) %>%
+  ggplot(aes(x = symbol, y = contri, fill = Weight)) +
+  geom_bar(stat = "identity") +
+  scale_y_reverse(breaks = seq(-0.2,0,0.002),
+                  labels = scales::percent) +
+  theme_fivethirtyeight() +
+  theme(axis.text.x = element_text(angle = 45, size = 7, vjust = 0.5)) +
+  theme(panel.border = element_blank(),
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray"),
+        axis.line.x = element_line(color = "gray"),
+        axis.text = element_text(face = "italic"),
+        legend.text = element_text(size = 8),
+        plot.title = element_text(size = 16, face = c("italic", "bold")),
+        legend.position = "top") +
+  ggtitle("Top Detractors from S&P 500 in 2020") +
+  labs(x = "", y = "Contribution to S&P") +
+  scale_fill_continuous(name = "Weight",
+                        labels = c("0", "1%", "2%", "3%", "4%", "4.5%"),
+                        low = "purple", high = "dark blue") 
+
+```
+
+
+As we said before since October, Apple turned around from the top contributor to the second worst detractor in a single quarter. We also see Facebook and many financial stocks, dragging the S&P 500 lower.
+
+Next we will look at each sectors top and botton stocks.
+
+### Top and Bottom stocks for each Sector
+
+```{r top-bottom,echo=FALSE, message=FALSE, warning=FALSE}
+
+sector_chart <- function(a) {
+  
+  spx_ret_all %>%
+    rename(Weight = `Weight (%)`) %>%
+    rename(symbol = Ticker) %>%
+    filter(Sector != "Cash and/or Derivatives") %>%
+    filter(Sector == a) %>%
+    filter(Weight > 0.1) %>%
+    mutate(Weight = Weight/100) %>%
+    mutate(contri = Weight * ROC) %>%
+    ungroup() %>%
+    mutate(symbol = as_factor(symbol),
+           Name = as_factor(Name)) %>%
+    mutate(symbol = fct_reorder(Name,ROC)) %>%
+    ggplot(aes(x = symbol, y = ROC)) +
+    geom_bar(stat = "identity", fill = 'purple') +
+    scale_y_continuous(breaks = seq(-1,1,0.05),
+                       labels = scales::percent) +
+    theme_fivethirtyeight() +
+    theme(axis.text.x = element_text(angle = 45, size = 8, vjust = 0.5)) +
+    theme(axis.text.y = element_text(size = 6, vjust = 0.5)) +
+    theme(panel.border = element_blank(),
+          panel.grid = element_blank(),
+          panel.grid.major.y = element_line(color = "gray"),
+          axis.line.x = element_line(color = "gray"),
+          axis.text = element_text(face = "italic"),
+          legend.text = element_text(size = 5),
+          plot.title = element_text(size = 16, face = c("italic", "bold")),
+          legend.position = "top") +
+    ggtitle(paste("Top and bottom stocks \nfrom", a, "sector")) +
+    labs(x = "", y = "Contribution to S&P") +
+    scale_fill_continuous(name = "Weight",
+                          low = "purple", high = "dark blue") +
+    coord_flip()
+  
+}
+
+sector_names <- unique(spx_ret_all %>%
+                         filter(Sector != "Cash and/or Derivatives") %>%
+                         select(Sector) %>%
+                         .[[1]])
+
+map(sector_names, sector_chart)
+
+```
+
+
+
