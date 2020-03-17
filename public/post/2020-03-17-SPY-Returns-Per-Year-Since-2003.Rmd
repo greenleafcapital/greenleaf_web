@@ -1,0 +1,46 @@
+---
+title: "S&P 500 Yearly Returns"
+author: "DD"
+date: "2020-03-17"
+categories:
+  - Market
+  - stock
+tags:
+  - market
+  - analysis
+  - stocks
+description: "SPY etf Returns each year since 2003"
+output: html_document
+---
+### Yearly Returns
+
+One of these lines has not had a great start. Lets see how it ends.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+library(tidyverse)
+library(gganimate)
+library(tidyquant)
+library(ggthemes)
+library(magick)
+
+```
+
+
+
+```{r load-components, echo=FALSE, message=FALSE, warning=FALSE}
+
+img <- image_read("E:/Documents/greenleaf_web_data/2020/March/Mar_17_2020/returns.gif")
+
+returns = img %>%
+  image_scale("500x") %>%
+  image_quantize(128)
+
+returns
+
+
+```
+
+
+
+

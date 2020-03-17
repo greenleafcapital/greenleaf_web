@@ -6,10 +6,20 @@
     <description>Recent content in market on Long Short Strategies</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/market/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>S&amp;P 500 Yearly Returns</title>
+      <link>/post/2020-03-17-spy-returns-per-year-since-2003/</link>
+      <pubDate>Tue, 17 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-03-17-spy-returns-per-year-since-2003/</guid>
+      <description>Yearly ReturnsOne of these lines has not had a great start. Lets see how it ends.
+</description>
+    </item>
     
     <item>
       <title>S&amp;P 500 Analysis March 2020</title>
