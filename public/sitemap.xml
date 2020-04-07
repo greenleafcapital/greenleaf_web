@@ -4,51 +4,56 @@
   
   <url>
     <loc>/tags/analysis/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/market/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/market/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2020-03-17-spy-returns-per-year-since-2003/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+    <loc>/post/2020-04-07-spx-cup-handle/</loc>
+    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/stock/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/stocks/</loc>
-    <lastmod>2020-03-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
+    <lastmod>2020-04-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2020-03-17-spy-returns-per-year-since-2003/</loc>
     <lastmod>2020-03-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -108,12 +113,12 @@
   </url>
   
   <url>
-    <loc>/tags/us/</loc>
+    <loc>/categories/us/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/us/</loc>
+    <loc>/tags/us/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -128,12 +133,12 @@
   </url>
   
   <url>
-    <loc>/categories/apple/</loc>
+    <loc>/tags/apple/</loc>
     <lastmod>2019-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/apple/</loc>
+    <loc>/categories/apple/</loc>
     <lastmod>2019-01-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -173,12 +178,12 @@
   </url>
   
   <url>
-    <loc>/tags/home-builders/</loc>
+    <loc>/categories/home-builders/</loc>
     <lastmod>2018-12-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/home-builders/</loc>
+    <loc>/tags/home-builders/</loc>
     <lastmod>2018-12-15T00:00:00+00:00</lastmod>
   </url>
   
