@@ -1,13 +1,15 @@
 ---
-title: "Trading with Alpaca API"
+title: "Bought BITCOIN"
 author: 'DD'
 date: '2022-02-06'
 slug: Trading
-description: "Testing automated trading with Alpaca"
+description: "Testing automated trading with Alpaca PaperMoney API."
 categories: []
 tags:
   - market
 ---
+
+It appears that Bitcoin might have bottomed and I am testing a new Algo trading platform. 
 
 ```{r include=FALSE, echo=FALSE}
 library(reticulate)
@@ -15,7 +17,7 @@ use_python("/usr/local/Caskroom/miniconda/base/envs/alpaca/bin/python")
 ```
 
 
-```{python, echo=FALSE}
+```{python, echo=FALSE, include=FALSE}
 import configparser
 parser = configparser.ConfigParser()
 parser.read("/Volumes/Mac/Users/blu/Documents/alpaca_trading_practice/alpaca.ini")
