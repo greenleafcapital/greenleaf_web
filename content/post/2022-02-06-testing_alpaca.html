@@ -11,4 +11,48 @@ tags:
 
 
 
-<p>Test</p>
+<pre><code>## [&#39;/Volumes/Mac/Users/blu/Documents/alpaca_trading_practice/alpaca.ini&#39;]</code></pre>
+<pre class="python"><code>import alpaca_trade_api as tradeapi
+BASE_URL = &quot;https://paper-api.alpaca.markets&quot;
+ALPACA_API_KEY = parser[&#39;ALPACA&#39;][&#39;api&#39;]
+ALPACA_SECRET_KEY = parser[&#39;ALPACA&#39;][&#39;secret&#39;]
+api = tradeapi.REST(key_id=ALPACA_API_KEY, secret_key=ALPACA_SECRET_KEY, 
+                    base_url=BASE_URL, api_version=&#39;v2&#39;)
+account = api.get_account()                   
+print(account)</code></pre>
+<pre><code>## Account({   &#39;account_blocked&#39;: False,
+##     &#39;account_number&#39;: &#39;PA30X2D8XTAL&#39;,
+##     &#39;accrued_fees&#39;: &#39;0&#39;,
+##     &#39;buying_power&#39;: &#39;81057.8&#39;,
+##     &#39;cash&#39;: &#39;40528.9&#39;,
+##     &#39;created_at&#39;: &#39;2022-02-06T16:38:56.473725Z&#39;,
+##     &#39;crypto_status&#39;: &#39;ACTIVE&#39;,
+##     &#39;currency&#39;: &#39;USD&#39;,
+##     &#39;daytrade_count&#39;: 0,
+##     &#39;daytrading_buying_power&#39;: &#39;0&#39;,
+##     &#39;equity&#39;: &#39;1019925.71&#39;,
+##     &#39;id&#39;: &#39;c5699a3e-661b-474e-966c-91223ddd0a94&#39;,
+##     &#39;initial_margin&#39;: &#39;979396.81&#39;,
+##     &#39;last_equity&#39;: &#39;1000000&#39;,
+##     &#39;last_maintenance_margin&#39;: &#39;0&#39;,
+##     &#39;long_market_value&#39;: &#39;979396.81&#39;,
+##     &#39;maintenance_margin&#39;: &#39;979396.81&#39;,
+##     &#39;multiplier&#39;: &#39;2&#39;,
+##     &#39;non_marginable_buying_power&#39;: &#39;40528.9&#39;,
+##     &#39;pattern_day_trader&#39;: False,
+##     &#39;pending_transfer_in&#39;: &#39;0&#39;,
+##     &#39;portfolio_value&#39;: &#39;1019925.71&#39;,
+##     &#39;regt_buying_power&#39;: &#39;81057.8&#39;,
+##     &#39;short_market_value&#39;: &#39;0&#39;,
+##     &#39;shorting_enabled&#39;: True,
+##     &#39;sma&#39;: &#39;0&#39;,
+##     &#39;status&#39;: &#39;ACTIVE&#39;,
+##     &#39;trade_suspended_by_user&#39;: False,
+##     &#39;trading_blocked&#39;: False,
+##     &#39;transfers_blocked&#39;: False})</code></pre>
+<pre class="python"><code>portfolio = api.list_positions()
+
+# Print the quantity of shares for each position.
+for position in portfolio:
+    print(&quot;{} shares of {}&quot;.format(position.qty, position.symbol))</code></pre>
+<pre><code>## 23 shares of BTCUSD</code></pre>

@@ -9,4 +9,37 @@ tags:
   - market
 ---
 
-Test
+```{r include=FALSE, echo=FALSE}
+library(reticulate)
+use_python("/usr/local/Caskroom/miniconda/base/envs/alpaca/bin/python")
+```
+
+
+```{python, echo=FALSE}
+import configparser
+parser = configparser.ConfigParser()
+parser.read("/Volumes/Mac/Users/blu/Documents/alpaca_trading_practice/alpaca.ini")
+```
+
+```{python}
+import alpaca_trade_api as tradeapi
+BASE_URL = "https://paper-api.alpaca.markets"
+ALPACA_API_KEY = parser['ALPACA']['api']
+ALPACA_SECRET_KEY = parser['ALPACA']['secret']
+api = tradeapi.REST(key_id=ALPACA_API_KEY, secret_key=ALPACA_SECRET_KEY, 
+                    base_url=BASE_URL, api_version='v2')
+account = api.get_account()                   
+print(account)
+
+```
+
+```{python}
+portfolio = api.list_positions()
+
+# Print the quantity of shares for each position.
+for position in portfolio:
+    print("{} shares of {}".format(position.qty, position.symbol))
+```
+
+
+
