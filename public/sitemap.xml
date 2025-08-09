@@ -1,390 +1,236 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>/tags/analysis/</loc>
+    <loc>//localhost:4321/tags/analysis/</loc>
     <lastmod>2020-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/</loc>
     <lastmod>2020-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
+  </url><url>
+    <loc>//localhost:4321/</loc>
     <lastmod>2020-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/market/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/market/</loc>
     <lastmod>2020-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/market/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/market/</loc>
     <lastmod>2020-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/</loc>
     <lastmod>2020-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2020-04-07-spx-cup-handle/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2020-04-07-spx-cup-handle/</loc>
     <lastmod>2020-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/stock/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/stock/</loc>
     <lastmod>2020-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/stocks/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/stocks/</loc>
     <lastmod>2020-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/</loc>
     <lastmod>2020-04-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2020-03-17-spy-returns-per-year-since-2003/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2020-03-17-spy-returns-per-year-since-2003/</loc>
     <lastmod>2020-03-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2020-03-16-s_p_analysis/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2020-03-16-s_p_analysis/</loc>
     <lastmod>2020-03-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/analysis/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/analysis/</loc>
     <lastmod>2020-03-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2020-03-01-stock_market_selloff/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2020-03-01-stock_market_selloff/</loc>
     <lastmod>2020-03-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/idea/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/idea/</loc>
     <lastmod>2019-10-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2019-10-14-short_netflix_trade_idea_update/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2019-10-14-short_netflix_trade_idea_update/</loc>
     <lastmod>2019-10-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2019-07-26-short_netflix_trade_idea/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2019-07-26-short_netflix_trade_idea/</loc>
     <lastmod>2019-07-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2019-07-18-sp_500_analysis/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2019-07-18-sp_500_analysis/</loc>
     <lastmod>2019-07-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/markets/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/markets/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/markets/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/markets/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/s//p500/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/s%5C%5Cp500/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/stocks/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/stocks/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/us/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/us/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/us/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/us/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2019-03-18-year_end_target/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2019-03-18-year_end_target/</loc>
     <lastmod>2019-03-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2019-01-11-year_end_target/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2019-01-11-year_end_target/</loc>
     <lastmod>2019-01-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/apple/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/apple/</loc>
     <lastmod>2019-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/apple/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/apple/</loc>
     <lastmod>2019-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2019-01-02-aapl-stock/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2019-01-02-aapl-stock/</loc>
     <lastmod>2019-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2019-01-03-major-mkt/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2019-01-03-major-mkt/</loc>
     <lastmod>2019-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2019-01-02-world-markets/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2019-01-02-world-markets/</loc>
     <lastmod>2019-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/world/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/world/</loc>
     <lastmod>2019-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/bonds/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/bonds/</loc>
     <lastmod>2018-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2018-12-27-sp500_analysis/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2018-12-27-sp500_analysis/</loc>
     <lastmod>2018-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/bonds/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/bonds/</loc>
     <lastmod>2018-12-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/home-builders/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/home-builders/</loc>
     <lastmod>2018-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/home-builders/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/home-builders/</loc>
     <lastmod>2018-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/home-builders/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/home-builders/</loc>
     <lastmod>2018-12-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/banks/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/banks/</loc>
     <lastmod>2018-12-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/fang/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/fang/</loc>
     <lastmod>2018-12-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/fang/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/fang/</loc>
     <lastmod>2018-12-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2018-12-14-fang-perf-ytd/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2018-12-14-fang-perf-ytd/</loc>
     <lastmod>2018-12-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/world-banks/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/world-banks/</loc>
     <lastmod>2018-12-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/world-markets/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/world-markets/</loc>
     <lastmod>2018-12-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2018-10-25-sp500_analysis/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2018-10-25-sp500_analysis/</loc>
     <lastmod>2018-10-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/lottery/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/lottery/</loc>
     <lastmod>2018-10-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/mega-millions/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/mega-millions/</loc>
     <lastmod>2018-10-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/gld/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/gld/</loc>
     <lastmod>2018-10-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/gld/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/gld/</loc>
     <lastmod>2018-10-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/gold-trade-update/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/gold-trade-update/</loc>
     <lastmod>2018-10-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/metal/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/metal/</loc>
     <lastmod>2018-10-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/trades/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/trades/</loc>
     <lastmod>2018-10-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/gold/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/gold/</loc>
     <lastmod>2018-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/gold/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/gold/</loc>
     <lastmod>2018-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/gold-investor-s-lost-decade/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/gold-investor-s-lost-decade/</loc>
     <lastmod>2018-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2018-08-17-sp500_analysis/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2018-08-17-sp500_analysis/</loc>
     <lastmod>2018-08-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2018-08-13-gold_trade_update/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2018-08-13-gold_trade_update/</loc>
     <lastmod>2018-08-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/trade/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/trade/</loc>
     <lastmod>2018-08-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/currency/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/currency/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/currency/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/currency/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/turkey/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/turkey/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/turkey-currency/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/turkey-currency/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/bonds/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/bonds/</loc>
     <lastmod>2018-08-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/rates/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/rates/</loc>
     <lastmod>2018-08-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2018-08-08-tlt-iron-condors/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/2018-08-08-tlt-iron-condors/</loc>
     <lastmod>2018-08-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/gld/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/gld/</loc>
     <lastmod>2018-08-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/code/</loc>
+  </url><url>
+    <loc>//localhost:4321/code/</loc>
     <lastmod>2018-07-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/fang/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/fang/</loc>
     <lastmod>2018-07-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/portfolio/</loc>
+  </url><url>
+    <loc>//localhost:4321/portfolio/</loc>
     <lastmod>2018-07-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/bond/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/bond/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/facebook/</loc>
+  </url><url>
+    <loc>//localhost:4321/tags/facebook/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/facebook-idea/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/facebook-idea/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/ideas/</loc>
+  </url><url>
+    <loc>//localhost:4321/categories/ideas/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/int_rates/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/int_rates/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/test/</loc>
+  </url><url>
+    <loc>//localhost:4321/post/test/</loc>
     <lastmod>2018-07-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
+  </url><url>
+    <loc>//localhost:4321/about/</loc>
+    <lastmod>2018-07-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:4321/showcase/</loc>
     <lastmod>2018-07-18T00:00:00+00:00</lastmod>
   </url>
-  
-  <url>
-    <loc>/showcase/</loc>
-    <lastmod>2018-07-18T00:00:00+00:00</lastmod>
-  </url>
-  
 </urlset>

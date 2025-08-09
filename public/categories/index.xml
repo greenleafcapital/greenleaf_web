@@ -2,185 +2,144 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Long Short Strategies</title>
-    <link>/categories/</link>
+    <link>//localhost:4321/categories/</link>
     <description>Recent content in Categories on Long Short Strategies</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 07 Apr 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="//localhost:4321/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Market</title>
-      <link>/categories/market/</link>
+      <link>//localhost:4321/categories/market/</link>
       <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/market/</guid>
+      <guid>//localhost:4321/categories/market/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>stock</title>
-      <link>/categories/stock/</link>
+      <title>Stock</title>
+      <link>//localhost:4321/categories/stock/</link>
       <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/stock/</guid>
+      <guid>//localhost:4321/categories/stock/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Analysis</title>
-      <link>/categories/analysis/</link>
+      <link>//localhost:4321/categories/analysis/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/analysis/</guid>
+      <guid>//localhost:4321/categories/analysis/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Idea</title>
-      <link>/categories/idea/</link>
+      <link>//localhost:4321/categories/idea/</link>
       <pubDate>Mon, 14 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/idea/</guid>
+      <guid>//localhost:4321/categories/idea/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Markets</title>
-      <link>/categories/markets/</link>
+      <link>//localhost:4321/categories/markets/</link>
       <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/markets/</guid>
+      <guid>//localhost:4321/categories/markets/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>stocks</title>
-      <link>/categories/stocks/</link>
+      <title>Stocks</title>
+      <link>//localhost:4321/categories/stocks/</link>
       <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/stocks/</guid>
+      <guid>//localhost:4321/categories/stocks/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>US</title>
-      <link>/categories/us/</link>
+      <link>//localhost:4321/categories/us/</link>
       <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/us/</guid>
+      <guid>//localhost:4321/categories/us/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>apple</title>
-      <link>/categories/apple/</link>
+      <title>Apple</title>
+      <link>//localhost:4321/categories/apple/</link>
       <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/apple/</guid>
+      <guid>//localhost:4321/categories/apple/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Home Builders</title>
-      <link>/categories/home-builders/</link>
+      <link>//localhost:4321/categories/home-builders/</link>
       <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/home-builders/</guid>
+      <guid>//localhost:4321/categories/home-builders/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Banks</title>
-      <link>/categories/banks/</link>
+      <link>//localhost:4321/categories/banks/</link>
       <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/banks/</guid>
+      <guid>//localhost:4321/categories/banks/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>fang</title>
-      <link>/categories/fang/</link>
+      <title>Fang</title>
+      <link>//localhost:4321/categories/fang/</link>
       <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/fang/</guid>
+      <guid>//localhost:4321/categories/fang/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>lottery</title>
-      <link>/categories/lottery/</link>
+      <title>Lottery</title>
+      <link>//localhost:4321/categories/lottery/</link>
       <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/lottery/</guid>
+      <guid>//localhost:4321/categories/lottery/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>gld</title>
-      <link>/categories/gld/</link>
+      <title>Gld</title>
+      <link>//localhost:4321/categories/gld/</link>
       <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/gld/</guid>
+      <guid>//localhost:4321/categories/gld/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>metal</title>
-      <link>/categories/metal/</link>
+      <title>Metal</title>
+      <link>//localhost:4321/categories/metal/</link>
       <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/metal/</guid>
+      <guid>//localhost:4321/categories/metal/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Trades</title>
-      <link>/categories/trades/</link>
+      <link>//localhost:4321/categories/trades/</link>
       <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/trades/</guid>
+      <guid>//localhost:4321/categories/trades/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>gold</title>
-      <link>/categories/gold/</link>
+      <title>Gold</title>
+      <link>//localhost:4321/categories/gold/</link>
       <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/gold/</guid>
+      <guid>//localhost:4321/categories/gold/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>currency</title>
-      <link>/categories/currency/</link>
+      <title>Currency</title>
+      <link>//localhost:4321/categories/currency/</link>
       <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/currency/</guid>
+      <guid>//localhost:4321/categories/currency/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>bonds</title>
-      <link>/categories/bonds/</link>
+      <title>Bonds</title>
+      <link>//localhost:4321/categories/bonds/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/bonds/</guid>
+      <guid>//localhost:4321/categories/bonds/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Ideas</title>
-      <link>/categories/ideas/</link>
+      <link>//localhost:4321/categories/ideas/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/ideas/</guid>
+      <guid>//localhost:4321/categories/ideas/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

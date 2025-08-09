@@ -2,23 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Banks on Long Short Strategies</title>
-    <link>/categories/banks/</link>
+    <link>//localhost:4321/categories/banks/</link>
     <description>Recent content in Banks on Long Short Strategies</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Dec 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/banks/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="//localhost:4321/categories/banks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>World Banks</title>
-      <link>/post/world-banks/</link>
+      <link>//localhost:4321/post/world-banks/</link>
       <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/world-banks/</guid>
-      <description>The US stocks market are in a coorection territory now. They are down more than 10% in the last two months. One of the major sectors has been trending lower throughout 2018. The financials sector is in a bear market. The major banks around the world are looking weak. Initially investors dismissed these concerns as company specific. Goldman Sachs was tangled in the 1MDB scandal. Then there European banks such as Deutche Bank and Credit Suisse.</description>
+      <guid>//localhost:4321/post/world-banks/</guid>
+      <description>&lt;p&gt;The US stocks market are in a coorection territory now. They are down more than 10% in the last two months. One of the major sectors has been trending lower throughout 2018. The financials sector is in a bear market. The major banks around the world are looking weak. Initially investors dismissed these concerns as company specific. Goldman Sachs was tangled in the 1MDB scandal. Then there European banks such as Deutche Bank and Credit Suisse. Their stocks are down more than 30% in 2018. Deutche Bank has some serious fundamental issues.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

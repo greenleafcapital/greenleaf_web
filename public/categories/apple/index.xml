@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>apple on Long Short Strategies</title>
-    <link>/categories/apple/</link>
-    <description>Recent content in apple on Long Short Strategies</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Apple on Long Short Strategies</title>
+    <link>//localhost:4321/categories/apple/</link>
+    <description>Recent content in Apple on Long Short Strategies</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 03 Jan 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/apple/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="//localhost:4321/categories/apple/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apple lowers revenue forecast</title>
-      <link>/post/2019-01-02-aapl-stock/</link>
+      <link>//localhost:4321/post/2019-01-02-aapl-stock/</link>
       <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019-01-02-aapl-stock/</guid>
-      <description>Last evening after market close, Apple lowered their revenue forecast, for Q1 2019. On an interview with Josh Lipton from CNBC, Apple CEO Tim Cook, explained/blamed the the US China trade war for lower iPhone sales. The news came as a shock to the market, an immediately the stock plunged from $158 to $145.
-Right now it is trading around $143 which is 9% drop from yesterday.
-Performance since 2005Recent performance has been lackluster compared to the pastApple has had phenomenal returns since 2008 financial crisis.</description>
+      <guid>//localhost:4321/post/2019-01-02-aapl-stock/</guid>
+      <description>&lt;p&gt;Last evening after market close, Apple lowered their revenue forecast, for Q1 2019. On an interview with Josh Lipton from CNBC, Apple CEO Tim Cook, explained/blamed the the US China trade war for lower iPhone sales. The news came as a shock to the market, an immediately the stock plunged from $158 to $145.&lt;/p&gt;&#xA;&lt;p&gt;Right now it is trading around $143 which is 9% drop from yesterday.&lt;/p&gt;&#xA;&lt;div id=&#34;performance-since-2005&#34; class=&#34;section level3&#34;&gt;&#xA;&lt;h3&gt;Performance since 2005&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/2019-01-02-aapl-stock_files/figure-html/yearly-returns-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

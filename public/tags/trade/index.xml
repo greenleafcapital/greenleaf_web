@@ -1,44 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>trade on Long Short Strategies</title>
-    <link>/tags/trade/</link>
-    <description>Recent content in trade on Long Short Strategies</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Trade on Long Short Strategies</title>
+    <link>//localhost:4321/tags/trade/</link>
+    <description>Recent content in Trade on Long Short Strategies</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/trade/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="//localhost:4321/tags/trade/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gold trade update</title>
-      <link>/post/2018-08-13-gold_trade_update/</link>
+      <link>//localhost:4321/post/2018-08-13-gold_trade_update/</link>
       <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018-08-13-gold_trade_update/</guid>
-      <description>The Turkish currency depreciation which was a slow moving event for the past two years is now front and center in the financial world. The relations between US and Turkey have been deteriorating and Turkey which is a NATO member is looking for new friends. In light of all this our long gold trade has been performing poorly. We put on that trade last Monday (August 6) and since then Gold prices have fallen 2.</description>
+      <guid>//localhost:4321/post/2018-08-13-gold_trade_update/</guid>
+      <description>&lt;p&gt;The Turkish currency depreciation which was a slow moving event for the past two years is now front and center in the financial world. The relations between US and Turkey have been deteriorating and Turkey which is a NATO member is looking for new friends. In light of all this our long gold trade has been performing poorly. We put on that trade last Monday (August 6) and since then Gold prices have fallen 2.8% in other words Dollar index has gone up approximately the same amount.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Gold Trade Idea</title>
-      <link>/post/gld/</link>
+      <link>//localhost:4321/post/gld/</link>
       <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/gld/</guid>
-      <description>A potential trade idea that we executed today was being long Gold. First lets see how the shiny object has performed since 2010 versus the dollar.
-Its clear from the chart that both assets move in opposite directions (most of the time). After the huge run in price in Gold from 2009 t0 2013, it saw a crash in 2014. Since then its been sideways and range bound trading between $1300 to $1200.</description>
+      <guid>//localhost:4321/post/gld/</guid>
+      <description>&lt;p&gt;A potential trade idea that we executed today was being long Gold. First lets see how the shiny object has performed since 2010 versus the dollar.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/2018-08-06-gld_long_calls_files/figure-html/gld%20uup%20annual%20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;Its clear from the chart that both assets move in opposite directions (most of the time). After the huge run in price in Gold from 2009 t0 2013, it saw a crash in 2014. Since then its been sideways and range bound trading between $1300 to $1200.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Facebook disappoints! Stock down 20%</title>
-      <link>/post/facebook-idea/</link>
+      <link>//localhost:4321/post/facebook-idea/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/facebook-idea/</guid>
-      <description>Yesterday Facebook reported their earnings after market hours and investors were not pleased. They sent the stock down almost 25% at one point. Right now the stock is down about 20%. We wanted to check if this was the worst performance for Facebook stock since the IPO
-This is the worst one day performance for Facebook since its IPO. After its IPO Facebook stock was under heavy pressure and it continued to slide down for several days.</description>
+      <guid>//localhost:4321/post/facebook-idea/</guid>
+      <description>&lt;script src=&#34;//localhost:4321/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;p&gt;Yesterday Facebook reported their earnings after market hours and investors were not pleased. They sent the stock down almost 25% at one point. Right now the stock is down about 20%. We wanted to check if this was the worst performance for Facebook stock since the IPO&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/2018-07-26-facebook-idea_files/figure-html/daily%20charts-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;This is the worst one day performance for Facebook since its IPO. After its IPO Facebook stock was under heavy pressure and it continued to slide down for several days.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

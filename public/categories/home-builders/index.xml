@@ -2,25 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home Builders on Long Short Strategies</title>
-    <link>/categories/home-builders/</link>
+    <link>//localhost:4321/categories/home-builders/</link>
     <description>Recent content in Home Builders on Long Short Strategies</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 15 Dec 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/home-builders/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="//localhost:4321/categories/home-builders/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Home builders stocks</title>
-      <link>/post/home-builders/</link>
+      <link>//localhost:4321/post/home-builders/</link>
       <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/home-builders/</guid>
-      <description>2018 has not been a good year for equities. One sector in particular has come under enormous pressure. Home builder stocks are now firmly into bear market. In this article we will try to analyze this sector and see if there is an opportunity to invest or stay away from these stocks.
-Lets begin by looking at the overall housing sector.
-The sector is highly volatile and cyclical.</description>
+      <guid>//localhost:4321/post/home-builders/</guid>
+      <description>&lt;script src=&#34;//localhost:4321/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;p&gt;2018 has not been a good year for equities. One sector in particular has come under enormous pressure. Home builder stocks are now firmly into bear market. In this article we will try to analyze this sector and see if there is an opportunity to invest or stay away from these stocks.&lt;/p&gt;&#xA;&lt;p&gt;Lets begin by looking at the overall housing sector.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/2018-12-15-housing-stocks_files/figure-html/housing-sector-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;The sector is highly volatile and cyclical. An investor in this ETF is still underwater since 2006, even after the rally since 2009 bottom. This goes to show deep the drawdown was for such an investor. Looking at the price action it does not appear to be a sector one should buy and hold.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

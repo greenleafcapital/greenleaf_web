@@ -2,24 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gold on Long Short Strategies</title>
-    <link>/tags/gold/</link>
+    <link>//localhost:4321/tags/gold/</link>
     <description>Recent content in Gold on Long Short Strategies</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 15 Sep 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/gold/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="//localhost:4321/tags/gold/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gold investor&#39;s lost decade</title>
-      <link>/post/gold-investor-s-lost-decade/</link>
+      <link>//localhost:4321/post/gold-investor-s-lost-decade/</link>
       <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/gold-investor-s-lost-decade/</guid>
-      <description>On September 15, 2008 investment bank Lehman Brothers announced bankruptcy. This event was the largest bankruptcy in US history and pushed the world economies in deep recessions. Today is the 10 year anniversary of this event. We wanted to reflect back on this event and see how the markets have performed since the bankruptcy in 2008.
-It was a tough time for investors and many panicked and sold their stock holdings.</description>
+      <guid>//localhost:4321/post/gold-investor-s-lost-decade/</guid>
+      <description>&lt;p&gt;On September 15, 2008 investment bank Lehman Brothers announced bankruptcy. This event was the largest bankruptcy in US history and pushed the world economies in deep recessions. Today is the 10 year anniversary of this event. We wanted to reflect back on this event and see how the markets have performed since the bankruptcy in 2008.&lt;/p&gt;&#xA;&lt;p&gt;It was a tough time for investors and many panicked and sold their stock holdings. During the crisis many commentators and investors were recommending investment in gold. We wanted to answer the following questions:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

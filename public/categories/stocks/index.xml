@@ -1,118 +1,82 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>stocks on Long Short Strategies</title>
-    <link>/categories/stocks/</link>
-    <description>Recent content in stocks on Long Short Strategies</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Stocks on Long Short Strategies</title>
+    <link>//localhost:4321/categories/stocks/</link>
+    <description>Recent content in Stocks on Long Short Strategies</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Mar 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/stocks/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="//localhost:4321/categories/stocks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Year end targets for S&amp;P 500 Index</title>
-      <link>/post/2019-03-18-year_end_target/</link>
+      <link>//localhost:4321/post/2019-03-18-year_end_target/</link>
       <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019-03-18-year_end_target/</guid>
-      <description>Updated as of March 2019.
-Presenting today the year end targets for 2019, by wall street analysts.
-{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;caption&#34;:&#34;Wall Street targets for 2019&#34;,&#34;data&#34;:[[&#34;Morgan Stanley*&#34;,&#34;Goldman Sachs&#34;,&#34;Credit Suisse&#34;,&#34;Deutsche Bank&#34;,&#34;Bank of America Merrill Lynch&#34;,&#34;Citigroup&#34;,&#34;UBS&#34;,&#34;BMO&#34;,&#34;JPMorgan Chase&#34;,&#34;Oppenheimer&#34;,&#34;Fundstrat Global Advisors&#34;,&#34;Wells Fargo Investment Institute&#34;,&#34;CFRA*&#34;,&#34;BNY Mellon Wealth Management&#34;,&#34;Canaccord Genuity&#34;,&#34;RBC Capital Markets&#34;,&#34;BTIG&#34;,&#34;Bernstein&#34;,&#34;Barclays&#34;],[&#34;Mike Wilson&#34;,&#34;David Kostin&#34;,&#34;Jonathan Golub&#34;,&#34;Binky Chadha&#34;,&#34;Savita Subramanian&#34;,&#34;Tobias Levkovich&#34;,&#34;Keith Parker&#34;,&#34;Brian Belski&#34;,&#34;Dubravko Lakos-Bujas&#34;,&#34;John Stoltzfus&#34;,&#34;Thomas Lee&#34;,&#34;Scott Wren&#34;,&#34;Sam Stovall&#34;,&#34;Jeff Mortimer&#34;,&#34;Tony Dwyer&#34;,&#34;Lori Calvasina&#34;,&#34;Julian Emanuel&#34;,&#34;Noah Weisberger&#34;,&#34;Maneesh Deshpande&#34;],[2750,2850,3000,3000,3000,2800,3150,2950,3000,3000,3025,2850,3000,2850,3200,2890,3000,3000,3000],[162,150,161.5,162,153,153,157,158,153,146,147,152,156.2,152.5,160,151,150,160,162.6],[16.98,19,18.58,18.52,19.61,18.3,20.06,18.67,19.61,20.55,20.58,18.75,19.21,18.69,20,19.14,20,18.75,18.45]],&#34;container&#34;:&#34;\n \n \n Firm\n Analyst\n 2019 Target\n S&amp;amp;P 500 Earnings\n S&amp;amp;P 500 PE ratio\n \n \n&#34;</description>
+      <guid>//localhost:4321/post/2019-03-18-year_end_target/</guid>
+      <description>&lt;script src=&#34;//localhost:4321/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;p&gt;Updated as of March 2019.&lt;/p&gt;&#xA;&lt;p&gt;Presenting today the year end targets for 2019, by wall street analysts.&lt;/p&gt;&#xA;&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;datatables html-widget&#34;&gt;&lt;/div&gt;&#xA;&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;caption&#34;:&#34;&lt;caption&gt;Wall Street targets for 2019&lt;\/caption&gt;&#34;,&#34;data&#34;:[[&#34;Morgan Stanley*&#34;,&#34;Goldman Sachs&#34;,&#34;Credit Suisse&#34;,&#34;Deutsche Bank&#34;,&#34;Bank of America Merrill Lynch&#34;,&#34;Citigroup&#34;,&#34;UBS&#34;,&#34;BMO&#34;,&#34;JPMorgan Chase&#34;,&#34;Oppenheimer&#34;,&#34;Fundstrat Global Advisors&#34;,&#34;Wells Fargo Investment Institute&#34;,&#34;CFRA*&#34;,&#34;BNY Mellon Wealth Management&#34;,&#34;Canaccord Genuity&#34;,&#34;RBC Capital Markets&#34;,&#34;BTIG&#34;,&#34;Bernstein&#34;,&#34;Barclays&#34;],[&#34;Mike Wilson&#34;,&#34;David Kostin&#34;,&#34;Jonathan Golub&#34;,&#34;Binky Chadha&#34;,&#34;Savita Subramanian&#34;,&#34;Tobias Levkovich&#34;,&#34;Keith Parker&#34;,&#34;Brian Belski&#34;,&#34;Dubravko Lakos-Bujas&#34;,&#34;John Stoltzfus&#34;,&#34;Thomas Lee&#34;,&#34;Scott Wren&#34;,&#34;Sam Stovall&#34;,&#34;Jeff Mortimer&#34;,&#34;Tony Dwyer&#34;,&#34;Lori Calvasina&#34;,&#34;Julian Emanuel&#34;,&#34;Noah Weisberger&#34;,&#34;Maneesh Deshpande&#34;],[2750,2850,3000,3000,3000,2800,3150,2950,3000,3000,3025,2850,3000,2850,3200,2890,3000,3000,3000],[162,150,161.5,162,153,153,157,158,153,146,147,152,156.2,152.5,160,151,150,160,162.6],[16.98,19,18.58,18.52,19.61,18.3,20.06,18.67,19.61,20.55,20.58,18.75,19.21,18.69,20,19.14,20,18.75,18.45]],&#34;container&#34;:&#34;&lt;table class=\&#34;display\&#34;&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt;Firm&lt;\/th&gt;\n      &lt;th&gt;Analyst&lt;\/th&gt;\n      &lt;th&gt;2019 Target&lt;\/th&gt;\n      &lt;th&gt;S&amp;amp;P 500 Earnings&lt;\/th&gt;\n      &lt;th&gt;S&amp;amp;P 500 PE ratio&lt;\/th&gt;\n    &lt;\/tr&gt;\n  &lt;\/thead&gt;\n&lt;\/table&gt;&#34;,&#34;options&#34;:{&#34;columnDefs&#34;:[{&#34;className&#34;:&#34;dt-right&#34;,&#34;targets&#34;:[2,3,4]}],&#34;order&#34;:[],&#34;autoWidth&#34;:false,&#34;orderClasses&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;&#xA;&lt;p&gt;It appears that we have met the price target of some analysts. But we still have many analysts with price at 3000 or above.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Year end targets for S&amp;P 500 Index</title>
-      <link>/post/2019-01-11-year_end_target/</link>
+      <link>//localhost:4321/post/2019-01-11-year_end_target/</link>
       <pubDate>Fri, 11 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019-01-11-year_end_target/</guid>
-      <description>Presenting today the year end targets for 2019, by wall street analysts.
-{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;caption&#34;:&#34;Wall Street targets for 2019&#34;,&#34;data&#34;:[[&#34;Morgan Stanley*&#34;,&#34;Goldman Sachs&#34;,&#34;Credit Suisse&#34;,&#34;Deutsche Bank&#34;,&#34;Bank of America Merrill Lynch&#34;,&#34;Citigroup&#34;,&#34;UBS&#34;,&#34;BMO&#34;,&#34;JPMorgan Chase&#34;,&#34;Oppenheimer&#34;,&#34;Fundstrat Global Advisors&#34;,&#34;Wells Fargo Investment Institute&#34;,&#34;CFRA*&#34;,&#34;BNY Mellon Wealth Management&#34;,&#34;Canaccord Genuity&#34;,&#34;RBC Capital Markets&#34;,&#34;BTIG&#34;,&#34;Bernstein&#34;,&#34;Barclays&#34;],[&#34;Mike Wilson&#34;,&#34;David Kostin&#34;,&#34;Jonathan Golub&#34;,&#34;Binky Chadha&#34;,&#34;Savita Subramanian&#34;,&#34;Tobias Levkovich&#34;,&#34;Keith Parker&#34;,&#34;Brian Belski&#34;,&#34;Dubravko Lakos-Bujas&#34;,&#34;John Stoltzfus&#34;,&#34;Thomas Lee&#34;,&#34;Scott Wren&#34;,&#34;Sam Stovall&#34;,&#34;Jeff Mortimer&#34;,&#34;Tony Dwyer&#34;,&#34;Lori Calvasina&#34;,&#34;Julian Emanuel&#34;,&#34;Noah Weisberger&#34;,&#34;Maneesh Deshpande&#34;],[2750,2850,3000,3000,3000,2800,3150,2950,3000,3000,3025,2850,3000,2850,3200,2890,3000,3000,3000],[162,150,161.5,162,153,153,157,158,153,146,147,152,156.2,152.5,160,151,150,160,162.6],[16.98,19,18.58,18.52,19.61,18.3,20.06,18.67,19.61,20.55,20.58,18.75,19.21,18.69,20,19.14,20,18.75,18.45]],&#34;container&#34;:&#34;\n \n \n Firm\n Analyst\n 2019 Target\n S&amp;amp;P 500 Earnings\n S&amp;amp;P 500 PE ratio\n \n \n&#34;</description>
+      <guid>//localhost:4321/post/2019-01-11-year_end_target/</guid>
+      <description>&lt;script src=&#34;//localhost:4321/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;p&gt;Presenting today the year end targets for 2019, by wall street analysts.&lt;/p&gt;&#xA;&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;datatables html-widget&#34;&gt;&lt;/div&gt;&#xA;&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;caption&#34;:&#34;&lt;caption&gt;Wall Street targets for 2019&lt;\/caption&gt;&#34;,&#34;data&#34;:[[&#34;Morgan Stanley*&#34;,&#34;Goldman Sachs&#34;,&#34;Credit Suisse&#34;,&#34;Deutsche Bank&#34;,&#34;Bank of America Merrill Lynch&#34;,&#34;Citigroup&#34;,&#34;UBS&#34;,&#34;BMO&#34;,&#34;JPMorgan Chase&#34;,&#34;Oppenheimer&#34;,&#34;Fundstrat Global Advisors&#34;,&#34;Wells Fargo Investment Institute&#34;,&#34;CFRA*&#34;,&#34;BNY Mellon Wealth Management&#34;,&#34;Canaccord Genuity&#34;,&#34;RBC Capital Markets&#34;,&#34;BTIG&#34;,&#34;Bernstein&#34;,&#34;Barclays&#34;],[&#34;Mike Wilson&#34;,&#34;David Kostin&#34;,&#34;Jonathan Golub&#34;,&#34;Binky Chadha&#34;,&#34;Savita Subramanian&#34;,&#34;Tobias Levkovich&#34;,&#34;Keith Parker&#34;,&#34;Brian Belski&#34;,&#34;Dubravko Lakos-Bujas&#34;,&#34;John Stoltzfus&#34;,&#34;Thomas Lee&#34;,&#34;Scott Wren&#34;,&#34;Sam Stovall&#34;,&#34;Jeff Mortimer&#34;,&#34;Tony Dwyer&#34;,&#34;Lori Calvasina&#34;,&#34;Julian Emanuel&#34;,&#34;Noah Weisberger&#34;,&#34;Maneesh Deshpande&#34;],[2750,2850,3000,3000,3000,2800,3150,2950,3000,3000,3025,2850,3000,2850,3200,2890,3000,3000,3000],[162,150,161.5,162,153,153,157,158,153,146,147,152,156.2,152.5,160,151,150,160,162.6],[16.98,19,18.58,18.52,19.61,18.3,20.06,18.67,19.61,20.55,20.58,18.75,19.21,18.69,20,19.14,20,18.75,18.45]],&#34;container&#34;:&#34;&lt;table class=\&#34;display\&#34;&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt;Firm&lt;\/th&gt;\n      &lt;th&gt;Analyst&lt;\/th&gt;\n      &lt;th&gt;2019 Target&lt;\/th&gt;\n      &lt;th&gt;S&amp;amp;P 500 Earnings&lt;\/th&gt;\n      &lt;th&gt;S&amp;amp;P 500 PE ratio&lt;\/th&gt;\n    &lt;\/tr&gt;\n  &lt;\/thead&gt;\n&lt;\/table&gt;&#34;,&#34;options&#34;:{&#34;columnDefs&#34;:[{&#34;className&#34;:&#34;dt-right&#34;,&#34;targets&#34;:[2,3,4]}],&#34;order&#34;:[],&#34;autoWidth&#34;:false,&#34;orderClasses&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;&#xA;&lt;p&gt;Overall everybody is bullish. Targets range from 6% to 23% above the current price of 2600 on the S&amp;amp;P 500.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Apple lowers revenue forecast</title>
-      <link>/post/2019-01-02-aapl-stock/</link>
+      <link>//localhost:4321/post/2019-01-02-aapl-stock/</link>
       <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019-01-02-aapl-stock/</guid>
-      <description>Last evening after market close, Apple lowered their revenue forecast, for Q1 2019. On an interview with Josh Lipton from CNBC, Apple CEO Tim Cook, explained/blamed the the US China trade war for lower iPhone sales. The news came as a shock to the market, an immediately the stock plunged from $158 to $145.
-Right now it is trading around $143 which is 9% drop from yesterday.
-Performance since 2005Recent performance has been lackluster compared to the pastApple has had phenomenal returns since 2008 financial crisis.</description>
+      <guid>//localhost:4321/post/2019-01-02-aapl-stock/</guid>
+      <description>&lt;p&gt;Last evening after market close, Apple lowered their revenue forecast, for Q1 2019. On an interview with Josh Lipton from CNBC, Apple CEO Tim Cook, explained/blamed the the US China trade war for lower iPhone sales. The news came as a shock to the market, an immediately the stock plunged from $158 to $145.&lt;/p&gt;&#xA;&lt;p&gt;Right now it is trading around $143 which is 9% drop from yesterday.&lt;/p&gt;&#xA;&lt;div id=&#34;performance-since-2005&#34; class=&#34;section level3&#34;&gt;&#xA;&lt;h3&gt;Performance since 2005&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/2019-01-02-aapl-stock_files/figure-html/yearly-returns-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>US Markets and Important Levels</title>
-      <link>/post/2019-01-03-major-mkt/</link>
+      <link>//localhost:4321/post/2019-01-03-major-mkt/</link>
       <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019-01-03-major-mkt/</guid>
-      <description>On January 2nd, Apple warned a slowdown in iPhone sales forecast and as a result the stock was down almost 10%. Apple’s weakness has affected all major US markets. All the major US markets are now below their key support area. Below we will look at all the major index charts and their key support levels.
-Dow Jones Index ETF (DIA)S&amp;amp;P 500 Index ETF (SPY)Nasdaq 100 ETF (QQQ)Russell 2000 ETF (IWM)US Markets are losing major support areas.</description>
+      <guid>//localhost:4321/post/2019-01-03-major-mkt/</guid>
+      <description>&lt;p&gt;On January 2nd, Apple warned a slowdown in iPhone sales forecast and as a result the stock was down almost 10%. Apple’s weakness has affected all major US markets. All the major US markets are now below their key support area. Below we will look at all the major index charts and their key support levels.&lt;/p&gt;&#xA;&lt;div id=&#34;dow-jones-index-etf-dia&#34; class=&#34;section level3&#34;&gt;&#xA;&lt;h3&gt;Dow Jones Index ETF (DIA)&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/2019-01-03-major-mkt_files/figure-html/inx-data-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;&#xA;&lt;/div&gt;&#xA;&lt;div id=&#34;sp-500-index-etf-spy&#34; class=&#34;section level3&#34;&gt;&#xA;&lt;h3&gt;S&amp;amp;P 500 Index ETF (SPY)&lt;/h3&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/2019-01-03-major-mkt_files/figure-html/spy-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>2018 Major Asset class performance</title>
-      <link>/post/2019-01-02-world-markets/</link>
+      <link>//localhost:4321/post/2019-01-02-world-markets/</link>
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019-01-02-world-markets/</guid>
-      <description>Year 2018 has concluded and its time to reflect back and see what happened this year. We began the year on a positive note, but then by February the market sold off and since then S&amp;amp;P 500 moved sideways between 2500 on the low end to 2940 on the high end. The the range was extended on the lower end when we broke the 2500 support level after the FED hike and the “hawkish” press conference by Jerome Powell.</description>
+      <guid>//localhost:4321/post/2019-01-02-world-markets/</guid>
+      <description>&lt;script src=&#34;//localhost:4321/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;p&gt;Year 2018 has concluded and its time to reflect back and see what happened this year. We began the year on a positive note, but then by February the market sold off and since then S&amp;amp;P 500 moved sideways between 2500 on the low end to 2940 on the high end. The the range was extended on the lower end when we broke the 2500 support level after the FED hike and the “hawkish” press conference by Jerome Powell. The lower end of the new range is 2350 and we have a “potential” high of 2500 on the high end. Lets look at the SPY etf chart below see the important range and levels.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Home builders stocks</title>
-      <link>/post/home-builders/</link>
+      <link>//localhost:4321/post/home-builders/</link>
       <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/home-builders/</guid>
-      <description>2018 has not been a good year for equities. One sector in particular has come under enormous pressure. Home builder stocks are now firmly into bear market. In this article we will try to analyze this sector and see if there is an opportunity to invest or stay away from these stocks.
-Lets begin by looking at the overall housing sector.
-The sector is highly volatile and cyclical.</description>
+      <guid>//localhost:4321/post/home-builders/</guid>
+      <description>&lt;script src=&#34;//localhost:4321/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;p&gt;2018 has not been a good year for equities. One sector in particular has come under enormous pressure. Home builder stocks are now firmly into bear market. In this article we will try to analyze this sector and see if there is an opportunity to invest or stay away from these stocks.&lt;/p&gt;&#xA;&lt;p&gt;Lets begin by looking at the overall housing sector.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/2018-12-15-housing-stocks_files/figure-html/housing-sector-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;The sector is highly volatile and cyclical. An investor in this ETF is still underwater since 2006, even after the rally since 2009 bottom. This goes to show deep the drawdown was for such an investor. Looking at the price action it does not appear to be a sector one should buy and hold.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>FANG Stocks</title>
-      <link>/post/2018-12-14-fang-perf-ytd/</link>
+      <link>//localhost:4321/post/2018-12-14-fang-perf-ytd/</link>
       <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018-12-14-fang-perf-ytd/</guid>
-      <description>FAANG stock performance since October 1, 2018. We have seen major losses since October 2018.</description>
+      <guid>//localhost:4321/post/2018-12-14-fang-perf-ytd/</guid>
+      <description>&lt;p&gt;FAANG stock performance since October 1, 2018. We have seen major losses since October 2018.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/2018-12-14-fang-perf-ytd_files/figure-html/chart-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/2018-12-14-fang-perf-ytd_files/figure-html/YTD%20chart-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>World Banks</title>
-      <link>/post/world-banks/</link>
+      <link>//localhost:4321/post/world-banks/</link>
       <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/world-banks/</guid>
-      <description>The US stocks market are in a coorection territory now. They are down more than 10% in the last two months. One of the major sectors has been trending lower throughout 2018. The financials sector is in a bear market. The major banks around the world are looking weak. Initially investors dismissed these concerns as company specific. Goldman Sachs was tangled in the 1MDB scandal. Then there European banks such as Deutche Bank and Credit Suisse.</description>
+      <guid>//localhost:4321/post/world-banks/</guid>
+      <description>&lt;p&gt;The US stocks market are in a coorection territory now. They are down more than 10% in the last two months. One of the major sectors has been trending lower throughout 2018. The financials sector is in a bear market. The major banks around the world are looking weak. Initially investors dismissed these concerns as company specific. Goldman Sachs was tangled in the 1MDB scandal. Then there European banks such as Deutche Bank and Credit Suisse. Their stocks are down more than 30% in 2018. Deutche Bank has some serious fundamental issues.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>World Markets</title>
-      <link>/post/world-markets/</link>
+      <link>//localhost:4321/post/world-markets/</link>
       <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/world-markets/</guid>
-      <description>Market Review 2018We began this year on a high note. Markets around the world rallied 7 to 8% in January. But February saw a quick 10% correction. Since then the stock markets have mostly gone sideways. But the volatility has increased a lot in the last few weeks.
-Below are some reasons for the sideways market
-Trade warsSince Donald Trump took control of the White House he had been eager to reduce the US trade deficits.</description>
+      <guid>//localhost:4321/post/world-markets/</guid>
+      <description>&lt;script src=&#34;//localhost:4321/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;div id=&#34;market-review-2018&#34; class=&#34;section level2&#34;&gt;&#xA;&lt;h2&gt;Market Review 2018&lt;/h2&gt;&#xA;&lt;p&gt;We began this year on a high note. Markets around the world rallied 7 to 8% in January. But February saw a quick 10% correction. Since then the stock markets have mostly gone sideways. But the volatility has increased a lot in the last few weeks.&lt;/p&gt;&#xA;&lt;p&gt;Below are some reasons for the sideways market&lt;/p&gt;&#xA;&lt;div id=&#34;trade-wars&#34; class=&#34;section level3&#34;&gt;&#xA;&lt;h3&gt;Trade wars&lt;/h3&gt;&#xA;&lt;p&gt;Since Donald Trump took control of the White House he had been eager to reduce the US trade deficits. He wanted to put tariffs on other countries. This policy was not supported by most economist, but Trump with a tweet commenced the trade wars. In March, Trump tweeted “Trade wars are good and easy to win”. Well he got his trade war, but so far there is no win. In our view tariffs are an indirect tax on the consumer. If Trump puts a 15% tariff on BMW, then BMW increases the price on its cars by 15% and passes the cost to the customer. This also hurts exporting economies such as South Korea and Germany since their goods are now more expensive. In the end trade wars hurt the US consumers and foreign exporters. Its a lose-lose situation. Recently Trump met Xi at the G20 meeting. Trade was the major discussion, and China agreed to lower tariffs on cars and said that they will allow foreign companies more access in its vision 2025 plan. Trump on the other hand gave China 90 day deadline to sort things out. Leading the trade talks for the US side is Robert Lighthizer, he has been a big China bear and more skeptical of China and its intentions. On top of that, Canada recently arrested the CFO Huawei in Vancouver, on behalf of America. US has accused the CFO of bank fraud and selling technology parts to Iran. This was an important development and sent shock waves around the world. Huawei is the most important company in China and the CFO is the daughter of Huawei’s founder and has close ties to the Chinese government. Many US executives are now fearful of traveling to China to do business, as they could also get arrested in retaliation. This could have major disruptions in the Global trade.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>FANG Stocks</title>
-      <link>/post/fang/</link>
+      <link>//localhost:4321/post/fang/</link>
       <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/fang/</guid>
-      <description>FAANG stock performance since July 1, 2018
-With Netflix and Facebook both suffering major losses, all eyes will be on Apple as it races to be the first company with a $1 Trillion valuation.
-How have the FAANG stocks performed YTD
-Netflix and Amazon have clearly dominated the large cap stocks. This has been a terrible year of performance for managers who make a living by shorting “bubble basket stocks”.</description>
+      <guid>//localhost:4321/post/fang/</guid>
+      <description>&lt;p&gt;FAANG stock performance since July 1, 2018&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/fang_rets_jul2018_files/figure-html/chart-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;With Netflix and Facebook both suffering major losses, all eyes will be on Apple as it races to be the first company with a $1 Trillion valuation.&lt;/p&gt;&#xA;&lt;p&gt;How have the FAANG stocks performed YTD&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/fang_rets_jul2018_files/figure-html/YTD%20chart-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;Netflix and Amazon have clearly dominated the large cap stocks. This has been a terrible year of performance for managers who make a living by shorting “bubble basket stocks”.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

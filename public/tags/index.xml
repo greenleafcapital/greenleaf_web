@@ -2,176 +2,137 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Long Short Strategies</title>
-    <link>/tags/</link>
+    <link>//localhost:4321/tags/</link>
     <description>Recent content in Tags on Long Short Strategies</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 07 Apr 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="//localhost:4321/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>analysis</title>
-      <link>/tags/analysis/</link>
+      <title>Analysis</title>
+      <link>//localhost:4321/tags/analysis/</link>
       <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/analysis/</guid>
+      <guid>//localhost:4321/tags/analysis/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>market</title>
-      <link>/tags/market/</link>
+      <title>Market</title>
+      <link>//localhost:4321/tags/market/</link>
       <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/market/</guid>
+      <guid>//localhost:4321/tags/market/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>stocks</title>
-      <link>/tags/stocks/</link>
+      <title>Stocks</title>
+      <link>//localhost:4321/tags/stocks/</link>
       <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/stocks/</guid>
+      <guid>//localhost:4321/tags/stocks/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Markets</title>
-      <link>/tags/markets/</link>
+      <link>//localhost:4321/tags/markets/</link>
       <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/markets/</guid>
+      <guid>//localhost:4321/tags/markets/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>S\&amp;\P500</title>
-      <link>/tags/s//p500/</link>
+      <link>//localhost:4321/tags/s%5C%5Cp500/</link>
       <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/s//p500/</guid>
+      <guid>//localhost:4321/tags/s%5C%5Cp500/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>US</title>
-      <link>/tags/us/</link>
+      <link>//localhost:4321/tags/us/</link>
       <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/us/</guid>
+      <guid>//localhost:4321/tags/us/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>apple</title>
-      <link>/tags/apple/</link>
+      <title>Apple</title>
+      <link>//localhost:4321/tags/apple/</link>
       <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/apple/</guid>
+      <guid>//localhost:4321/tags/apple/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>World</title>
-      <link>/tags/world/</link>
+      <link>//localhost:4321/tags/world/</link>
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/world/</guid>
+      <guid>//localhost:4321/tags/world/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>bonds</title>
-      <link>/tags/bonds/</link>
+      <title>Bonds</title>
+      <link>//localhost:4321/tags/bonds/</link>
       <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/bonds/</guid>
+      <guid>//localhost:4321/tags/bonds/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Home Builders</title>
-      <link>/tags/home-builders/</link>
+      <link>//localhost:4321/tags/home-builders/</link>
       <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/home-builders/</guid>
+      <guid>//localhost:4321/tags/home-builders/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>fang</title>
-      <link>/tags/fang/</link>
+      <title>Fang</title>
+      <link>//localhost:4321/tags/fang/</link>
       <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/fang/</guid>
+      <guid>//localhost:4321/tags/fang/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>gld</title>
-      <link>/tags/gld/</link>
+      <title>Gld</title>
+      <link>//localhost:4321/tags/gld/</link>
       <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/gld/</guid>
+      <guid>//localhost:4321/tags/gld/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Gold</title>
-      <link>/tags/gold/</link>
+      <link>//localhost:4321/tags/gold/</link>
       <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/gold/</guid>
+      <guid>//localhost:4321/tags/gold/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>trade</title>
-      <link>/tags/trade/</link>
+      <title>Trade</title>
+      <link>//localhost:4321/tags/trade/</link>
       <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/trade/</guid>
+      <guid>//localhost:4321/tags/trade/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>currency</title>
-      <link>/tags/currency/</link>
+      <title>Currency</title>
+      <link>//localhost:4321/tags/currency/</link>
       <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/currency/</guid>
+      <guid>//localhost:4321/tags/currency/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>turkey</title>
-      <link>/tags/turkey/</link>
+      <title>Turkey</title>
+      <link>//localhost:4321/tags/turkey/</link>
       <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/turkey/</guid>
+      <guid>//localhost:4321/tags/turkey/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>rates</title>
-      <link>/tags/rates/</link>
+      <title>Rates</title>
+      <link>//localhost:4321/tags/rates/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/rates/</guid>
+      <guid>//localhost:4321/tags/rates/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>facebook</title>
-      <link>/tags/facebook/</link>
+      <title>Facebook</title>
+      <link>//localhost:4321/tags/facebook/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/facebook/</guid>
+      <guid>//localhost:4321/tags/facebook/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

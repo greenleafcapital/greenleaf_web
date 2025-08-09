@@ -1,36 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>fang on Long Short Strategies</title>
-    <link>/categories/fang/</link>
-    <description>Recent content in fang on Long Short Strategies</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Fang on Long Short Strategies</title>
+    <link>//localhost:4321/categories/fang/</link>
+    <description>Recent content in Fang on Long Short Strategies</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 14 Dec 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/fang/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="//localhost:4321/categories/fang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FANG Stocks</title>
-      <link>/post/2018-12-14-fang-perf-ytd/</link>
+      <link>//localhost:4321/post/2018-12-14-fang-perf-ytd/</link>
       <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018-12-14-fang-perf-ytd/</guid>
-      <description>FAANG stock performance since October 1, 2018. We have seen major losses since October 2018.</description>
+      <guid>//localhost:4321/post/2018-12-14-fang-perf-ytd/</guid>
+      <description>&lt;p&gt;FAANG stock performance since October 1, 2018. We have seen major losses since October 2018.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/2018-12-14-fang-perf-ytd_files/figure-html/chart-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/2018-12-14-fang-perf-ytd_files/figure-html/YTD%20chart-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>FANG Stocks</title>
-      <link>/post/fang/</link>
+      <link>//localhost:4321/post/fang/</link>
       <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/fang/</guid>
-      <description>FAANG stock performance since July 1, 2018
-With Netflix and Facebook both suffering major losses, all eyes will be on Apple as it races to be the first company with a $1 Trillion valuation.
-How have the FAANG stocks performed YTD
-Netflix and Amazon have clearly dominated the large cap stocks. This has been a terrible year of performance for managers who make a living by shorting “bubble basket stocks”.</description>
+      <guid>//localhost:4321/post/fang/</guid>
+      <description>&lt;p&gt;FAANG stock performance since July 1, 2018&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/fang_rets_jul2018_files/figure-html/chart-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;With Netflix and Facebook both suffering major losses, all eyes will be on Apple as it races to be the first company with a $1 Trillion valuation.&lt;/p&gt;&#xA;&lt;p&gt;How have the FAANG stocks performed YTD&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/fang_rets_jul2018_files/figure-html/YTD%20chart-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;Netflix and Amazon have clearly dominated the large cap stocks. This has been a terrible year of performance for managers who make a living by shorting “bubble basket stocks”.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

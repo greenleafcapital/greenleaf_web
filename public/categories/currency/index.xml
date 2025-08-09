@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>currency on Long Short Strategies</title>
-    <link>/categories/currency/</link>
-    <description>Recent content in currency on Long Short Strategies</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Currency on Long Short Strategies</title>
+    <link>//localhost:4321/categories/currency/</link>
+    <description>Recent content in Currency on Long Short Strategies</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 13 Aug 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/currency/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="//localhost:4321/categories/currency/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Turkey Currency Crisis</title>
-      <link>/post/turkey-currency/</link>
+      <link>//localhost:4321/post/turkey-currency/</link>
       <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/turkey-currency/</guid>
-      <description>Turkey Currency crisisThe emerging markets are spiraled into chaos and crisis and leading the way is Turkey. The country has been tackling one crisis after another. In 2016 the there was an attempt of military coup which was put down by the people of Turkey. Since then the current president of Turkey Erdogan has consolidated his hold at the top. He has purged many opponents and the recent elections has emboldened his hold at the top.</description>
+      <guid>//localhost:4321/post/turkey-currency/</guid>
+      <description>&lt;script src=&#34;//localhost:4321/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/dygraphs/dygraph.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/dygraphs/dygraph-combined.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/dygraphs/shapes.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/moment/moment.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/moment-timezone/moment-timezone-with-data.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/moment-fquarter/moment-fquarter.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/dygraphs-binding/dygraphs.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;div id=&#34;turkey-currency-crisis&#34; class=&#34;section level4&#34;&gt;&#xA;&lt;h4&gt;Turkey Currency crisis&lt;/h4&gt;&#xA;&lt;p&gt;The emerging markets are spiraled into chaos and crisis and leading the way is Turkey. The country has been tackling one crisis after another. In 2016 the there was an attempt of military coup which was put down by the people of Turkey. Since then the current president of Turkey Erdogan has consolidated his hold at the top. He has purged many opponents and the recent elections has emboldened his hold at the top. He has near absolute control over Turkey which some say is only rivaled by the Father of the country Ataturk.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -2,43 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>World on Long Short Strategies</title>
-    <link>/tags/world/</link>
+    <link>//localhost:4321/tags/world/</link>
     <description>Recent content in World on Long Short Strategies</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 02 Jan 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/world/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="//localhost:4321/tags/world/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2018 Major Asset class performance</title>
-      <link>/post/2019-01-02-world-markets/</link>
+      <link>//localhost:4321/post/2019-01-02-world-markets/</link>
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019-01-02-world-markets/</guid>
-      <description>Year 2018 has concluded and its time to reflect back and see what happened this year. We began the year on a positive note, but then by February the market sold off and since then S&amp;amp;P 500 moved sideways between 2500 on the low end to 2940 on the high end. The the range was extended on the lower end when we broke the 2500 support level after the FED hike and the “hawkish” press conference by Jerome Powell.</description>
+      <guid>//localhost:4321/post/2019-01-02-world-markets/</guid>
+      <description>&lt;script src=&#34;//localhost:4321/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;&#xA;&lt;link href=&#34;//localhost:4321/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;&#xA;&lt;script src=&#34;//localhost:4321/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;p&gt;Year 2018 has concluded and its time to reflect back and see what happened this year. We began the year on a positive note, but then by February the market sold off and since then S&amp;amp;P 500 moved sideways between 2500 on the low end to 2940 on the high end. The the range was extended on the lower end when we broke the 2500 support level after the FED hike and the “hawkish” press conference by Jerome Powell. The lower end of the new range is 2350 and we have a “potential” high of 2500 on the high end. Lets look at the SPY etf chart below see the important range and levels.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>World Banks</title>
-      <link>/post/world-banks/</link>
+      <link>//localhost:4321/post/world-banks/</link>
       <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/world-banks/</guid>
-      <description>The US stocks market are in a coorection territory now. They are down more than 10% in the last two months. One of the major sectors has been trending lower throughout 2018. The financials sector is in a bear market. The major banks around the world are looking weak. Initially investors dismissed these concerns as company specific. Goldman Sachs was tangled in the 1MDB scandal. Then there European banks such as Deutche Bank and Credit Suisse.</description>
+      <guid>//localhost:4321/post/world-banks/</guid>
+      <description>&lt;p&gt;The US stocks market are in a coorection territory now. They are down more than 10% in the last two months. One of the major sectors has been trending lower throughout 2018. The financials sector is in a bear market. The major banks around the world are looking weak. Initially investors dismissed these concerns as company specific. Goldman Sachs was tangled in the 1MDB scandal. Then there European banks such as Deutche Bank and Credit Suisse. Their stocks are down more than 30% in 2018. Deutche Bank has some serious fundamental issues.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>World Markets</title>
-      <link>/post/world-markets/</link>
+      <link>//localhost:4321/post/world-markets/</link>
       <pubDate>Fri, 14 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/world-markets/</guid>
-      <description>Market Review 2018We began this year on a high note. Markets around the world rallied 7 to 8% in January. But February saw a quick 10% correction. Since then the stock markets have mostly gone sideways. But the volatility has increased a lot in the last few weeks.
-Below are some reasons for the sideways market
-Trade warsSince Donald Trump took control of the White House he had been eager to reduce the US trade deficits.</description>
+      <guid>//localhost:4321/post/world-markets/</guid>
+      <description>&lt;script src=&#34;//localhost:4321/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;div id=&#34;market-review-2018&#34; class=&#34;section level2&#34;&gt;&#xA;&lt;h2&gt;Market Review 2018&lt;/h2&gt;&#xA;&lt;p&gt;We began this year on a high note. Markets around the world rallied 7 to 8% in January. But February saw a quick 10% correction. Since then the stock markets have mostly gone sideways. But the volatility has increased a lot in the last few weeks.&lt;/p&gt;&#xA;&lt;p&gt;Below are some reasons for the sideways market&lt;/p&gt;&#xA;&lt;div id=&#34;trade-wars&#34; class=&#34;section level3&#34;&gt;&#xA;&lt;h3&gt;Trade wars&lt;/h3&gt;&#xA;&lt;p&gt;Since Donald Trump took control of the White House he had been eager to reduce the US trade deficits. He wanted to put tariffs on other countries. This policy was not supported by most economist, but Trump with a tweet commenced the trade wars. In March, Trump tweeted “Trade wars are good and easy to win”. Well he got his trade war, but so far there is no win. In our view tariffs are an indirect tax on the consumer. If Trump puts a 15% tariff on BMW, then BMW increases the price on its cars by 15% and passes the cost to the customer. This also hurts exporting economies such as South Korea and Germany since their goods are now more expensive. In the end trade wars hurt the US consumers and foreign exporters. Its a lose-lose situation. Recently Trump met Xi at the G20 meeting. Trade was the major discussion, and China agreed to lower tariffs on cars and said that they will allow foreign companies more access in its vision 2025 plan. Trump on the other hand gave China 90 day deadline to sort things out. Leading the trade talks for the US side is Robert Lighthizer, he has been a big China bear and more skeptical of China and its intentions. On top of that, Canada recently arrested the CFO Huawei in Vancouver, on behalf of America. US has accused the CFO of bank fraud and selling technology parts to Iran. This was an important development and sent shock waves around the world. Huawei is the most important company in China and the CFO is the daughter of Huawei’s founder and has close ties to the Chinese government. Many US executives are now fearful of traveling to China to do business, as they could also get arrested in retaliation. This could have major disruptions in the Global trade.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

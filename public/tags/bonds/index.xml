@@ -1,44 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>bonds on Long Short Strategies</title>
-    <link>/tags/bonds/</link>
-    <description>Recent content in bonds on Long Short Strategies</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Bonds on Long Short Strategies</title>
+    <link>//localhost:4321/tags/bonds/</link>
+    <description>Recent content in Bonds on Long Short Strategies</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Dec 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/bonds/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="//localhost:4321/tags/bonds/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Stock Market and Interest Rates Since 2007</title>
-      <link>/post/bonds/</link>
+      <link>//localhost:4321/post/bonds/</link>
       <pubDate>Thu, 27 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/bonds/</guid>
-      <description>Volatility is back in the stock markets. In the past we have pointed out the divergence between the US markets and the World stock markets. It is now clear that this disconnection has now resolved itself with the sell-off in the US markets. YTD the US stock market is down about 7%. The month December 2018 saw its worst performance in since the great depression. It was at one point down almost 18%.</description>
+      <guid>//localhost:4321/post/bonds/</guid>
+      <description>&lt;p&gt;Volatility is back in the stock markets. In the past we have pointed out the divergence between the US markets and the World stock markets. It is now clear that this disconnection has now resolved itself with the sell-off in the US markets. YTD the US stock market is down about 7%. The month December 2018 saw its worst performance in since the great depression. It was at one point down almost 18%.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>TLT trade - Iron Condor</title>
-      <link>/post/2018-08-08-tlt-iron-condors/</link>
+      <link>//localhost:4321/post/2018-08-08-tlt-iron-condors/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2018-08-08-tlt-iron-condors/</guid>
-      <description>Today we executed a trade to sell both call and put verticals on the underlying TLT etf (Long US government bonds etf). For the trade to make money, both legs of the trade need to expire worthless. First lets start by looking at the historical returns and volatility of Long Bonds since summer of 2016.
-Interest rates made their lows in the summer of 2016 and since then rates have been moving higher.</description>
+      <guid>//localhost:4321/post/2018-08-08-tlt-iron-condors/</guid>
+      <description>&lt;script src=&#34;//localhost:4321/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;&#xA;&#xA;&#xA;&lt;p&gt;Today we executed a trade to sell both call and put verticals on the underlying TLT etf (Long US government bonds etf). For the trade to make money, both legs of the trade need to expire worthless. First lets start by looking at the historical returns and volatility of Long Bonds since summer of 2016.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/2018-08-08-tlt-iron-condors_files/figure-html/tlt%20hist%202017-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;Interest rates made their lows in the summer of 2016 and since then rates have been moving higher. We saw a big spike up in interest rates after the presidential election as POTUS DJT was considered to be more of a debt guy. During the campaign he had promised to run US like a business, and in the past he was comfortable taking on higher levels of debts when he ran his own businesses.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Interest Rates and Bear Markets</title>
-      <link>/post/int_rates/</link>
+      <link>//localhost:4321/post/int_rates/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/int_rates/</guid>
-      <description>How do interest rates affect Market Valuations?It has been said many times that it is impossible to predict a bear market. Many on Wall Street spend enormous amount of time and money on this very activity. Although it may be difficult to predict the bear market one can evaluate the conditions that could lead to a bear market. What do I mean by that?
-Lets imagine a bridge that carries thousands of vehicles across from one end to another.</description>
+      <guid>//localhost:4321/post/int_rates/</guid>
+      <description>&lt;div id=&#34;how-do-interest-rates-affect-market-valuations&#34; class=&#34;section level4&#34;&gt;&#xA;&lt;h4&gt;How do interest rates affect Market Valuations?&lt;/h4&gt;&#xA;&lt;p&gt;It has been said many times that it is impossible to predict a bear market. Many on Wall Street spend enormous amount of time and money on this very activity. Although it may be difficult to predict the bear market one can evaluate the conditions that could lead to a bear market. &lt;br /&gt; What do I mean by that?&lt;/p&gt;&#xA;&lt;p&gt;Lets imagine a bridge that carries thousands of vehicles across from one end to another. Lets also suppose its a very old bridge, and there is some visible wear and tear on the bridge. Now by observing this, one can conclude the weakness of the bridge, but its impossible to know which vehicle will exactly cause the fall of the bridge. It could be any one of the thousands of vehicles that pass over it. Similarly, one can evaluate general conditions that precede a bear market, but its impossible to predict which one event will cause the start of the bear market. &lt;br /&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
