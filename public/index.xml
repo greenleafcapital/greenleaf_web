@@ -9,11 +9,18 @@
     <lastBuildDate>Sun, 10 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:4321/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>A New Start</title>
+      <link>//localhost:4321/post/2025-08-12-new/</link>
+      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/post/2025-08-12-new/</guid>
+      <description>&lt;p&gt;A little more than a week ago on August 1, 2025, I started a new simulated (paper money) portfolio on thinorswim. I wanted to get a feeling of managing large sums of money. My idea in doing so was to train my mind with the large swings (absolute dollars) in the portfolio value. But these swings would be minor in percentage terms of the overall portfolio.&lt;/p&gt;&#xA;&lt;p&gt;The starting portfolio value is one billion dollars. The rules of managing the portfolio are as follows:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Portfolio</title>
       <link>//localhost:4321/portfolio/</link>
       <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
       <guid>//localhost:4321/portfolio/</guid>
-      <description>&lt;p&gt;Find the Portfolio here.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/realspeculator/portfolio_1B&#34;&gt;https://github.com/realspeculator/portfolio_1B&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;h4 id=&#34;current-portfolio-details&#34;&gt;Current Portfolio Details&lt;/h4&gt;&#xA;&lt;p&gt;You can find the current portfolio positions here.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/realspeculator/portfolio_1B&#34;&gt;https://github.com/realspeculator/portfolio_1B&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;trading-education-with-paper-money&#34;&gt;Trading Education with Paper Money&lt;/h4&gt;&#xA;&lt;p&gt;If you want to replicate the portfolio positions then consider using a paper money account to try these strategies without risking real capital.&lt;/p&gt;&#xA;&lt;p&gt;How to open a paper trading account? See below 3 platforms that allow paper trading.&lt;/p&gt;&#xA;&lt;p&gt;Alpaca Trading - &lt;a href=&#34;https://alpaca.markets/learn/start-paper-trading/&#34;&gt;https://alpaca.markets/learn/start-paper-trading/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Interactive Brokers - &lt;a href=&#34;https://www.interactivebrokers.com/en/software/omnibrokers/topics/papertrader.htm&#34;&gt;https://www.interactivebrokers.com/en/software/omnibrokers/topics/papertrader.htm&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Thinkorswim - &lt;a href=&#34;https://www.schwab.com/trading/thinkorswim/paper-trading&#34;&gt;https://www.schwab.com/trading/thinkorswim/paper-trading&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;disclaimer&#34;&gt;Disclaimer&lt;/h4&gt;&#xA;&lt;p&gt;We are not financial advisors. The content on this website is for educational purpose only and merely cite our own personal opinions. In order to make the best financial decision that suits your own needs, you must conduct your own research and seek the advice of a licensed financial advisor if necessary. Know that all investments involve some form of risk and there is no guarantee that you will be successful in making, saving, or investing money; nor is there any guarantee that you won’t experience any loss when investing. Always remember to make smart decisions and do your own research!&lt;/p&gt;</description>
     </item>
     <item>
       <title>S&amp;P 500 potential bottom</title>

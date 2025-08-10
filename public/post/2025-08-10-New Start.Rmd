@@ -1,0 +1,49 @@
+---
+title: "S&P 500 potential bottom"
+author: "DD"
+date: "2020-04-07"
+categories:
+  - Market
+  - stock
+tags:
+  - market
+  - analysis
+  - stocks
+description: "Stock markets may be displaying a potential bottom"
+output: html_document
+---
+
+A little more than a week ago on August 1, 2025, I started a new simulated (papermoney) portfolio on thinorswim. I wanted to get a feeling of managing large sums of money. My idea in doing so was to train my mind with the large (in absolute dollars) swings in the portfolio value. But these swings would be minor in percentage terms of the overall portfolio.
+
+The starting portfolio value is one billion dollars. The rules of managing the portfolio as follows:
+  
+  - Invest the entire portfolio in TBill.
+- Use leverage to make trades. Short selling is allowed.
+- Use any instruments or asset classes to source and express ideas.
+- Max risk on any single trade will be 5 basis points.
+- Always have a STOP LOSS on every position.
+- Let the winners run, close the losers without exceptions.
+- If some stocks start to trend, look to add more (remember Livermore and Darvas).
+- Publish weekly commentary on what I leaned that week.
+
+
+I am aware that this exercise with pretend money is not the same as trading with real money. Indeed I remember the following excerpt from Reminicenses of the Stock Operator where Jesse Livermore narrates the stories of ghost gamblers.
+
+"I have heard of people who amuse themselves conducting imaginary
+operations in the stock market to prove with imaginary dollars how
+right they are. Sometimes these ghost gamblers make millions. It is
+very easy to be a plunger that way. It is like the old story of the man
+who was going to fight a duel the next day."
+
+His second asked him, “Are you a good shot?”
+
+“Well,” said the duelist, “I can snap the stem of a wineglass at twenty
+paces,” and he looked modest.
+
+“That’s all very well,” said the unimpressed second. “But can you snap
+the stem of the wineglass while the wineglass is pointing a loaded
+pistol straight at your heart?"
+
+
+
+Test
