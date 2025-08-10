@@ -1,7 +1,9 @@
 +++
 title = "Portfolio"
-date = "2018-07-27"
-author = "Team Greenleaf"
+date = "2025-08-10"
+author = "Real Speculator"
 +++
 
-This is where you will find portfolio positions in the future.
+Find the Portfolio here.
+
+https://github.com/realspeculator/portfolio_1B

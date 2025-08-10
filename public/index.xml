@@ -6,8 +6,15 @@
     <description>Recent content on Long Short Strategies</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:4321/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Portfolio</title>
+      <link>//localhost:4321/portfolio/</link>
+      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/portfolio/</guid>
+      <description>&lt;p&gt;Find the Portfolio here.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/realspeculator/portfolio_1B&#34;&gt;https://github.com/realspeculator/portfolio_1B&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>S&amp;P 500 potential bottom</title>
       <link>//localhost:4321/post/2020-04-07-spx-cup-handle/</link>
@@ -210,13 +217,6 @@
       <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
       <guid>//localhost:4321/post/fang/</guid>
       <description>&lt;p&gt;FAANG stock performance since July 1, 2018&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/fang_rets_jul2018_files/figure-html/chart-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;With Netflix and Facebook both suffering major losses, all eyes will be on Apple as it races to be the first company with a $1 Trillion valuation.&lt;/p&gt;&#xA;&lt;p&gt;How have the FAANG stocks performed YTD&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/fang_rets_jul2018_files/figure-html/YTD%20chart-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;Netflix and Amazon have clearly dominated the large cap stocks. This has been a terrible year of performance for managers who make a living by shorting “bubble basket stocks”.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Portfolio</title>
-      <link>//localhost:4321/portfolio/</link>
-      <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/portfolio/</guid>
-      <description>&lt;p&gt;This is where you will find portfolio positions in the future.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Bond Market</title>
