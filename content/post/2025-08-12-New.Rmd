@@ -24,7 +24,7 @@ The starting portfolio value is one billion dollars. The rules of managing the p
 - Always have a STOP LOSS on every position.
 - Let the winners run, close the losers without exceptions.
 - If some stocks start to trend, look to add more (remember Livermore and Darvas).
-- Publish weekly commentary on what I leaned that week.
+- Publish weekly commentary on what I learned that week.
 
 
 I am aware that this exercise with pretend money is not the same as trading with real money. Indeed I remember the following excerpt from Reminiscences of the Stock Operator where Jesse Livermore narrates the stories of ghost gamblers.
@@ -57,9 +57,9 @@ Again I don't want to let perfection be the enemy of the good and I want to keep
 - To train my mind to trade without fear or hesitation
 - To cultivate good trading habits of following stop losses, journaling and reflecting on wins and losses.
 
-All the trades made in this account will be posted on github. Here I will upload the account statements, daily journal, and daily returns. The github timestamp on commits and the commit history will help us track the progress made and ensure that no historical data was changed while managing the portfolio.
+All the trades made in this account will be posted on github. There I will upload the account statements, daily journal, and daily returns. The github timestamp on commits and the commit history will help us track the progress made and ensure that no historical data was changed while managing the portfolio to manage the numbers. One can easily track the time stamp to see when the actual trades were made.
 
-The daily journal of trade will help me keep track of my own thinking and evolution throughout the trading day.
+The daily journal will help me keep track of my own thinking and evolution throughout the trading day.
 
 The link to the Github repository is below
 
