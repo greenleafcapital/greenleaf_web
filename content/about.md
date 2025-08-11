@@ -1,7 +1,7 @@
 +++
 title = "About"
 date = "2018-07-18"
-author = "Team Green"
+author = "DD"
 +++
 
 <h2>> Welcome<span class="logo__cursor" style="width: 3px; height: 1.625rem;"></span></h2>
